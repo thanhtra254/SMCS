@@ -1,32 +1,31 @@
 .. _topics-index:
 
-====================================
-SAS for Credit Scoring documentation
-====================================
+===========================================
+SAS Macros for Credit Scoring documentation
+==========================================
+Credit Scoring là các mô hình chấm điểm khách hàng sử dụng hồi quy Logistic. Việc xây dựng các mô hình này thường đi qua các bước sau:
 
-Scrapy is a fast high-level `web crawling`_ and `web scraping`_ framework, used
-to crawl websites and extract structured data from their pages. It can be used
-for a wide range of purposes, from data mining to monitoring and automated
-testing.
+* Chuẩn bị dữ liệu.
+* Làm sạch dữ liệu & phân tích biến.
+* Lựa chọn biến & hồi quy mô hình.
+* Trình bày kết quả.
 
-`SAS`_ là phần mềm thống kê được sủ dụng rộng rãi trong ngân hàng.
+Chương trình `SAS`_ có nhiều ưu thế là phần mềm thương mại nên các công cụ trong SAS có tính tối ưu và chính xác cao. Chính vì điều này nên SAS được sử dụng rộng rãi trong các ngân hàng để xây dựng các mô hình Credit Score. Tài liệu này giới thiệu cách sử dụng SAS để xây dựng các mô hình Credit Scoring
 
 .. _SAS: https://www.sas.com/en_us/home.html
-.. _web crawling: https://en.wikipedia.org/wiki/Web_crawler
-.. _web scraping: https://en.wikipedia.org/wiki/Web_scraping
 
 Getting help
 ============
 
-Nếu gặp các vấn đề về macro:
+Xử lý các vấn đề với macro:
 
-* Liên hệ trực tiếp tác giả thông qua email: trant6@vpbank.com.vn.
+* Liên hệ với tác giả thông qua email công việc: trant6@vpbank.com.vn.
 * Liên hệ với Email cá nhân: thanhtra254@gmail.com
 * Đặt câu hỏi trên trang web `SAS Communities`_.
 * Report bugs with Scrapy in our `issue tracker`_.
 
 .. _SAS Communities: https://communities.sas.com/
-.. _issue tracker: https://github.com/scrapy/scrapy/issues
+.. _issue tracker: https://github.com/thanhtra254/SMCS/issues
 
 
 
