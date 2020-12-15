@@ -4,6 +4,7 @@
 SAS for Credit Scoring documentation
 ====================================
 Credit Scoring là các mô hình chấm điểm khách hàng sử dụng hồi quy Logistic. Việc xây dựng các mô hình này thường đi qua các bước sau:
+
 * Chuẩn bị dữ liệu.
 * Làm sạch dữ liệu & phân tích biến.
 * Lựa chọn biến & hồi quy mô hình.
