@@ -117,6 +117,7 @@ Ví dụ
 **Ví dụ 1:** Chạy báo cáo monitoring với dữ liệu *DATA.ALL* bao gồm cả train và out of time. Các biến thuộc mô hình *X1 X2 X3 X4 X5 X6 X7 X8 X9 10*.
 
 .. code:: sh  
+
   %LET DATA= DATA.ALL;
   %LET PARAM= DATA.TRAIN_PARAM;
   %LET VARLIST=	X1 X2 X3 X4 X5 X6 X7 X8 X9 10;
