@@ -49,7 +49,7 @@ Chú ý:
 Final Scorecard Report
 ----------------------
 =============  ========  ===========  =======
- Attribute    WOE       Parameter    Score
+ Attribute      WOE       Parameter    Score
 -------------  --------  -----------  -------
  Variable1 
 -------------------------------------------
