@@ -6,10 +6,10 @@ Variable Selection: Marginal IV Selection
 
 Marginal IV
 ===========
-Ta định nghĩa mô hình M_kvới kết quả đầu ra: P(Good)_i=(y_(k,i)  ) ̂. Xét biến X được chia thành các nhóm 1,2,…,n. Với mỗi nhóm, ta định nghĩa ΔWoE như sau:
+Ta định nghĩa mô hình M_kvới kết quả đầu ra: :math:`P(Good)_i=(y_(k,i))`. Xét biến X được chia thành các nhóm 1,2,…,n. Với mỗi nhóm, ta định nghĩa ΔWoE như sau:
 
 .. math::
-    \\Delta WoE=WoE_obs-WoE_Exp=\\ln\\left(\\frac{G_obs/TotalG_obs}{B_obs/TotalB_obs}\\right)-\\ln\\left(\\frac{G_exp/TotalG_exp}{B_exp/TotalB_exp}\\right)
+    \Delta WoE=WoE_obs-WoE_Exp=\ln\left(\\frac{G_obs/TotalG_obs}{B_obs/TotalB_obs}\\right)-\\ln\\left(\\frac{G_exp/TotalG_exp}{B_exp/TotalB_exp}\\right)
 
 Trong đó:
 - G_obs,B_obs là số lượng quan sát good, số lượng quan sát bad trong nhóm.
