@@ -39,7 +39,7 @@ Trong đó:
     EMP_START_WORK_DATE
     CUS_OPEN
     MIN_BD_COLL);
-    */
+
 
 Detail
 ======
