@@ -25,3 +25,24 @@ Minh họa công thức tính được cho trong bảng dưới đây:
    (a - b)^2 = a^2 - 2ab + b^2
 
 Since Pythagoras, we know that :math:`a^2 + b^2 = c^2`.
+
+Examples
+========
+
+See additional examples at http://sphinx-doc.org/ext/math.html.
+
+Code:: 
+
+      If :math:`\sigma_{1}` equals :math:`\sigma_{2}` then etc, etc. 
+   
+Output:
+
+      If :math:`\sigma_{1}` equals :math:`\sigma_{2}` then etc, etc.
+
+Code:: 
+
+      :math:`\underline{x}=[  x_{1}, ...,  x_{n}]^{T}`
+      
+Output:
+
+      :math:`\underline{x}=[  x_{1}, ...,  x_{n}]^{T}`
