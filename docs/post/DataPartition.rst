@@ -57,7 +57,7 @@ Syntax
 
 Để chia dữ liệu thành tập dữ liệu train và validate theo `stratify sampling <https://en.wikipedia.org/wiki/Stratified_sampling>`_, ta dùng Macro **DataPartition**. Tham số của Macro như sau:
 
-   %PARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
+   %DATAPARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
 
 Trong đó:
 
@@ -76,6 +76,6 @@ Các bước xử lý trong macro như sau:
 - **Bước 2**: Sử dụng `PROC HPSAMPLE <https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=prochp&docsetTarget=prochp_hpsample_syntax01.htm&locale=en>`_ để chia dữ liệu **DATA**  thành hai dữ liệu **TRAIN**  và  **VALID** theo tỉ lệ **PERCENT: (100- PERCENT)**.
 - **Bước 3**: Chia biến **TARGET** thành 20 nhóm theo quantile. Sử dụng biến group mới này để thực hiện `stratify sampling <https://en.wikipedia.org/wiki/Stratified_sampling>`_. Sử dụng `PROC HPSAMPLE <https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=prochp&docsetTarget=prochp_hpsample_syntax01.htm&locale=en>`_ để chia dữ liệu **DATA** thành hai dữ liệu **TRAIN**  và  **VALID** theo tỉ lệ **PERCENT: (100- PERCENT)**.
 
-   %PARTITION (DATA.IMPORT, DATA.TRAIN, DATA.VALID, 70, Y);
+   %DATAPARTITION (DATA.IMPORT, DATA.TRAIN, DATA.VALID, 70, Y);
 
 
