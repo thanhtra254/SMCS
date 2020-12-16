@@ -32,7 +32,7 @@ release = '2020-12-12'
 # ones.
 extensions = [
 	'recommonmark',
-	'sphinx.ext.mathjax'
+	'sphinx.ext.mathjax',
 	'sphinx.ext.autosectionlabel'
 ]
 
