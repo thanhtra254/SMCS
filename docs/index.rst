@@ -78,13 +78,16 @@ Variable Analysis
    
    post/VariableReview
    post/VariableAnalysis
+   post/VariableInteaction
 
 :doc:`post/VariableReview`
     Tính toán các chỉ số thống kê (Max, mean, std, ...) và chỉ số dự báo (IV, Gini, ...) của biến để đưa ra cái nhìn tổng quan về dữ liệu
     
 :doc:`post/VariableAnalysis`
     Binning và group các biến, sau đó tính toán chỉ số WoE.
-    
+   
+:doc:`post/VariableInteaction`
+    Variable Interaction: Các phát hiện và phân tích interactive giữa các biến.
     
 Data transformation
 ===================
