@@ -4,17 +4,58 @@
 Data Partition
 ===============
 
-Scrapy is an application framework for crawling web sites and extracting
-structured data which can be used for a wide range of useful applications, like
-data mining, information processing or historical archival.
+Overfitting
+===========
 
-Even though Scrapy was originally designed for web scraping, it can also be
-used to extract data using APIs (such as Amazon Associates Web Services) or
-as a general purpose web crawler.
+**Overfitting** là hiện tượng mô hình quá khớp với dữ liệu training. Việc quá khớp chỉ với một dữ liệu dẫn đến việc dự đoán nhầm, nhiễu và mô hình không còn tốt trên các dữ liệu khác. Hình sau đây minh họa hiện tượng overfitting.
+
+.. image:: ./images/DataPreparation/Picture1.png
+   :align: center
+   :width: 600
+
+Từ hình minh họa, ta thấy rằng:
+
+- Mô hình 1: Quá đơn giản và quá yếu.
+- Mô hình 2: Cân bằng giữa độ phức tạp và sức mạnh.
+- Mô hình 3: Quá mạnh nhưng độ phức tạp cao, đồng thời không tốt trên mẫu test.
+
+Tránh overfitting
+=================
+
+Để tránh overfittling, ta thường sử dụng quy trình như sau:
+
+- Dữ liệu ban đầu thường được chia thành tập train và validate (out-of sampe).
+- Xây dựng mô hình theo độ phức tạp tăng dần trên mẫu train, dùng mô hình này để score cho mẫu validate. 
+- Theo dõi performance đồng thời trên dữ liệu train và validate.
+- Chọn điều kiện dừng phù hợp (early stopping): thường là khi performance của model trên dữ liệu validate bắt đầu xấu đi.
+
+Hình sau đây minh họa phương pháp tránh overfitting:
+
+.. image:: ./images/DataPreparation/Picture2.png
+   :align: center
+   :width: 600
+
+Với hình minh họa trên, ta thấy rằng, khi độ phức tạp của mô hình tăng dần thì sai số trên dữ liệu train giảm dần.Trong khi đó sai số trên dữ liệu validate lúc đầu giảm dần nhưng sau đó lại tăng lên. Căn cứ vào đồ thị, ta thấy dừng tại bước số 9 là hợp lý. 
+
+Nếu số lượng quan sát trong dữ liệu đủ lớn, ta có thể chia dữ liệu ban đầu thành dữ liệu train (chiếm 70% quan sát) và dữ liệu validate (chiếm 30%) quan sát. Tỉ lệ này có thể là 70/30 hoặc 80/20. Khi chia dữ liệu thành hai phần cần chú ý các vấn đề như sau:
+
+- Sử dụng kỹ thuật Stratify sample cho biến target (good/bad) nhằm đảm bảo tỉ lệ Good/Bad của mẫu validation và train là tương tự nhau.
+
+- Sử dụng seed là giá trị định danh nhằm đảm bảo cách chia train/validate là tương tự nhau trong mỗi lần chia (mỗi lần chạy code).
+
+Minh họa cho stratify sampling được minh họa như sau:
+
+.. image:: ./images/DataPreparation/Picture4.png
+   :align: center
+   :width: 600
+   
+
+Sử dụng Macro
+=============
+
+Để chia dữ liệu thành tập dữ liệu train và validate theo stratify, ta dùng Macro **DataPartition**. Tham số của Macro như sau:
+
+.. code-block:: sas
+  %PARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
 
 
-Walk-through of an example spider
-=================================
-
-In order to show you what Scrapy brings to the table, we'll walk you through an
-example of a Scrapy Spider using the simplest way to run a spider.
