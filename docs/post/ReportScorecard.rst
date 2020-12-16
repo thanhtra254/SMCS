@@ -18,7 +18,7 @@ Nguyên nhân
 Lý thuyết
 ---------
 
-Vì :math:`f(t)=\frac{1}{1+exp⁡(-t)` là hàm đồng biến nên:
+Vì :math:`f(t)=\frac{1}{1+exp⁡(-t)}` là hàm đồng biến nên:
 
 .. math::
   f(t_A)>f(t_B) \Leftrightarrw t_A>t_B.
@@ -33,17 +33,46 @@ Do đó, để xếp hạng khách hàng thì chỉ cần dùng :math:`ln⁡(odd
 
 .. math::
   Score &=Offset+Factor\times ln(odds)\\
-        &=Offset+Factor\times\left(\beta_0+\sum_{i=1}^n beta_i woe_{x_i}\right)\\
-        &=\sum_{i=1}^n \left(\frac{Offset}{n}+Factor\times \left(\frac{\beta_0}{n}+beta_i woe_{x_i}\right)\right)
+        &=Offset+Factor\times\left(\beta_0+\sum_{i=1}^n \beta_i woe_{x_i}\right)\\
+        &=\sum_{i=1}^n \left(\frac{Offset}{n}+Factor\times \left(\frac{\beta_0}{n}+\beta_i woe_{x_i}\right)\right)
         
 Điểm của nhóm :math:`j` của biến :math:`x_i` sẽ là:
 
 .. math::
-  \frac{Offset}{n}+Factor\times \left(\frac{\beta_0}{n}+beta_i woe_{x_i}\right)
+  \frac{Offset}{n}+Factor\times \left(\frac{\beta_0}{n}+\beta_i woe_{x_i}\right)
 
 Chú ý: 
 
 - Với ngân hàng  thì Offset=383 và Factor=144.27
 - Để cho đơn giản khi tính toán, có thể tách riêng Intercept(:math:`\beta_0`).
 
+Final Scorecard Report
+----------------------
 
+.. list-table:: Final Scorecard Report
+   :widths: 50 20 20 20
+   :header-rows: 1
+   
+   * - Attribute
+     - WOE
+     - Parameter
+     - Score
+   * - Variables 1
+     - 
+     - 
+     - 
+   * - LOW-16600
+     - -1.059
+     - 0.5435
+     - -83
+
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
