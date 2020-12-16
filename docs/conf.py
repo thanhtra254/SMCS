@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'SAS for Credit Scoring'
+project = 'SAS Macros for Credit Scoring'
 copyright = '2020, thanhtra254, trant6'
 author = 'thanhtra254'
 
