@@ -36,14 +36,14 @@ Trong đó:
 .. code:: sas    
     
     %REDUCE_SIZE(DATA.IMPORT, DATA.IMPORT1, 
-    DATE_VARLIST=
-    CREATION_DATE
-    MIN_VALUE_DATE
-    DATE_OF_ISSUE
-    CUR_START_LIVING_DATE
-    EMP_START_WORK_DATE
-    CUS_OPEN
-    MIN_BD_COLL);
+        DATE_VARLIST=
+        CREATION_DATE
+        MIN_VALUE_DATE
+        DATE_OF_ISSUE
+        CUR_START_LIVING_DATE
+        EMP_START_WORK_DATE
+        CUS_OPEN
+        MIN_BD_COLL);
 
 
 Detail
