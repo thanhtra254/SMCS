@@ -34,11 +34,13 @@ Do đó, để xếp hạng khách hàng thì chỉ cần dùng :math:`ln⁡(odd
         &=Offset+Factor\times\left(\beta_0+\sum_{i=1}^n beta_i woe_{x_i}\right)
         &=\sum_{i=1}^n \left(\frac{Offset}{n}+Factor\times \left(\frac{\beta_0}{n}+beta_i woe_{x_i}\right)\right)
         
-Điểm của nhóm j của biến 𝑥_𝑖 sẽ là:
+Điểm của nhóm :math:`j` của biến :math:`x_i` sẽ là:
+
 .. math::
   \frac{Offset}{n}+Factor\times \left(\frac{\beta_0}{n}+beta_i woe_{x_i}\right)
 
 Chú ý: 
+
 - Với VPB thì Offset383 và Factor144.27
 - Để cho đơn giản khi tính toán, có thể tách riêng Intercept(:math:`\beta_0`).
 
