@@ -19,6 +19,27 @@ Macro DATA_REDUCE_SIZE với mục đích xử lý hai vấn đề trên:
 
 Syntax
 ======
+Cú pháp của macro như sau:
+
+  %DATA_REDUCE_SIZE(INPUT, OUTPUT, DATE_VARLIST)
+Trong đó:
+
+- **INPUT** là data đầu vào.
+- **OUTPUT** là data đầu ra.
+- **DATE_VARLIST** là danh sách các biến ngày tháng bị sai định dạng.
+
+**Ví dụ:**
+
+  %REDUCE_SIZE(DATA.IMPORT, DATA.IMPORT1, 
+    DATE_VARLIST=
+    CREATION_DATE
+    MIN_VALUE_DATE
+    DATE_OF_ISSUE
+    CUR_START_LIVING_DATE
+    EMP_START_WORK_DATE
+    CUS_OPEN
+    MIN_BD_COLL);
+    */
 
 Detail
 ======
