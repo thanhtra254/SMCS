@@ -12,13 +12,14 @@ Ta định nghĩa mô hình :math:`M_k` với kết quả đầu ra: :math:`P(Go
     \Delta WoE=WoE_obs-WoE_Exp=\ln\left(\frac{G_{obs}/TotalG_{obs}}{B_{obs}/TotalB_{obs}}\right)-\ln\left(\frac{G_{exp}/TotalG_{exp}}{B_{exp}/TotalB_{exp}}\right)
 
 Trong đó:
+
 - :math:`G_{obs},B_{obs}` là số lượng quan sát good, số lượng quan sát bad trong nhóm.
 - :math:`G_{exp},B_{exp}` là tổng xác xuất dự báo good, tổng xác suất dự báo bad trong nhóm.
 
 Công thức tính Marginal IV của biến được cho như sau:
 
 .. math::
-	MIV=\\sum_{i=1}^n \\left(%G_obs-%B_obs \\right)
+	MIV=\sum_{i=1}^n \left(%G_obs-%B_obs \right)
 Minh họa công thức tính được cho trong bảng dưới đây:
 
 Lưu ý rằng, với model chỉ có intercept thì công thức Marginal IV cho kết quả trùng với IV.
