@@ -42,7 +42,7 @@ Do đó, để xếp hạng khách hàng thì chỉ cần dùng :math:`ln⁡(odd
 
 Chú ý: 
 
-- Với VPB thì Offset383 và Factor144.27
+- Với ngân hàng  thì Offset=383 và Factor=144.27
 - Để cho đơn giản khi tính toán, có thể tách riêng Intercept(:math:`\beta_0`).
 
 
