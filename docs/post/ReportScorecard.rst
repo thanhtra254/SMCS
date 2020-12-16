@@ -48,23 +48,26 @@ Chú ý:
 
 Final Scorecard Report
 ----------------------
-=============  ========  ===========  =======
- Attribute      WOE       Parameter    Score
--------------  --------  -----------  -------
- Variable1 
--------------------------------------------
- LOW-16600      -1.059    0.5435      -83  
- 16600-22500    -0.468    0.5435      -37  
- 22500-84500    -0.004    0.5435      0  
- 84500+         0.565     0.5435      44  
-=============  ========  ===========  ======= 
- 
 
-===========  ========  ===========  =======
- Attribute    WOE       Parameter    Score
------------  --------  -----------  -------
- LOW-16600    -1.059    0.5435      -83    
- 16600-22500	-0.468		0.5435      -37    
- 22500-84500	-0.004		0.5435      0      
- 84500+	      0.565		  0.5435      44     
-===========  ========  ===========  =======
+Final Scorecard Report được cho trong ví dụ dưới đây
+
+.. image:: ./images/Reporting/Picture1.png
+   :align: center
+   :width: 600
+   
+Trong bảng bên, Score được tính theo công thức
+.. math::
+  Score=WOE\times Param\times Factor
+Trong đó Factor=144.27
+
+Intercept được đặt riêng và tính bằng công thức:
+.. math::
+Intercept được đặt riêng và tính bằng công thức:
+  Intercept=Offset+Factor\times \beta_0
+Trong đó Offset=383 
+
+Từ scoredcard cuối cùng cần chú ý các vấn đề như sau:
+
+- Các nhóm của biến cộng điểm và trừ điểm nhiều nhất cho khách hàng. Từ đó đánh giá tác động của biến đến mô hình
+- Kiểm tra logic giữa điểm và badrate. Điểm càng cao thì bad rate trong nhóm phải càng thấp.
+- Có thể chuyển score của các nhóm thành các giá trị lớn hơn 0 (bằng cách cộng tất cả với giá trị nhỏ nhất) để tiện so sánh trọng số 
