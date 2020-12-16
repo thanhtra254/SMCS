@@ -70,8 +70,17 @@ Variable Analysis
 .. toctree::
    :caption: Variable Analysis
    :hidden:
+   
+   post/VariableReview
+   post/VariableAnalysis
 
-
+:doc:`post/VariableReview`
+    Tính toán các chỉ số thống kê (Max, mean, std, ...) và chỉ số dự báo (IV, Gini, ...) của biến để đưa ra cái nhìn tổng quan về dữ liệu
+    
+:doc:`post/VariableAnalysis`
+    Binning và group các biến, sau đó tính toán chỉ số WoE.
+    
+    
 Data transformation
 ===================
 .. toctree::
