@@ -6,7 +6,7 @@ Variable Selection: Marginal IV Selection
 
 Marginal IV
 ===========
-Ta định nghĩa mô hình :math:`M_k` với kết quả đầu ra: :math:`P(Good)_i=(y_{k,i})`. Xét biến X được chia thành các nhóm :math:`1,2,…,n`. Với mỗi nhóm, ta định nghĩa :math:`\Delta WoE' như sau:
+Ta định nghĩa mô hình :math:`M_k` với kết quả đầu ra: :math:`P(Good)_i=(y_{k,i})`. Xét biến X được chia thành các nhóm :math:`1,2,…,n`. Với mỗi nhóm, ta định nghĩa :math:`\Delta WoE` như sau:
 
 .. math::
     \Delta WoE=WoE_obs-WoE_Exp=\ln\left(\frac{G_{obs}/TotalG_{obs}}{B_{obs}/TotalB_{obs}}\right)-\ln\left(\frac{G_{exp}/TotalG_{exp}}{B_{exp}/TotalB_{exp}}\right)
@@ -20,6 +20,7 @@ Công thức tính Marginal IV của biến được cho như sau:
 
 .. math::
 	MIV=\sum_{i=1}^n \left(%G_obs-%B_obs \right)
+	
 Minh họa công thức tính được cho trong bảng dưới đây:
 
 Lưu ý rằng, với model chỉ có intercept thì công thức Marginal IV cho kết quả trùng với IV.
