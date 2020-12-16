@@ -54,8 +54,8 @@ Sử dụng Macro
 =============
 
 Để chia dữ liệu thành tập dữ liệu train và validate theo stratify, ta dùng Macro **DataPartition**. Tham số của Macro như sau:
-
-.. code-block:: python
-  %PARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
+.. example-code::
+   .. code-block:: python
+      PARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
 
 
