@@ -21,7 +21,7 @@ Lý thuyết
 Vì :math:`f(t)=\frac{1}{1+exp⁡(-t)` là hàm đồng biến nên:
 
 .. math::
-  f(t_A)>f(t_B) \Leftrightarrpw t_A>t_B.
+  f(t_A)>f(t_B) \Leftrightarrw t_A>t_B.
 
 Trong đó 
 
