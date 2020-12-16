@@ -21,7 +21,7 @@ Lý thuyết
 Vì :math:`f(t)=\frac{1}{1+exp⁡(-t)}` là hàm đồng biến nên:
 
 .. math::
-  f(t_A)>f(t_B) \Leftrightarrw t_A>t_B.
+  f(t_A)>f(t_B) \Leftrightarrow t_A>t_B.
 
 Trong đó 
 
@@ -53,5 +53,7 @@ Final Scorecard Report
  Attribute    WOE       Parameter    Score
 -----------  --------  -----------  -------
  LOW-16600    -1.059    0.5435      -83 
- 16600-22500	-0.468		            -37
+ 16600-22500	-0.468		0.5435      -37
+ 22500-84500	-0.004		0.5435      0
+ 84500+	      0.565		  0.5435      44
 ===========  ========  ===========  =======
