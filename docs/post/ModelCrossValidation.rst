@@ -16,12 +16,9 @@ Cross Validation
 ----------------
 Cross validation  được thực hiện theo các bước như sau:
 
-- Bước 1. Chia ngẫu nhiên mẫu thành 70\% cho train và 30\% cho validate.
-	
+- Bước 1. Chia ngẫu nhiên mẫu thành 70\% cho train và 30\% cho validate.	
 - Bước 2. Hồi quy mô hình với mẫu train và đánh giá mô hình với mẫu validate.
-	
 - Bước 3. Lặp lại các bước 1 và bước 2 1000 lần.
-	
 - Bước 4. Tính trung bình 1000 chỉ số thống kê của từng mẫu.
 
 Minh hoạ kỹ thuật Cross validation
@@ -59,11 +56,11 @@ Cách sử dụng macro như sau:
 
 Trong đó:
 
-- **DATA (data)**: Dữ liệu xây dựng mô hình
--	**NUM (integer)**: Số lượng các bước lặp lại.
--	**PERCENT (float [0-1])**: Tỉ lệ chia dữ liệu validate/ train: x:(1-x)
--	**METHOD (character)**: Gồm một trong ba giá trị tương ứng với 3 phương pháp:
-  -	**CROSS**: Cross validation.
-  -	**KFOLD**: k-fold validation
-  -	**BOOTS**: Boostraping validation. 
--	**WOE_VARLIST** (WOE variable list): Danh sách biến hồi quy mô hình (dạng WOE)
+* **DATA (data)**: Dữ liệu xây dựng mô hình
+*	**NUM (integer)**: Số lượng các bước lặp lại.
+*	**PERCENT (float [0-1])**: Tỉ lệ chia dữ liệu validate/ train: x:(1-x)
+*	**METHOD (character)**: Gồm một trong ba giá trị tương ứng với 3 phương pháp:
+  *	**CROSS**: Cross validation.
+  *	**KFOLD**: k-fold validation
+  *	**BOOTS**: Boostraping validation. 
+*	**WOE_VARLIST** (WOE variable list): Danh sách biến hồi quy mô hình (dạng WOE)
