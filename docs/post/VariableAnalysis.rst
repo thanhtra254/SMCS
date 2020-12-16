@@ -32,6 +32,7 @@ Giá trị thay thế cho mỗi nhóm là WOE (Weight of Evidence) được tín
   WoE_i=\ln\left(\frac{g_i/G}{b_i/B}\right).
 
 Trong đó:
+
 -	:math:`g_i,b_i` là số lượng good và bad trong nhóm :math:`i`.
 -	:math:`G,B` là tổng số lượng good và bad trong dữ liệu.
 
@@ -44,6 +45,7 @@ Biến đổi WOE có các lợi thế như sau:
 - Có thể điều chỉnh kết quả dựa trên hiểu biết về dữ liệu.
 
 Bảng sau đây minh họa cho việc tính WoE:
+
 .. list-table:: Credit Scorecard
    :widths: 25 15 15 15 15
    :header-rows: 1
