@@ -28,6 +28,7 @@ Binning và transform WOE
 -	Có cái nhìn tổng quan về xu hướng biến trong dữ liệu.
 
 Giá trị thay thế cho mỗi nhóm là WOE (Weight of Evidence) được tính theo công thức:
+
 .. math::
   WoE_i=\ln\left(\frac{g_i/G}{b_i/B}\right).
 
@@ -95,6 +96,7 @@ Lựa chọn biến ban đầu
 =====================
 
 Lựa chọn biến ban đầu là quy trình chọn các biến dựa trên tính dự báo đơn biến (phân biệt với lựa chọn biến khi vào mô hình – phân tích đa biến). Tính dự báo được đo lường bằng Information Value (IV). Công thức tính IV cho đơn biến được cho như sau:
+
 .. math::
   \sum_{i=1}^n\left(\%Good-\%Bad\right)\times\ln\left⁡(\frac{%Good}{%Bad}\right)
   
