@@ -18,7 +18,7 @@ Nguyên nhân
 Lý thuyết
 ---------
 
-Vì :math:`f(t)=1/(1+exp⁡(-t))` là hàm đồng biến nên:
+Vì :math:`f(t)=\frac{1}{1+exp⁡(-t)` là hàm đồng biến nên:
 
 .. math::
   f(t_A)>f(t_B) \Leftrightarrpw t_A>t_B.
@@ -26,13 +26,14 @@ Vì :math:`f(t)=1/(1+exp⁡(-t))` là hàm đồng biến nên:
 Trong đó 
 
 .. math::
-  t=ln⁡(odd)=\beta_0+\beta_1 woe_{x_1}+\beta_2 woe_{x_2}+\cdots+\beta_n woe_{x_n}
+  t &=ln⁡(odd)\\
+    &=\beta_0+\beta_1 woe_{x_1}+\beta_2 woe_{x_2}+\cdots+\beta_n woe_{x_n}
   
 Do đó, để xếp hạng khách hàng thì chỉ cần dùng :math:`ln⁡(odd)`. Cách thức biến đổi như sau:
 
 .. math::
   Score &=Offset+Factor\times ln(odds)\\
-        &=Offset+Factor\times\left(\beta_0+\sum_{i=1}^n beta_i woe_{x_i}\right)
+        &=Offset+Factor\times\left(\beta_0+\sum_{i=1}^n beta_i woe_{x_i}\right)\\
         &=\sum_{i=1}^n \left(\frac{Offset}{n}+Factor\times \left(\frac{\beta_0}{n}+beta_i woe_{x_i}\right)\right)
         
 Điểm của nhóm :math:`j` của biến :math:`x_i` sẽ là:
