@@ -24,7 +24,7 @@ Công thức tính Marginal IV của biến được cho như sau:
 Minh họa công thức tính được cho trong bảng dưới đây:
 
 .. list-table:: Credit Scorecard
-   :widths: 10 15 15 15 
+   :widths: 10 15 15 15 15 15 15 20 20
    :header-rows: 1
    
    * - Nhóm
