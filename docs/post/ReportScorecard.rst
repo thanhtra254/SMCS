@@ -66,13 +66,9 @@ Final Scorecard Report
      - 0.5435
      - -83
 
-=====  =====  ======
-   Inputs     Output
-------------  ------
-  A      B    A or B
-=====  =====  ======
-False  False  False
-True   False  True
-False  True   True
-True   True   True
-=====  =====  ======
+===========  ========  =========== =======
+ Attribute    WOE       Parameter   Score
+------------------------------------------
+ Variable 1
+==========================================
+ LOW-16600    -1.059    0.5435      -83 
