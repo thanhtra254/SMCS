@@ -18,4 +18,8 @@ Công thức tính Marginal IV của biến được cho như sau:
 MIV=∑_(i=1)^n▒〖(%G_obs-%B_obs)〗×ΔWoE
 Minh họa công thức tính được cho trong bảng dưới đây:
 
+.. math::
 
+   (a + b)^2 = a^2 + 2ab + b^2
+
+   (a - b)^2 = a^2 - 2ab + b^2
