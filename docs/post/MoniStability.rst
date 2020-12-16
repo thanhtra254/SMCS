@@ -74,6 +74,7 @@ Cú pháp chạy macro để output ra báo cáo ổn định của mô hình nh
   %MONI_STABILITY;
 
 Trong đó:
+
 -	**DATA (data)**: Dữ liệu để kiểm định cần chứa tất cả các thông tin như sau:
     -	Dữ liệu bao gồm thông tin train và outtime. Phân biệt bởi biến **YEARMONTH** có định dạng YYYYMM.
     -	Dữ liệu phải chứa các biến trong **VARLIST** dưới dạng WOE_ và GRP_. Ví dụ **VARLIST=X1 X2** thì dữ liệu phải chứa **WOE_X1 WOE_X2 GRP_X1 GRP_X2**
@@ -93,6 +94,7 @@ Ví dụ
 -----
 
 **Ví dụ 1:** Chạy báo cáo monitoring với dữ liệu *DATA.ALL* bao gồm cả train và out of time. Các biến thuộc mô hình *X1 X2 X3 X4 X5 X6 X7 X8 X9 10*.
+
 .. code-block:: sas
   %LET DATA= DATA.ALL;
   %LET PARAM= DATA.TRAIN_PARAM;
