@@ -49,28 +49,9 @@ Chú ý:
 Final Scorecard Report
 ----------------------
 
-.. list-table:: Final Scorecard Report
-   :widths: 50 20 20 20
-   :header-rows: 1
-   
-   * - Attribute
-     - WOE
-     - Parameter
-     - Score
-   * - Variables 1
-     - 
-     - 
-     - 
-   * - LOW-16600
-     - -1.059
-     - 0.5435
-     - -83
-
 ===========  ========  ===========  =======
  Attribute    WOE       Parameter    Score
 -----------  --------  -----------  -------
  LOW-16600    -1.059    0.5435      -83 
  16600-22500	-0.468		            -37
- 22500-84500	-0.004		            0
- 84500+	      0.565		              44
 ===========  ========  ===========  =======
