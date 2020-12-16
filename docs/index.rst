@@ -19,8 +19,8 @@ Getting help
 
 Xử lý các vấn đề với macro:
 
-* Liên hệ với tác giả thông qua email công việc: trant6@vpbank.com.vn.
-* Liên hệ với Email cá nhân: thanhtra254@gmail.com
+* Liên hệ với tác giả qua email công việc: trant6@vpbank.com.vn.
+* Liên hệ với tác giả qua email cá nhân: thanhtra254@gmail.com
 * Đặt câu hỏi trên trang web `SAS Communities`_.
 * Report bugs with Scrapy in our `issue tracker`_.
 
@@ -58,6 +58,7 @@ Data preparation
    
    post/DataAggregation
    post/DataPartition
+   post/DataReduceSize
    
 :doc:`post/DataAggregation`
     Các kỹ thuật cho việc trích xuất biến.
@@ -65,6 +66,10 @@ Data preparation
 :doc:`post/DataPartition`
     Kỹ thuật chia dữ liệu thành train và validate theo phương pháp stratify sampling.
 
+:doc:`post/DataReduceSize`
+    Giảm kích thước của dữ liệu để hiệu năng tính toán trên file cao hơn.
+    
+    
 Variable Analysis
 =================
 .. toctree::
@@ -73,13 +78,16 @@ Variable Analysis
    
    post/VariableReview
    post/VariableAnalysis
+   post/VariableInteaction
 
 :doc:`post/VariableReview`
     Tính toán các chỉ số thống kê (Max, mean, std, ...) và chỉ số dự báo (IV, Gini, ...) của biến để đưa ra cái nhìn tổng quan về dữ liệu
     
 :doc:`post/VariableAnalysis`
     Binning và group các biến, sau đó tính toán chỉ số WoE.
-    
+   
+:doc:`post/VariableInteaction`
+    Variable Interaction: Các phát hiện và phân tích interactive giữa các biến.
     
 Data transformation
 ===================
@@ -114,9 +122,12 @@ Model Assessment
    :hidden:
    
    post/ModelAssess
+   post/ModelCrossValidation
    
 :doc:`post/ModelAssess`
     Tính toán các chỉ số đánh giá mô hình.
+:doc:`post/ModelCrossValidation`
+    Đánh giá mô hình bằng các phương pháp: cross validation, f-fold validation và boostraping validation.
    
 Report Scorecard
 ================

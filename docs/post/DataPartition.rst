@@ -43,7 +43,7 @@ Nếu số lượng quan sát trong dữ liệu đủ lớn, ta có thể chia d
 
 - Sử dụng seed là giá trị định danh nhằm đảm bảo cách chia train/validate là tương tự nhau trong mỗi lần chia (mỗi lần chạy code).
 
-Minh họa cho stratify sampling được minh họa như sau:
+Minh họa cho `stratify sampling <https://en.wikipedia.org/wiki/Stratified_sampling>`_ được minh họa như sau:
 
 .. image:: ./images/DataPreparation/Picture4.png
    :align: center
@@ -52,23 +52,30 @@ Minh họa cho stratify sampling được minh họa như sau:
 
 Sử dụng Macro
 =============
+Syntax
+------
 
-Để chia dữ liệu thành tập dữ liệu train và validate theo stratify, ta dùng Macro **DataPartition**. Tham số của Macro như sau:
+Để chia dữ liệu thành tập dữ liệu train và validate theo `stratify sampling <https://en.wikipedia.org/wiki/Stratified_sampling>`_, ta dùng Macro **DataPartition**. Tham số của Macro như sau:
 
-.. example-code::
+   %DATAPARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
 
-  .. code-block:: JSON
+Trong đó:
 
-    {
-      "key": "value"
-    }
+- **DATA (data)**: Dữ liệu ban đầu cần chia (input).
+- **TRAIN (data)**: Dữ liệu train (output).
+- **VALID (data)**: Dữ liệu validate (output).
+- **PERCENT (float)**: (Số quan sát dữ liệu train)/ (Số quan sát dữ liệu validate) *100.
+- **TARGET (variable)**: Thực hiện stratify sampling dựa trên biến TARGET. Biến TARGET có thể là binary hoặc interval và phải nằm trong dữ liệu DATA
 
-  .. code-block:: python
+Detail
+------
 
-    pygments_style = 'sphinx'
+Các bước xử lý trong macro như sau:
 
+- **Bước 1**: Check số lượng n các giá trị phân biệt của biến **TARGET**. Nếu n nhỏ hơn hoặc bảng 20 thì chuyển sang bước 2. Còn lại chuyển sang bước 3.
+- **Bước 2**: Sử dụng `PROC HPSAMPLE <https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=prochp&docsetTarget=prochp_hpsample_syntax01.htm&locale=en>`_ để chia dữ liệu **DATA**  thành hai dữ liệu **TRAIN**  và  **VALID** theo tỉ lệ **PERCENT: (100- PERCENT)**.
+- **Bước 3**: Chia biến **TARGET** thành 20 nhóm theo quantile. Sử dụng biến group mới này để thực hiện `stratify sampling <https://en.wikipedia.org/wiki/Stratified_sampling>`_. Sử dụng `PROC HPSAMPLE <https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=prochp&docsetTarget=prochp_hpsample_syntax01.htm&locale=en>`_ để chia dữ liệu **DATA** thành hai dữ liệu **TRAIN**  và  **VALID** theo tỉ lệ **PERCENT: (100- PERCENT)**.
 
-  .. code-block:: ruby
+   %DATAPARTITION (DATA.IMPORT, DATA.TRAIN, DATA.VALID, 70, Y);
 
-    print "Hello, World!\n"
 
