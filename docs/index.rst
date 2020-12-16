@@ -3,17 +3,17 @@
 ===========================================
 SAS Macros for Credit Scoring documentation
 ===========================================
-Credit Scoring là các mô hình chấm điểm khách hàng sử dụng hồi quy Logistic. Việc xây dựng các mô hình này thường đi qua các bước sau:
+
+**SAS Macros for Credit Scoring (SMCS)** là tập hợp các `Macro`_ được viết trên chương trình `SAS`_ với mục đích phục vụ việc xây dựng mô hình `CreditScorecard`_. Các Macro được viết cho các bước sau đây trong quá trình xây dựng mô hình:
 
 * Chuẩn bị dữ liệu.
 * Làm sạch dữ liệu & phân tích biến.
 * Lựa chọn biến & hồi quy mô hình.
 * Trình bày kết quả.
 
-Chương trình `SAS`_ có nhiều ưu thế là phần mềm thương mại nên các công cụ trong SAS có tính tối ưu và chính xác cao. Chính vì điều này nên SAS được sử dụng rộng rãi trong các ngân hàng để xây dựng các mô hình Credit Score. Tài liệu này giới thiệu cách sử dụng SAS để xây dựng các mô hình Credit Scoring
-
 .. _SAS: https://www.sas.com/en_us/home.html
-
+.. _Macro: https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=mcrolref&docsetTarget=p1nypovnwon4uyn159rst8pgzqrl.htm&locale=en
+.. _CreditScorecard: https://en.wikipedia.org/wiki/Credit_scorecards
 Getting help
 ============
 
@@ -56,7 +56,14 @@ Data preparation
    :caption: Data preparation
    :hidden:
    
-   intro/overview
+   post/DataAggregation
+   post/DataPartition
+   
+:doc:`post/DataAggregation`
+    Các kỹ thuật cho việc trích xuất biến.
+
+:doc:`post/DataPartition`
+    Kỹ thuật chia dữ liệu thành train và validate theo phương pháp stratify sampling.
 
 Variable Analysis
 =================
@@ -70,26 +77,49 @@ Data transformation
 .. toctree::
    :caption: Data transformation
    :hidden:
-
    
+   post/DataTransformartion
+
+:doc:`post/DataTransformartion`
+    Transform các biến ban đầu thành dạng WoE.
    
 Variable Selection
 ==================
 .. toctree::
    :caption: Variable Selection
    :hidden:
+   
+   post/SelectFoward
+   post/SelectMarIV
 
-
+:doc:`post/SelectFoward`
+    Lựa chọn các biến sử dụng phương pháp Forward Selection. Các biến được lựa chọn tại mỗi bước được dựa trên hệ số Gini.
+    
+:doc:`post/SelectMarIV`
+    Lựa chọn các biến sử dụng phương pháp Marginal Information Value.
 
 Model Assessment
 ================
 .. toctree::
    :caption: Model Assessment
    :hidden:
-
+   
+   post/ModelAssess
+   
+:doc:`post/ModelAssess`
+    Tính toán các chỉ số đánh giá mô hình.
    
 Report Scorecard
 ================
 .. toctree::
    :caption: Report Scorecard
    :hidden:
+   
+   post/ReportVariable
+   post/ReportScorecard
+   
+:doc:`post/ReportVariable`
+    Trình bày kết quả binning các biến.
+
+:doc:`post/ReportScorecard`
+    Trình bày kết quả mô hình và định dạng Scorecard.
