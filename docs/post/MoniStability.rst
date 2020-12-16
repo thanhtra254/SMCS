@@ -20,6 +20,7 @@ Monitoring Report: Stability
 Trong đó :math:`\%Dev,\%Rec` là phần trăm quan sát trong mỗi khoảng của mẫu train (DEV-development) và out of time (REC- recent).
 
 Để có một đánh giá định lượng, ta sử dụng chỉ số PSI (population stability index)
+
 .. math::
   PSI=\sum_{i=1}^n\left(\%Dev_i-\%Rec_i\right)\times \ln\left(\frac{\Dev_i}{\%Rec_i}\right)
   
@@ -44,6 +45,7 @@ Thang đánh giá cho chỉ số PSI được cho dưới đây:
 - Tìm ra các sai sót trong hệ thống.
 
 Để đánh giá sự ổn định cho từng biến, ta thực hiện tương tự đánh giá sự ổn định cho toàn mẫu. Chỉ số sử dụng là CSI (characteristic stability index). 
+
 .. math::
   CSI=\sum_{i=1}^n\left(\%Dev_i-\%Rec_i\right)\times \ln\left(\frac{\Dev_i}{\%Rec_i}\right)
   
