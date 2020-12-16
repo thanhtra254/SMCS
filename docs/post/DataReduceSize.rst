@@ -22,6 +22,7 @@ Syntax
 Cú pháp của macro như sau:
 
 .. code:: sh   
+    
     %DATA_REDUCE_SIZE(INPUT, OUTPUT, DATE_VARLIST)
 
 Trong đó:
@@ -33,6 +34,7 @@ Trong đó:
 **Ví dụ:**
 
 .. code:: sas    
+    
     %REDUCE_SIZE(DATA.IMPORT, DATA.IMPORT1, 
     DATE_VARLIST=
     CREATION_DATE
