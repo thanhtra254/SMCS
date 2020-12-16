@@ -46,7 +46,7 @@ Biến đổi WOE có các lợi thế như sau:
 
 Bảng sau đây minh họa cho việc tính WoE:
 
-.. list-table:: Credit Scorecard
+.. list-table:: Example of WoE calculation
    :widths: 25 15 15 15 15
    :header-rows: 1
    
