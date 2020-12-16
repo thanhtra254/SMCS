@@ -17,6 +17,10 @@ Monitoring Report: Stability
 
 Để đánh giá sự ổn định ta cần dữ liệu train và out of time. Sau khi xây dựng xong mô hình, ta sẽ tiến hành chấm điểm cho hai dữ liệu này. Sau khi có điểm, ta chia điểm chấm này thành 20 khoảng vào tính số lượng và phần trăm quan sát trong mỗi khoảng. Hình sau đây minh họa sự so sánh phân phối giữa dữ liệu train và out of time:
 
+.. image:: ./images/Monitoring/Picture1.png
+   :align: center
+   :width: 600
+
 Trong đó :math:`\%Dev,\%Rec` là phần trăm quan sát trong mỗi khoảng của mẫu train (DEV-development) và out of time (REC- recent).
 
 Để có một đánh giá định lượng, ta sử dụng chỉ số PSI (population stability index)
@@ -44,7 +48,13 @@ Thang đánh giá cho chỉ số PSI được cho dưới đây:
 - Đánh giá sự biến động của mỗi biến qua thời gian.
 - Tìm ra các sai sót trong hệ thống.
 
-Để đánh giá sự ổn định cho từng biến, ta thực hiện tương tự đánh giá sự ổn định cho toàn mẫu. Chỉ số sử dụng là CSI (characteristic stability index). 
+Để đánh giá sự ổn định cho từng biến, ta thực hiện tương tự đánh giá sự ổn định cho toàn mẫu. Hình sau đây minh hoạ so sánh phân phối giữa mẫu development và recent:
+
+.. image:: ./images/Monitoring/Picture2.png
+   :align: center
+   :width: 600
+
+Chỉ số sử dụng là CSI (characteristic stability index). 
 
 .. math::
   CSI=\sum_{i=1}^n\left(\%Dev_i-\%Rec_i\right)\times \ln\left(\frac{\%Dev_i}{\%Rec_i}\right)
@@ -53,6 +63,17 @@ Trong đó:
 
 - :math:`\%Rec_i`: Tỉ lệ quan sát ở nhóm thứ i so với toàn mẫu ở mẫu kiểm định (out of time).
 - :math:`\%Dev_i`: Tỉ lệ quan sát ở nhóm thứ i so với toàn mẫu ở mẫu phát triển (train).
+
+Ngoài ra, ta có thế đánh giá sự ổn định của biến qua một thời gian dài bằng cách quan sát đồ thị phân phối biến.  Ví dụ như sau:
+
+.. image:: ./images/Monitoring/Picture3.png
+   :align: center
+   :width: 600
+
+Từ đồ thị ta có thể thấy được:
+
+- Xu hướng dịch chuyển giữa các nhóm biến.
+- Phát hiện các sai sót trong dữ liệu.
 
 Sử dụng Macro
 =============
