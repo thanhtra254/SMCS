@@ -56,13 +56,12 @@ Final Scorecard Report được cho trong ví dụ dưới đây
    :width: 600
    
 Trong bảng bên, Score được tính theo công thức
+
 .. math::
   Score=WOE\times Param\times Factor
-Trong đó Factor=144.27
+Trong đó Factor=144.27. Intercept được đặt riêng và tính bằng công thức:
 
-Intercept được đặt riêng và tính bằng công thức:
 .. math::
-Intercept được đặt riêng và tính bằng công thức:
   Intercept=Offset+Factor\times \beta_0
 Trong đó Offset=383 
 
