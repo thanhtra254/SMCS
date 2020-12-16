@@ -98,7 +98,7 @@ Lựa chọn biến ban đầu
 Lựa chọn biến ban đầu là quy trình chọn các biến dựa trên tính dự báo đơn biến (phân biệt với lựa chọn biến khi vào mô hình – phân tích đa biến). Tính dự báo được đo lường bằng Information Value (IV). Công thức tính IV cho đơn biến được cho như sau:
 
 .. math::
-  IV=\sum_{i=1}^n\left(\%Good-\%Bad\right)\times \ln\left(\frac{\%Good}{\%Bad}\right)
+  IV=\sum_{i=1}^n\left(\%Good_i-\%Bad_i\right)\times \ln\left(\frac{\%Good_i}{\%Bad_i}\right)
   
 Trong đó: :math:`\%Good_i=g_i/G` và :math:`\%Bad_i=b_i/B` với các định nghĩa tương tự như trong công thức WOE.  
 
