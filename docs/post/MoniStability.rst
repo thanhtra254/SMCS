@@ -22,7 +22,7 @@ Trong đó :math:`\%Dev,\%Rec` là phần trăm quan sát trong mỗi khoảng c
 Để có một đánh giá định lượng, ta sử dụng chỉ số PSI (population stability index)
 
 .. math::
-  PSI=\sum_{i=1}^n\left(\%Dev_i-\%Rec_i\right)\times \ln\left(\frac{\Dev_i}{\%Rec_i}\right)
+  PSI=\sum_{i=1}^n\left(\%Dev_i-\%Rec_i\right)\times \ln\left(\frac{\%Dev_i}{\%Rec_i}\right)
   
 Trong đó:
 
@@ -47,7 +47,7 @@ Thang đánh giá cho chỉ số PSI được cho dưới đây:
 Để đánh giá sự ổn định cho từng biến, ta thực hiện tương tự đánh giá sự ổn định cho toàn mẫu. Chỉ số sử dụng là CSI (characteristic stability index). 
 
 .. math::
-  CSI=\sum_{i=1}^n\left(\%Dev_i-\%Rec_i\right)\times \ln\left(\frac{\Dev_i}{\%Rec_i}\right)
+  CSI=\sum_{i=1}^n\left(\%Dev_i-\%Rec_i\right)\times \ln\left(\frac{\%Dev_i}{\%Rec_i}\right)
   
 Trong đó:
 
