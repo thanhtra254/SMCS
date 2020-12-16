@@ -132,3 +132,23 @@ Report Scorecard
 
 :doc:`post/ReportScorecard`
     Trình bày kết quả mô hình và định dạng Scorecard.
+    
+    
+Monitoring
+==========
+.. toctree::
+   :caption: Monitoring
+   :hidden:
+   
+   post/MoniStability
+   post/MoniDiscriminatory
+   post/MoniAccuracy
+   
+:doc:`post/MoniStability`
+    Các hậu kiểm về tính ổn định của mô hình.
+
+:doc:`post/MoniDiscriminatory`
+    Các kết quả hậu kiểm về tính phân biệt của mô hình. Nội dung bao gồm Gini, KS của score và Gini, IV của từng biến.
+    
+:doc:`post/MoniAccuracy`
+    Các kết quả hậu kiểm về tính chính xác của mô hình.
