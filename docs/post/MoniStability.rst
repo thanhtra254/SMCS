@@ -48,5 +48,6 @@ Thang đánh giá cho chỉ số PSI được cho dưới đây:
   CSI=\sum_{i=1}^n\left(\%Dev_i-\%Rec_i\right)\times \ln\left(\frac{\Dev_i}{\%Rec_i}\right)
   
 Trong đó:
+
 - :math:`\%Rec_i`: Tỉ lệ quan sát ở nhóm thứ i so với toàn mẫu ở mẫu kiểm định (out of time).
 - :math:`\%Dev_i`: Tỉ lệ quan sát ở nhóm thứ i so với toàn mẫu ở mẫu phát triển (train).
