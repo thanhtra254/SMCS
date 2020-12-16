@@ -29,8 +29,12 @@ Trong đó:
 - **DATE_VARLIST** là danh sách các biến ngày tháng bị sai định dạng.
 
 **Ví dụ:**
+.. code:: sh
 
-  %REDUCE_SIZE(DATA.IMPORT, DATA.IMPORT1, 
+    pip install -r requirements.txt
+    make html
+    
+    %REDUCE_SIZE(DATA.IMPORT, DATA.IMPORT1, 
     DATE_VARLIST=
     CREATION_DATE
     MIN_VALUE_DATE
