@@ -60,7 +60,7 @@ Trong đó:
 *	**NUM (integer)**: Số lượng các bước lặp lại.
 *	**PERCENT (float [0-1])**: Tỉ lệ chia dữ liệu validate/ train: x:(1-x)
 *	**METHOD (character)**: Gồm một trong ba giá trị tương ứng với 3 phương pháp:
-  *	**CROSS**: Cross validation.
-  *	**KFOLD**: k-fold validation
-  *	**BOOTS**: Boostraping validation. 
+   *	**CROSS**: Cross validation.
+   *	**KFOLD**: k-fold validation
+   *	**BOOTS**: Boostraping validation. 
 *	**WOE_VARLIST** (WOE variable list): Danh sách biến hồi quy mô hình (dạng WOE)
