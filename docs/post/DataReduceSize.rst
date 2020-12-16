@@ -20,8 +20,9 @@ Macro DATA_REDUCE_SIZE với mục đích xử lý hai vấn đề trên:
 Syntax
 ======
 Cú pháp của macro như sau:
+.. code:: sh   
+    %DATA_REDUCE_SIZE(INPUT, OUTPUT, DATE_VARLIST)
 
-  %DATA_REDUCE_SIZE(INPUT, OUTPUT, DATE_VARLIST)
 Trong đó:
 
 - **INPUT** là data đầu vào.
@@ -30,11 +31,7 @@ Trong đó:
 
 **Ví dụ:**
 
-.. code:: sh
-
-    pip install -r requirements.txt
-    make html
-    
+.. code:: sh    
     %REDUCE_SIZE(DATA.IMPORT, DATA.IMPORT1, 
     DATE_VARLIST=
     CREATION_DATE
