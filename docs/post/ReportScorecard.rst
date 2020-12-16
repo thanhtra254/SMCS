@@ -67,6 +67,6 @@ Trong đó Offset=383
 
 Từ scoredcard cuối cùng cần chú ý các vấn đề như sau:
 
-- Các nhóm của biến cộng điểm và trừ điểm nhiều nhất cho khách hàng. Từ đó đánh giá tác động của biến đến mô hình
+- Các nhóm của biến cộng điểm và trừ điểm nhiều nhất cho khách hàng. Từ đó đánh giá tác động của biến đến mô hình.
 - Kiểm tra logic giữa điểm và badrate. Điểm càng cao thì bad rate trong nhóm phải càng thấp.
-- Có thể chuyển score của các nhóm thành các giá trị lớn hơn 0 (bằng cách cộng tất cả với giá trị nhỏ nhất) để tiện so sánh trọng số 
+- Có thể chuyển score của các nhóm thành các giá trị lớn hơn 0 (bằng cách cộng tất cả với giá trị nhỏ nhất) để tiện so sánh trọng số.
