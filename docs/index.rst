@@ -114,9 +114,12 @@ Model Assessment
    :hidden:
    
    post/ModelAssess
+   post/ModelCrossValidation
    
 :doc:`post/ModelAssess`
     Tính toán các chỉ số đánh giá mô hình.
+:doc:`post/ModelCrossValidation`
+    Đánh giá mô hình bằng các phương pháp: cross validation, f-fold validation và boostraping validation.
    
 Report Scorecard
 ================
