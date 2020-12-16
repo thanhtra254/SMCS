@@ -29,6 +29,7 @@ Trong đó:
 - **DATE_VARLIST** là danh sách các biến ngày tháng bị sai định dạng.
 
 **Ví dụ:**
+
 .. code:: sh
 
     pip install -r requirements.txt
