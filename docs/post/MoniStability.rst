@@ -25,7 +25,7 @@ Trong đó :math:`\%Dev,\%Rec` là phần trăm quan sát trong mỗi khoảng c
   
 Trong đó:
 	:math:`\%Rec_i`: Tỉ lệ quan sát ở khoảng thứ i so với toàn mẫu ở mẫu kiểm định (out of time).
-	:math:`\%Dec_i`: Tỉ lệ quan sát ở khoảng thứ i so với toàn mẫu ở mẫu phát triển (train).
+	:math:`\%Dev_i`: Tỉ lệ quan sát ở khoảng thứ i so với toàn mẫu ở mẫu phát triển (train).
 
 Thang đánh giá cho chỉ số PSI được cho dưới đây:
 
@@ -48,4 +48,4 @@ Thang đánh giá cho chỉ số PSI được cho dưới đây:
   
 Trong đó:
 	:math:`\%Rec_i`: Tỉ lệ quan sát ở nhóm thứ i so với toàn mẫu ở mẫu kiểm định (out of time).
-	:math:`\%Dec_i`: Tỉ lệ quan sát ở nhóm thứ i so với toàn mẫu ở mẫu phát triển (train).
+	:math:`\%Dev_i`: Tỉ lệ quan sát ở nhóm thứ i so với toàn mẫu ở mẫu phát triển (train).
