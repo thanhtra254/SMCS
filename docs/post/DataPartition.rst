@@ -56,6 +56,7 @@ Syntax
 ------
 
 Để chia dữ liệu thành tập dữ liệu train và validate theo `stratify sampling <https://en.wikipedia.org/wiki/Stratified_sampling>`_, ta dùng Macro **DataPartition**. Tham số của Macro như sau:
+
 .. code:: sh
 
    %DATAPARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
