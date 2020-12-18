@@ -26,6 +26,9 @@ Các biến ban đầu sẽ được chuyển sang các giá trị WOE dựa tr�
 Sử dụng Macro
 =============
 
+Syntax
+------
+
 Macro **DATA_ADD_WOE** là công cụ transform các biến từ dạng ban đầu sang dạng WOE và lưu sang một dữ liệu mới. Cú pháp của macro như sau:
 
 .. code:: sh
@@ -48,3 +51,29 @@ Trong đó:
 -	KEEP (variable list): Các biến cần giữ lại (ví dụ customer_id, yearmonth, contract_no). Nguyên nhân vì mặc định macro ADD_WOE chỉ giữ lại các biến có dạng WOE_, GRP_, GOOD, BAD.
 
 -	VARLIST (variable list): Các biến sẽ được transform thành dạng WoE và Group.
+
+Detail
+------
+
+Các bước xử lý trong macro như sau:
+
+- Bước 1: Transform các biến thành dạng Group (các biến có tiền tố GRP_). Sử dụng PROC FREQ để tính WoE của các nhóm của các biến Group;
+-	Bước 2: Tạo bảng DATA_WOEDATA chứa thông tin tổng hợp về nhóm và WoE của các biến thuộc **VARLIST**.
+-	Bước 3: Chuyển các biến trong dữ liệu DATA thành dạng group và WoE. Đẩy ra hai bảng DATA_WOE và DATA_GRP.
+-	Bước 4: Nếu data **VALIDATE** tồn tại thì chuyển các biến trong dữ liệu VALIDATE thành dạng group và WoE. Đẩy ra hai bảng VALIDATE _WOE và VALIDATE _GRP.
+-	Bước 5: Nếu data **TEST** tồn tại thì chuyển các biến trong dữ liệu TEST thành dạng group và WoE. Đẩy ra hai bảng TEST _WOE và TEST_GRP.
+
+
+Example
+-------
+
+.. code:: sh
+
+  %ADD_WOE (DATA.TRAIN, DATA.VALID, 
+  Y YEARMONTH,
+  X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12);
+
+
+
+
+
