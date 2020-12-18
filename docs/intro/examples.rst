@@ -43,20 +43,21 @@ Chia thành train/ Validate
 --------------------------
 
 Ta chia dữ liệu thành hai phần, 70% quan sát cho dữ liệu train và 30% quan sát cho dữ liệu validate. Cách làm như sau:
+
 .. code:: sh
 
   %DATA_PARTITION(DATA.IMPORT, DATA.TRAIN, DATA.VALIDATE, 70, GOOD);
 
 Chương trình SAS hiện thông báo như sau:
 
-------------------------------------------------
- One Target Stratified Sampling Frequency Table
-========= ================ =====================
+======== ================ =====================
+One Target Stratified Sampling Frequency Table
+-----------------------------------------------
   Target    Number of Obs    Number of Samples
---------- ---------------- ---------------------
+-------- ---------------- ---------------------
  0          1249504          874776
  1          1248420          874000
---------- ---------------- ---------------------
+-------- ---------------- ---------------------
 
 
 
