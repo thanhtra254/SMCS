@@ -19,11 +19,11 @@ Trong đó:
 Công thức tính Marginal IV của biến được cho như sau:
 
 .. math::
-    MIV=\sum_{i=1}^n \left(\%G_obs-\%B_obs \right)
+    MIV=\sum_{i=1}^n \left(\%G_{obs}-\%B_{obs} \right)\times \Delta WoE.
 	
 Minh họa công thức tính được cho trong bảng dưới đây:
 
-.. list-table:: Credit Scorecard
+.. list-table:: Example of Marginal IV Calculation
    :widths: 10 15 15 15 15 15 15 20 20
    :header-rows: 1
    
