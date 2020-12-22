@@ -59,7 +59,7 @@ Syntax
 
 .. code:: sh
 
-   %DATAPARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
+   %DATA_PARTITION (DATA, TRAIN, VALID, PERCENT, TARGET)
 
 Trong đó:
 
@@ -80,6 +80,6 @@ Các bước xử lý trong macro như sau:
 
 .. code:: sh
 
-   %DATAPARTITION (DATA.IMPORT, DATA.TRAIN, DATA.VALID, 70, Y);
+   %DATA_PARTITION (DATA.IMPORT, DATA.TRAIN, DATA.VALID, 70, Y);
 
 
