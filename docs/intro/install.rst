@@ -20,7 +20,7 @@ Tải các macros
     "\\10.39.133.225\Document\RMD\RCC(GSRR)\Modeling\05 TRAINEE\4. DATABASE VM\MACROS\*" 
     "&LOCATION\MACROS"';
 
-Các macro sẽ được cài đặt trong thư mục **&LOCATION\MACROS** trong đó &LOCATION là vị trí lưu file SAS. Ví dụ file .EGP được lưu tại thư mục *E:\THANHTRA254\2. PROJECT\84. Sas macros for Credit Scoring* thì các Macro sẽ được lưu tại *E:\THANHTRA254\2. PROJECT\84. Sas macros for Credit Scoring\MACROS*. Để load các macro ta dùng lệnh:
+Các macro sẽ được cài đặt trong thư mục **"&LOCATION\MACROS"** trong đó &LOCATION là vị trí lưu file SAS. Ví dụ file .EGP được lưu tại thư mục *"E:\THANHTRA254\2. PROJECT\84. Sas macros for Credit Scoring"* thì các Macro sẽ được lưu tại *"E:\THANHTRA254\2. PROJECT\84. Sas macros for Credit Scoring\MACROS"*. Để load các macro ta dùng lệnh:
 
 .. code:: sh
 
