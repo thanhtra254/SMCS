@@ -22,21 +22,15 @@ Tải các macros
 
 Các macro sẽ được cài đặt trong thư mục 
 
-.. class:: center
-
-  **&LOCATION\MACROS** 
+  ``&LOCATION\MACROS`` 
   
 Trong đó &LOCATION là vị trí lưu file SAS. Ví dụ file .EGP được lưu tại thư mục 
 
-.. class:: center
-
-  *E:\\THANHTRA254\\2. PROJECT\\84. Sas macros for Credit Scoring"* 
+  ``E:\\THANHTRA254\\2. PROJECT\\84. Sas macros for Credit Scoring``
   
 thì các Macro sẽ được lưu tại 
 
-.. class:: center
-
-*E:\\THANHTRA254\\2. PROJECT\\84. Sas macros for Credit Scoring\\MACROS*. 
+  ``E:\\THANHTRA254\\2. PROJECT\\84. Sas macros for Credit Scoring\\MACROS`` 
 
 Để load các macro ta dùng lệnh:
 

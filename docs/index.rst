@@ -1,5 +1,12 @@
 .. _topics-index:
 
+.. image:: ./logo/SMCS_Logo_Big.png
+   :align: center
+   :width: 600
+   
+
+
+
 ===========================================
 SAS Macros for Credit Scoring documentation
 ===========================================
