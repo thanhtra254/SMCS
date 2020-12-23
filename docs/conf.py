@@ -10,16 +10,18 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
 
+# sys.path.insert(0, os.path.abspath('.'))
+import datetime
+import sphinx_rtd_theme
+import sys
+import os
 
 # -- Project information -----------------------------------------------------
 
 project = 'SAS Macros for Credit Scoring'
-copyright = '2020, thanhtra254, trant6'
-author = 'thanhtra254'
+copyright = '%s, Nguyen Thanh Tra' % str(datetime.datetime.now().year)
+author = 'trant6@vpbank.com.vn'
 
 # The full version, including alpha/beta/rc tags
 release = '2020-12-12'
@@ -44,7 +46,9 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-
+html_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_Big.png')
+html_favicon = os.path.join(CURR_PATH, 'logo', 'favicon.ico')
+latex_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_.png')
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -53,7 +57,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 #html_theme = 'alabaster'
 
-import sphinx_rtd_theme
+
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme = 'sphinx_rtd_theme'
 pygments_style = 'sphinx'
