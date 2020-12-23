@@ -4,18 +4,18 @@
 Variable Review
 ===============
 
-Scrapy is an application framework for crawling web sites and extracting
-structured data which can be used for a wide range of useful applications, like
-data mining, information processing or historical archival.
+Variable review nhằm mục đích như sau:
 
-Even though Scrapy was originally designed for web scraping, it can also be
-used to extract data using APIs (such as Amazon Associates Web Services) or
-as a general purpose web crawler.
+- Tính toán các chỉ số thống kê của biến để từ đó đưa ra kết luận về chất lượng dữ liệu.
+- Tính toán sơ bộ các chỉ số về tính dự báo của biến để có thể loại các biến có tính dự báo yếu, tránh trường hợp phải đưa nhiều biến vào phân tích.
 
 
-Walk-through of an example spider
-=================================
+Tính toán các chỉ số thống kê
+=============================
 
-In order to show you what Scrapy brings to the table, we'll walk you through an
-example of a Scrapy Spider using the simplest way to run a spider.
+Các chỉ số về tính dự báo
+=========================
 
+
+Sử dụng Macro
+=============
