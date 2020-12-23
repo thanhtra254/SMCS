@@ -28,8 +28,8 @@ Phương pháp forward được mô tả như sau:
 -	Bước 2. Tiếp tục các bước 1 cho đến khi việc thêm biến không ảnh hưởng khác biệt đến sức mạnh của mô hình
 Minh họa cho phương pháp forward được cho như sau:
 
-.. image:: ./images/Variable Selection/Foward.png
-    :width: 200px
+.. image:: ./images/Variable Selection/Forward.png
+    :width: 600px
     :alt: Forward Method for Variable Selection
 
 Phương pháp backward
@@ -50,8 +50,8 @@ Phương pháp stepwise là kết hợp của forward và backward. Các bước
 Minh họa cho phương pháp stepwise được cho như sau:
 
 .. image:: ./images/Variable Selection/Stepwise.png
-    :width: 200px
-    :alt: Forward Method for Variable Selection
+    :width: 600px
+    :alt: Stepwise Method for Variable Selection
     
     
 Một số điều chỉnh
