@@ -114,7 +114,7 @@ Quy trình phân tích biến
 
 Quy trình phân tích biến được khuyến nghị theo các bước sau đây:
 
-#. Chia biến thành 20 nhóm (tùy thuộc vào số lượng quan sát, có thể chia thành nhỏ hơn 20 nhóm).
+#. **Coarse Binning:** Chia biến thành 20 nhóm (tùy thuộc vào số lượng quan sát, có thể chia thành nhỏ hơn 20 nhóm).
 #. Đảm bảo không có các nhóm 0 good hoặc 0 bad.
 #. Vẽ đường WoE từ các nhóm (Coarse Bining)
 #. Nhóm các nhóm nhỏ thành các nhóm lớn hơn theo các tiêu chí:
@@ -123,6 +123,22 @@ Quy trình phân tích biến được khuyến nghị theo các bước sau đ�
   - Số lượng quan sát ở mỗi nhóm không nhỏ quá 5% (có thể có ngoại lệ nếu là nhóm cực tốt hoặc cực xấu).
 #. Lặp lại bước số 4 nếu kết quả nhận được chưa vừa ý.
 #. Điều chỉnh WOE nếu có sample bias.
+#. Kết qủa nhận được là **Fine Binning**.
+
+Ví dụ về binning được cho như sau:
+
+Coarse Binning
+
+.. image:: ./images/VariableAnalysis/FineBinning.png
+   :align: center
+   :width: 600
 
 
+Fine Binning
 
+.. image:: ./images/VariableAnalysis/CoarseBinning.png
+   :align: center
+   :width: 600
+
+Sử dụng Macro
+=============
