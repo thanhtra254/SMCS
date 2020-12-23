@@ -48,7 +48,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_Big.png')
 html_favicon = os.path.join(CURR_PATH, 'logo', 'favicon.ico')
-latex_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_.png')
+latex_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_Small.png')
 
 # -- Options for HTML output -------------------------------------------------
 
