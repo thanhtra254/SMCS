@@ -16,7 +16,7 @@ Việc lựa chọn biến ở mô hình Credit Scoring có mục đích chọn 
 
 Các phương pháp
 ===============
-Các phương pháp chọn biến cho thuật toán GBT thường được dùng là Forward, Backward và Stepwise
+Các phương pháp chọn biến thường được dùng là Forward, Backward và Stepwise
 
 Phương pháp forward
 -------------------
@@ -27,6 +27,10 @@ Phương pháp forward được mô tả như sau:
 -	Bước 1. Chọn biến từ tập hợp các biến chưa vào mô hình sao cho biến đó kết hợp với tập hợp biến đã vào mô hình để mô hình mạnh nhất. Thêm biến đó vào danh sách biến đã vào mô hình.
 -	Bước 2. Tiếp tục các bước 1 cho đến khi việc thêm biến không ảnh hưởng khác biệt đến sức mạnh của mô hình
 Minh họa cho phương pháp forward được cho như sau:
+
+.. image:: ./images/Variable Selection/Foward.png
+    :width: 200px
+    :alt: Forward Method for Variable Selection
 
 Phương pháp backward
 --------------------
@@ -43,6 +47,13 @@ Phương pháp stepwise là kết hợp của forward và backward. Các bước
 -	Bước 1.2. Chọn biến từ tập hợp biến đã vào mô hình sao cho khi loại biến đó đi thì mô hình yếu đi ít nhất. Thêm biến đó vào tập hợp biến chưa vào mô hình.
 -	Bước 2. Tiếp tục các bước 1.1 và 1.2 cho đến khi việc thêm biến/bỏ biến không ảnh hưởng khác biệt đến sức mạnh của mô hình
 
+Minh họa cho phương pháp stepwise được cho như sau:
+
+.. image:: ./images/Variable Selection/Stepwise.png
+    :width: 200px
+    :alt: Forward Method for Variable Selection
+    
+    
 Một số điều chỉnh
 -----------------
 
