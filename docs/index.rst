@@ -11,7 +11,7 @@
 SAS Macros for Credit Scoring documentation
 ===========================================
 
-**SAS Macros for Credit Scoring (SMCS)** là tập hợp các `Macro`_ được viết trên chương trình `SAS`_ với mục đích phục vụ việc xây dựng mô hình `CreditScorecard`_. Các Macro được viết cho các bước sau đây trong quá trình xây dựng mô hình:
+**SAS Macros for Credit Scoring (SMCS)** là tập hợp các `Macro`_ được viết trên chương trình `SAS`_ với mục đích phục vụ việc xây dựng mô hình `Credit Scorecard <https://en.wikipedia.org/wiki/Credit_scorecards>`_. Các Macro được viết cho các bước sau đây trong quá trình xây dựng mô hình:
 
 * Chuẩn bị dữ liệu.
 * Làm sạch dữ liệu & phân tích biến.
@@ -20,7 +20,7 @@ SAS Macros for Credit Scoring documentation
 
 .. _SAS: https://www.sas.com/en_us/home.html
 .. _Macro: https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=mcrolref&docsetTarget=p1nypovnwon4uyn159rst8pgzqrl.htm&locale=en
-.. _CreditScorecard: https://en.wikipedia.org/wiki/Credit_scorecards
+
 Getting help
 ============
 
@@ -29,7 +29,7 @@ Xử lý các vấn đề với macro:
 * Liên hệ với tác giả qua email công việc: trant6@vpbank.com.vn.
 * Liên hệ với tác giả qua email cá nhân: thanhtra254@gmail.com
 * Đặt câu hỏi trên trang web `SAS Communities`_.
-* Report bugs with Scrapy in our `issue tracker`_.
+* Phản hồi các lỗi lên trang `issue tracker`_.
 
 .. _SAS Communities: https://communities.sas.com/
 .. _issue tracker: https://github.com/thanhtra254/SMCS/issues
