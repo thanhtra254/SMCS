@@ -109,3 +109,20 @@ Tính dự báo của biến (IV) được đánh giá bởi tiêu chí:
 -	0.1 đến 0.3: Trung bình.
 -	0.3+: Mạnh.
 
+Quy trình phân tích biến
+========================
+
+Quy trình phân tích biến được khuyến nghị theo các bước sau đây:
+
+#. Chia biến thành 20 nhóm (tùy thuộc vào số lượng quan sát, có thể chia thành nhỏ hơn 20 nhóm).
+#. Đảm bảo không có các nhóm 0 good hoặc 0 bad.
+#. Vẽ đường WoE từ các nhóm (Coarse Bining)
+#. Nhóm các nhóm nhỏ thành các nhóm lớn hơn theo các tiêu chí:
+  - Các nhóm có WOE tương tự hoặc theo một xu hướng đã biết trước.
+  - Số lượng các nhóm lớn từ 2-8 nhóm tùy vào độ dự báo của biến.
+  - Số lượng quan sát ở mỗi nhóm không nhỏ quá 5% (có thể có ngoại lệ nếu là nhóm cực tốt hoặc cực xấu).
+#. Lặp lại bước số 4 nếu kết quả nhận được chưa vừa ý.
+#. Điều chỉnh WOE nếu có sample bias.
+
+
+
