@@ -46,6 +46,7 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+CURR_PATH = os.path.abspath(os.path.dirname(__file__))
 html_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_Big.png')
 html_favicon = os.path.join(CURR_PATH, 'logo', 'favicon.ico')
 latex_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_Small.png')
