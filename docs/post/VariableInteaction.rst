@@ -14,7 +14,11 @@ Variable interaction xảy ra khi:
 
 **Ví dụ**: Xu hướng của hai biến Age và Resident status được cho như hình. Nếu mô hình hồi quy có hai biến trên thì kết quả đầu ra sẽ là (𝐴𝑔𝑒>=30, 𝑅𝑒𝑠 𝑠𝑡𝑎𝑡𝑢𝑠=𝑂𝑤𝑛) tốt nhất và (𝐴𝑔𝑒<30, 𝑅𝑒𝑠 𝑠𝑡𝑎𝑡𝑢𝑠=𝑃𝑎𝑟𝑒𝑛𝑡𝑠) xấu nhất. Tuy nhiên dữ liệu thực tế không cho thấy nhận định trên.
 
-Để phát hiện sự interactive giữa các biến, ta sử dụng các phương pháp sau:
+.. image:: ./images/VariableAnalysis/Interactive.png
+    :width: 600px
+    :alt: Interaction of two variables
+
+Giải pháp là sẽ tạo một biến mới là kết hợp của hai biến ban đầu. Biến này sẽ được nhóm tương tự như phương pháp binning. Để phát hiện sự interactive giữa các biến, ta sử dụng các phương pháp sau:
 
 - Dựa trên kinh nghiệm bản thân:
   - Đối với mô hình application, interaction thường xảy ra giữa các biến demographic
@@ -31,4 +35,4 @@ Thực hiện variable interaction:
 - Thực hiện nhóm tương tự như Binning.
 - Tạo biến theo format của hai biến cũ.
 
-Cách 2: Chạy mô hình decision tree với hai biến.
+**Cách 2:** Chạy mô hình decision tree với hai biến.
