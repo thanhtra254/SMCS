@@ -7,6 +7,9 @@ Cài đặt
 Tải các macros
 ==============
 
+Cài đặt tự động
+---------------
+
 Để cài đặt SMCS, tạo Project SAS Enterprise Guide (file .EGP) và tạo một program, sau đó gõ lệnh như sau:
 
 .. code:: sh
@@ -39,6 +42,24 @@ thì các Macro sẽ được lưu tại
   LIBNAME MACRO "&LOCATION\MACROS";
   OPTIONS MSTORED SASMSTORE=MACRO;
   
+  
+Cài đặt thủ công
+----------------
+
+Để cài đặt thủ công ta làm các bước như sau:
+
+- Tạo thư mục MACROS trong nơi chứa Project.
+- Copy toàn bộ các file trong thư mục ``\\10.39.133.225\Document\RMD\RCC(GSRR)\Modeling\05 TRAINEE\4. DATABASE VM\MACROS\`` vào thư mục vừa tạo.
+- Tạo library Macro bằng cách gõ lệnh:
+
+.. code:: sh
+
+  LIBNAME MACRO "&PATHNAME\MACROS";
+  OPTIONS MSTORED SASMSTORE=MACRO;
+
+Trong đó **&PATHNAME** là nơi chứa Project.
+  
+
 Kiểm tra thông tin Macros
 =========================
 
