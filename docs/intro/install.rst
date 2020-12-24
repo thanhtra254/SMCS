@@ -29,11 +29,11 @@ Các macro sẽ được cài đặt trong thư mục
   
 Trong đó &LOCATION là vị trí lưu file SAS. Ví dụ file .EGP được lưu tại thư mục 
 
-  ``E:\\THANHTRA254\\2. PROJECT\\84. Sas macros for Credit Scoring``
+  ``E:\THANHTRA254\2. PROJECT\84. Sas macros for Credit Scoring``
   
 thì các Macro sẽ được lưu tại 
 
-  ``E:\\THANHTRA254\\2. PROJECT\\84. Sas macros for Credit Scoring\\MACROS`` 
+  ``E:\THANHTRA254\2. PROJECT\84. Sas macros for Credit Scoring\MACROS`` 
 
 Để load các macro ta dùng lệnh:
 
