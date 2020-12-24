@@ -52,6 +52,8 @@ Syntax
 ------
 Cú pháp của macro cross validation như sau:
 
+.. code:: sh
+
   %MODEL_CROSS_VALIDATION (DATA, NUM, PERCENT, WOE_VARLIST, TYPE);
 
 Trong đó:
@@ -76,7 +78,7 @@ Ví dụ chạy macro cross validation như sau:
 .. code:: sh
 
    %MODEL_CROSS_VALIDATION(DATA=DATA.TRAIN_WOE, 
-						NUM=100, 
-						PERCENT=0.3, 
-						WOE_VARLIST=X1 X2 X3 X4 X5 X6 X7 X8 X9 X10, 
-						TYPE=2);
+				NUM=100, 
+				PERCENT=0.3, 
+				WOE_VARLIST=X1 X2 X3 X4 X5 X6 X7 X8 X9 X10, 
+				TYPE=2);
