@@ -59,8 +59,8 @@ Dữ liệu TRAIN và OUTTIME có kích thước là 207MB và 622MB tương ứ
 
 .. code:: sh
 
-  %DATA_REDUCE_SIZE(TRAIN, DATA.IMPORT, );
-  %DATA_REDUCE_SIZE(OUTTIME, DATA.OUTTIME, );
+  %DATA_REDUCE_SIZE(TRAIN, DATA.IMPORT, OBS_DATE);
+  %DATA_REDUCE_SIZE(OUTTIME, DATA.OUTTIME, OBS_DATE);
 
 Kết quả nhận được là hai dữ  liệu DATA.IMPORT và DATA.OUTTIME với kích thước 37MB và  112MB. Ta tiến hành JOIN các biến vào dữ liệu TRAIN và VALIDATE:
 
