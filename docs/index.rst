@@ -86,6 +86,7 @@ Variable Analysis
    post/VariableReview
    post/VariableAnalysis
    post/VariableInteaction
+   post/VariableTransformation
 
 :doc:`post/VariableReview`
     Tính toán các chỉ số thống kê (Max, mean, std, ...) và chỉ số dự báo (IV, Gini, ...) của biến để đưa ra cái nhìn tổng quan về dữ liệu
@@ -96,17 +97,10 @@ Variable Analysis
 :doc:`post/VariableInteaction`
     Variable Interaction: Các phát hiện và phân tích interactive giữa các biến.
     
-Data transformation
-===================
-.. toctree::
-   :caption: Data transformation
-   :hidden:
-   
-   post/DataTransformartion
+:doc:`post/VariableTransformation`
+   Transform các biến ban đầu thành dạng WoE.   
 
-:doc:`post/DataTransformartion`
-    Transform các biến ban đầu thành dạng WoE.
-   
+
 Variable Selection
 ==================
 .. toctree::
