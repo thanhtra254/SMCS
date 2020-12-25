@@ -40,12 +40,12 @@ Một số mẹo sử dụng:
 
 .. image:: ./logo/Search.png
    :align: center
-   :width: 300
+   :width: 200
    
 * Export tài liệu thành văn bản PDF/Html/Epub: Click vào cuối trang và chọn nội dung tương ứng.
-.. image:: ./logo/Export.png
+.. image:: ./logo/ExportPDF.png
    :align: center
-   :width: 300
+   :width: 200
 
 
 First steps
