@@ -43,6 +43,7 @@ Trong đó:
 - **BATCH_SIZE** là số lượt thử mỗi "lần". Nguyên nhân là SAS không thể thử cùng lúc :math:`2^n-1` trường hợp (do giới hạn về RAM, dung lượng ổ cứng). Số lần thử sẽ là :math:`\frac{2^n-1}{BATCH\_SIZE}` (tổng số step).
 - **NUM** là số lượng các lần chia trong trường hợp **METRIC** là *GINI_CROSS* hoặc *GINI_KFOLD*.
 - **METRIC** là tiêu chí để lựa chọn mô hình. Các giá trị có thể là:
+
   - *GINI_CROSS* Gini của dữ liệu validate khi thực hiện Cross Validation.
   - *GINI_CROSS* Gini của dữ liệu validate khi thực hiện KFold Validation.
   - *GINI_VALID* Gini của dữ liệu validate (dữ liệu **VALID**).
