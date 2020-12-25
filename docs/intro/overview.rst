@@ -74,7 +74,7 @@ Quy trình xây dựng thẻ điểm tín dụng thường bao gồm các bướ
 
 .. image:: ./images/ModelProcess.png
    :align: center
-   :width: 300
+   :width: 600
    
 Với giới hạn của tài liệu, ta chỉ xét đến các bước có sử dụng công cụ SAS:
 
