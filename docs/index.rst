@@ -34,18 +34,18 @@ Xử lý các vấn đề với macro:
 .. _SAS Communities: https://communities.sas.com/
 .. _issue tracker: https://github.com/thanhtra254/SMCS/issues
  
-Một số mẹo sử dụng:
+Một số tính năng:
 
 * Dùng công cụ search để tìm các nội dung.
 
 .. image:: ./logo/Search.png
    :align: center
-   :width: 100px
+   :width: 200px
    
 * Export tài liệu thành văn bản PDF/Html/Epub: Click vào cuối trang và chọn nội dung tương ứng.
 .. image:: ./logo/ExportPDF.png
    :align: center
-   :width: 100px
+   :width: 150px
 
 
 First steps
