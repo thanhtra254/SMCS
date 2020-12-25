@@ -50,17 +50,35 @@ Sử dụng Macro
 =============
 Syntax
 ------
-Cách sử dụng macro như sau:
+Cú pháp của macro cross validation như sau:
 
-  %MODEL_CROSS_VALIDATION (DATA, NUM, PERCENT, METHOD, VARLIST);
+.. code:: sh
+
+  %MODEL_CROSS_VALIDATION (DATA, NUM, PERCENT, WOE_VARLIST, TYPE);
 
 Trong đó:
 
-* **DATA (data)**: Dữ liệu xây dựng mô hình
-*	**NUM (integer)**: Số lượng các bước lặp lại.
-*	**PERCENT (float [0-1])**: Tỉ lệ chia dữ liệu validate/ train: x:(1-x)
-*	**METHOD (character)**: Gồm một trong ba giá trị tương ứng với 3 phương pháp:
-   *	**CROSS**: Cross validation.
-   *	**KFOLD**: k-fold validation
-   *	**BOOTS**: Boostraping validation. 
-*	**WOE_VARLIST** (WOE variable list): Danh sách biến hồi quy mô hình (dạng WOE)
+- **DATA (data)**: Dữ liệu xây dựng mô hình. Dữ liệu cần chứa ít nhất biến BAD và các biến trong **WOE_VARLIST**.
+- **NUM (integer)**: Số lượng các bước lặp lại.
+- **PERCENT (float [0-1])**(mặc định 0.3): Tỉ lệ chia dữ liệu validate/ train: x:(1-x).
+- **WOE_VARLIST** (WOE variable list): Danh sách biến hồi quy mô hình (dạng WOE).
+- **TYPE** (mặc định 2): Nếu Type=1 thì macro sẽ không tính lại WOE của các biến. Khi đó macro sẽ chạy nhanh hơn. Nếu Type=2 thì macro sẽ tính lại WOE của các biến trước khi hồi quy.
+
+Chi tiết
+--------
+
+Kết quả
+-------
+
+Ví dụ
+-----
+
+Ví dụ chạy macro cross validation như sau:
+
+.. code:: sh
+
+   %MODEL_CROSS_VALIDATION(DATA=DATA.TRAIN_WOE, 
+				NUM=100, 
+				PERCENT=0.3, 
+				WOE_VARLIST=X1 X2 X3 X4 X5 X6 X7 X8 X9 X10, 
+				TYPE=2);
