@@ -69,7 +69,7 @@ Syntax
 Trong đó:
 
 - **Dsin:** data đầu vào chính là data dạng multiple từ SQL.
-- **Dsout:** data đầu ra. Mỗi biến cơ sở sẽ tạo ra max 𝑚𝑜𝑛𝑡ℎ×10  biến mới
+- **Dsout:** data đầu ra. Mỗi biến cơ sở sẽ tạo ra :math:`max\_month\times 10`  biến mới.
 - **Max_month:** Là số tháng lớn nhất trước ngày quan sát (12,6) của cột id_month.
 - **Id:** Primary key của bảng. Ví dụ business_date customer_id.
 - **Varlist:** Danh sách các biến.
