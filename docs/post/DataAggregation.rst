@@ -12,13 +12,13 @@ Dữ liệu SQL
 Khi xây dựng Credit Scoring, ta thường sử dụng công cụ SQL để tạo các biến. Dữ liệu thường được lấy theo cách sau đây để tăng tính hiệu quả:
 
 .. image::  ./images/DataPreparation/DataSQL.png
-  :height: 108
+  :height: 91
   :alt: Variable Extraction
 
 Các biến sẽ được lấy tại từng khung thời gian (theo tháng, tuần, năm) trước ngày quan sát. Ví dụ về dữ liệu được cho như sau:
 
 .. image::  ./images/DataPreparation/DataBefore.png
-  :height: 262
+  :height: 222
   :alt: Example of data
   
 Trong đó:
@@ -34,8 +34,8 @@ Từ dữ liệu này, ta tính các hàm tổng hợp:
 - Crr (Correlation): tương quan giữa biến và time step.
 - Slp (Slope): hệ số góc giữa biến và time step.
 
-.. image::  post/images/DataPreparation/DataAgg.png
-  :height: 249
+.. image::  ./images/DataPreparation/DataAgg.png
+  :height: 211
   :alt: Data from SQL
 
 Kết quả của Data Aggregation là các biến mới được đặt tên theo quy tắc như sau:
@@ -51,7 +51,7 @@ Trong đó:
 **Ví dụ:** DPD_max_max_c12: Giá trị DPD lớn nhất của các giá trị lớn nhất trong vòng 12 tháng trước ngày quan sát. Có thể hiểu đơn giản là DPD lớn nhất trong 12 tháng trước ngày quan sát. Chú ý rằng có thể có những biến vô nghĩa (ví dụ DPD_max_min_12m). Cần lưu ý điều này khi phân tích biến. Minh họa về dữ liệu sau bước Data Aggregation được cho như sau:
 
 .. image::  ./images/DataPreparation/DataBefore.png
-  :height: 283
+  :height: 240
   :alt: Data from SQL
 
 Sử dụng Macro
