@@ -11,13 +11,13 @@ Dữ liệu SQL
 
 Khi xây dựng Credit Scoring, ta thường sử dụng công cụ SQL để tạo các biến. Dữ liệu thường được lấy theo cách sau đây để tăng tính hiệu quả:
 
-.. image::  post/images/DataPreparation/DataSQL.png
+.. image::  ./images/DataPreparation/DataSQL.png
   :height: 108
   :alt: Variable Extraction
 
 Các biến sẽ được lấy tại từng khung thời gian (theo tháng, tuần, năm) trước ngày quan sát. Ví dụ về dữ liệu được cho như sau:
 
-.. image::  post/images/DataPreparation/DataBefore.png
+.. image::  ./images/DataPreparation/DataBefore.png
   :height: 262
   :alt: Example of data
   
@@ -50,7 +50,7 @@ Trong đó:
 
 **Ví dụ:** DPD_max_max_c12: Giá trị DPD lớn nhất của các giá trị lớn nhất trong vòng 12 tháng trước ngày quan sát. Có thể hiểu đơn giản là DPD lớn nhất trong 12 tháng trước ngày quan sát. Chú ý rằng có thể có những biến vô nghĩa (ví dụ DPD_max_min_12m). Cần lưu ý điều này khi phân tích biến. Minh họa về dữ liệu sau bước Data Aggregation được cho như sau:
 
-.. image::  post/images/DataPreparation/DataBefore.png
+.. image::  ./images/DataPreparation/DataBefore.png
   :height: 283
   :alt: Data from SQL
 
