@@ -107,14 +107,23 @@ Variable Selection
    :caption: Variable Selection
    :hidden:
    
+   post/SelectOverview
    post/SelectFoward
    post/SelectMarIV
-
+   post/SelectBestSubset
+   
+   
+:doc:`post/SelectOverview`
+    Tổng quan về lựa chọn biến và các phương pháp lựa chọn biến.
+    
 :doc:`post/SelectFoward`
     Lựa chọn các biến sử dụng phương pháp Forward Selection. Các biến được lựa chọn tại mỗi bước được dựa trên hệ số Gini.
     
 :doc:`post/SelectMarIV`
     Lựa chọn các biến sử dụng phương pháp Marginal Information Value.
+    
+:doc:`post/SelectBestSubset`
+    Lựa chọn các biến bằng cách thử tất cả các tổ hợp biến.
 
 Model Assessment
 ================
