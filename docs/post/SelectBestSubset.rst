@@ -1,1 +1,53 @@
 
+.. _post-select_bestsubset:
+
+=========================================
+Variable Selection: Best Subset Selection
+=========================================
+
+Tổng quan
+=========
+
+Best Subset Selection là thuật toán lựa chọn biến bằng cách thử tất cả các tập con của tập hợp biến. Với :math:`n` biến ban đầu, về lý thuyết sẽ có :math:`2^n-1` tập hợp con.
+Với mỗi tập con, ta tiến hành hồi quy mô hình với các biến trong tập con này và tính toán các chỉ số như sau:
+
+- Metric: Tiêu chí để đánh giá mô hình. Vì các mô hình Credit Scoring hay sử dụng Gini là chỉ số đánh giá nên các metric sau đây thường được sử dụng
+  - Gini của dữ liệu train/ validation.
+  - Gini của Cross validation.
+  - Gini của K-fold validation.
+  
+- Số lượng các biến có hệ số ước lượng là âm.
+
+Do số lượng các trường hợp cần thử là rất lớn (:math:`2^n-1` trường hợp) nên thuật toán chỉ thích hợp với các dữ liệu có số lượng biến ít (nhỏ hơn 20 biến).
+
+Sử dụng Macro
+=============
+
+Để thực hiện chọn biến bằng phương pháp best subset, ta sử dụng Macro VARSELECT_ALL_COMBINE;
+
+Syntax
+------
+
+Cú pháp của macro như sau:
+
+.. code:: sh
+
+  VARSELECT_ALL_COMBINE(DATA=, VARLIST=, PERCENT=0.7, BATCH_SIZE=1000, NUM=50, METRIC=GINI_CROSS);
+  
+Trong đó:
+
+- **DATA** là dữ liệu train. Dữ liệu cần có biến BAD và các biến trong **VARLIST**.
+- **VALID** là dữ liệu validate (nếu có). Dữ liệu validate có cấu trúc tương tự train.
+- **VARLIST** danh sách các biến được đưa vào thử.
+- **PERCENT** tỉ lệ phần trăm quan sát ở dữ liệu train/ toàn bộ quan sát trong trường hợp **METRIC** là *GINI_CROSS*.
+- **BATCH_SIZE** là số lượt thử mỗi "lần". Nguyên nhân là SAS không thể thử cùng lúc :math:`2^n-1` trường hợp (do giới hạn về RAM, dung lượng ổ cứng). Số lần thử sẽ là :math:`\frac{2^n-1}{BATCH\_SIZE}` (tổng số step).
+- **NUM** là số lượng các lần chia trong trường hợp **METRIC** là *GINI_CROSS* hoặc *GINI_KFOLD*.
+- **METRIC** là tiêu chí để lựa chọn mô hình. Các giá trị có thể là:
+  - *GINI_CROSS* Gini của dữ liệu validate khi thực hiện Cross Validation.
+  - *GINI_CROSS* Gini của dữ liệu validate khi thực hiện KFold Validation.
+  - *GINI_VALID* Gini của dữ liệu validate (dữ liệu **VALID**).
+  - *GINI_TRAIN* Gini của dữ liệu train (dữ liệu **DATA**).
+  
+  
+
+
