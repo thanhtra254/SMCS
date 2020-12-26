@@ -57,7 +57,7 @@ Trong đó:
 Kiểm định p-value của Poison binomial test (cho sample) được tính như sau:
 
 .. math::
-  p=\sum_{A \subseteq N, |A|<d}\prod_{a\in A}PD(a)\prod_{a\in N\A}(1-PD(a))
+  p=\sum_{A \subseteq N, |A|<d}\prod_{a\in A}PD(a)\prod_{a\in N\ A}(1-PD(a))
 
 Sử dụng macro
 =============
