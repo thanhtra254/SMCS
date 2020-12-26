@@ -4,13 +4,26 @@
 Monitoring Report: Accuracy
 ===========================
 
-Scrapy is an application framework for crawling web sites and extracting
-structured data which can be used for a wide range of useful applications, like
-data mining, information processing or historical archival.
+Kiểm định tính chính xác
+========================
 
-Even though Scrapy was originally designed for web scraping, it can also be
-used to extract data using APIs (such as Amazon Associates Web Services) or
-as a general purpose web crawler.
+Kiểm định sự chính xác chỉ xuất hiện ở các mô hình phải dự đoán chính xác biến đầu ra (khác với mô hình xếp hạng chỉ quan tâm tới thứ tự giữa các quan sát). Ví dụ phổ biến về mô hình dạng này là mô hình PD. Trong trường hợp này, chất lượng của mô hình phụ thuộc vào việc dự đoán chính xác khả năng vỡ nợ (PD) của từng nhóm xếp hạng. Kiểm định sự chính xác là việc so sánh giữa kết quả đã ước lượng (PD predicted) và kết quả thực tế (PD actual). Một số kiểm định thường được sử dụng như sau:
+
+Two side nominal test
+---------------------
+
+Kiểm định p-value của two side nominal test (cho nhóm i) được tính như sau:
+
+.. math::
+  p_i=\phi\left(\frac{d_i/n_i-PD_i}{\sqrt{\frac{PD_i(1-PD_i)}{n_i}}}\right)
+
+
+Trong đó:
+
+- :math:`n_i` là số lượng quan sát trong nhóm i.
+- :math:`d_i` là số lượng default thực tế trong nhóm i.
+- :math:`PD_i` là xác xuất vỡ nợ ước lượng của nhóm i.
+
 
 
 Walk-through of an example spider
