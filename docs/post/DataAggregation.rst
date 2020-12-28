@@ -14,12 +14,14 @@ Khi xây dựng Credit Scoring, ta thường sử dụng công cụ SQL để t�
 .. image::  ./images/DataPreparation/DataSQL.png
   :height: 54
   :alt: Variable Extraction
+  :align: center
 
 Các biến sẽ được lấy tại từng khung thời gian (theo tháng, tuần, năm) trước ngày quan sát. Ví dụ về dữ liệu được cho như sau:
 
 .. image::  ./images/DataPreparation/DataBefore.png
   :height: 131
   :alt: Example of data
+  :align: center
   
 Trong đó:
 
@@ -37,6 +39,7 @@ Từ dữ liệu này, ta tính các hàm tổng hợp:
 .. image::  ./images/DataPreparation/DataAgg.png
   :height: 124
   :alt: Data from SQL
+  :align: center
 
 Kết quả của Data Aggregation là các biến mới được đặt tên theo quy tắc như sau:
 
@@ -53,6 +56,7 @@ Trong đó:
 .. image::  ./images/DataPreparation/DataBefore.png
   :height: 131
   :alt: Data from SQL
+  :align: center
 
 Sử dụng Macro
 =============
@@ -73,12 +77,3 @@ Trong đó:
 - **Max_month:** Là số tháng lớn nhất trước ngày quan sát (12,6) của cột id_month.
 - **Id:** Primary key của bảng. Ví dụ business_date customer_id.
 - **Varlist:** Danh sách các biến.
-
-
-
-
-
-
-
-
-
