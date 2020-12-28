@@ -78,7 +78,7 @@ Kiểm tra thông tin Macros
 Kết quả nhận được như sau:
 
 .. list-table:: Macro Information
-   :widths: 35 60 25 25
+   :widths: 35 50 30 30
    :header-rows: 1
    
    * - MACRO_NAME
