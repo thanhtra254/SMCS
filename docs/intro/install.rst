@@ -102,4 +102,8 @@ Kết quả nhận được như sau:
      - ...
      - ...
      
-Trong đó  MACRO_NAME là tên của Macro, MACRO_DESC là mô tả về Macro. CREATED và MODIFIED là ngày tạo và ngày cuối cùng thay đổi nội dung Macro.
+Trong đó:
+
+- **MACRO_NAME** là tên của Macro, 
+- **MACRO_DESC** là mô tả về Macro,
+- **CREATED** và **MODIFIED** là ngày tạo và ngày cuối cùng thay đổi nội dung Macro.
