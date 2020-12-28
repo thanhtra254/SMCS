@@ -12,7 +12,7 @@ Bảng sau đây minh hoa cho một một thẻ điểm tín dụng:
 .. list-table:: Credit Scorecard
    :widths: 25 50 10
    :header-rows: 1
-   :align: 
+   :align: center
    
    * - Attribute
      - Range
