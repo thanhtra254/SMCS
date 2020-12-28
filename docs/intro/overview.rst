@@ -6,12 +6,13 @@ Giới thiệu
 
 Tổng quan
 =========
-Mô hình chấm điểm rủi ro tín dụng (Credit Risk Scoring, Credit risk scorecard) là công cụ được sử dụng từ rất lâu trong ngân hàng nhằm mục đích phân loại khác hàng tốt hay xấu. Ví dụ một  thẻ điểm hay được sử dụng là FICO score. Các ngân hàng cũng xây thẻ điểm tín dụng cho riêng ngân hàng mình. Với các khách hàng có điểm tín dụng cao, khách hàng sẽ được chấp nhận cấp khoản vay. Đối với các khác hàng có điểm tín dụng thấp, khách hàng sẽ bị từ chối cấp khoản vay.
+Mô hình chấm điểm rủi ro tín dụng (Credit Risk Scoring, Credit risk scorecard) là công cụ được sử dụng phổ biến trong ngân hàng nhằm mục đích phân loại khác hàng tốt hay xấu. Ví dụ một  thẻ điểm hay được sử dụng là `FICO score <https://www.myfico.com/credit-education/credit-scores>`_. Các ngân hàng cũng xây thẻ điểm tín dụng để phù hợp với riêng ngân hàng mình. Với các khách hàng có điểm tín dụng cao, khách hàng sẽ được chấp nhận cấp khoản vay. Đối với các khác hàng có điểm tín dụng thấp, khách hàng sẽ bị từ chối cấp khoản vay.
 Bảng sau đây minh hoa cho một một thẻ điểm tín dụng:
 
 .. list-table:: Credit Scorecard
    :widths: 25 50 10
    :header-rows: 1
+   :align: 
    
    * - Attribute
      - Range
