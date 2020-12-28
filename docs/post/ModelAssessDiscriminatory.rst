@@ -1,4 +1,4 @@
-.. _post-model_assess:
+.. _post-model_assess-disc:
 
 ================================
 Model Assessment: Discriminatory
