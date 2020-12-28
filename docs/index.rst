@@ -101,7 +101,7 @@ Variable Analysis
    post/VariableTransformation
 
 :doc:`post/VariableReview`
-    Tính toán các chỉ số thống kê (Max, mean, std, ...) và chỉ số dự báo (IV, Gini, ...) của biến để đưa ra cái nhìn tổng quan về dữ liệu
+    Tính toán các chỉ số thống kê (Max, mean, std, ...) và chỉ số dự báo (IV, Gini, ...) của biến để đưa ra cái nhìn tổng quan về dữ liệu.
     
 :doc:`post/VariableAnalysis`
     Binning và group các biến, sau đó tính toán chỉ số WoE.
@@ -143,11 +143,14 @@ Model Assessment
    :caption: Model Assessment
    :hidden:
    
-   post/ModelAssess
+   post/ModelAssessDiscriminatory
+   post/ModelAssessAccuracy
    post/ModelCrossValidation
    
-:doc:`post/ModelAssess`
-    Tính toán các chỉ số đánh giá mô hình.
+:doc:`post/ModelAssessDiscriminatory`
+    Đánh giá mô hình bằng cách tính toán các chỉ số về sự phân biệt.
+:doc:`post/ModelAssessAccuracy`
+    Đánh giá mô hình bằng cách tính toán các chỉ số về sự chính xác.
 :doc:`post/ModelCrossValidation`
     Đánh giá mô hình bằng các phương pháp: cross validation, f-fold validation và boostraping validation.
    
