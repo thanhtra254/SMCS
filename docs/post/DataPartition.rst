@@ -34,7 +34,7 @@ Hình sau đây minh họa phương pháp tránh overfitting:
 
 .. image:: ./images/DataPreparation/Picture2.png
    :align: center
-   :width: 251
+   :height: 251
    :alt: Train & Validate
 
 Với hình minh họa trên, ta thấy rằng, khi độ phức tạp của mô hình tăng dần thì sai số trên dữ liệu train giảm dần.Trong khi đó sai số trên dữ liệu validate lúc đầu giảm dần nhưng sau đó lại tăng lên. Căn cứ vào đồ thị, ta thấy dừng tại bước số 9 là hợp lý. 
@@ -49,7 +49,7 @@ Minh họa cho `stratify sampling <https://en.wikipedia.org/wiki/Stratified_samp
 
 .. image:: ./images/DataPreparation/Picture4.png
    :align: center
-   :width: 237
+   :height: 237
    :alt: Example of tratify sampling
    
 
