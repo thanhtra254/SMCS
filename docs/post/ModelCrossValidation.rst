@@ -26,7 +26,8 @@ Minh hoạ kỹ thuật Cross validation
 
 .. image:: ./images/DataPreparation/Picture5.png
    :align: center
-   :width: 600
+   :height: 233
+   :alt: Cross validation
 
 
 K-fold Validation
@@ -43,7 +44,8 @@ Minh hoạ kỹ thuật K-fold Validation được cho như sau:
 
 .. image:: ./images/DataPreparation/Picture6.png
    :align: center
-   :width: 600
+   :height: 200
+   :alt: K-fold Validation
 
 
 Sử dụng Macro
@@ -78,7 +80,7 @@ Ví dụ chạy macro cross validation như sau:
 .. code:: sh
 
    %MODEL_CROSS_VALIDATION(DATA=DATA.TRAIN_WOE, 
-				NUM=100, 
-				PERCENT=0.3, 
-				WOE_VARLIST=X1 X2 X3 X4 X5 X6 X7 X8 X9 X10, 
-				TYPE=2);
+	NUM=100, 
+	PERCENT=0.3, 
+	WOE_VARLIST=X1 X2 X3 X4 X5 X6 X7 X8 X9 X10, 
+	TYPE=2);
