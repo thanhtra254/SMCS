@@ -35,9 +35,9 @@ K-fold Validation
 
 K-fold Validation được thực hiện theo các bước như sau:
 
-- Bước 1. Chia dữ liệu đã cho thành $k$ phần ($k-$fold).
-- Bước 2. Dùng $k-1$ fold để train model và dùng 1 fold còn lại để validate. Lúc này fold còn lại sẽ có predicted.
-- Bước 3. Lặp lại bước 2 tới $k$ lần. Sau bước này tất cả $k$ fold đều có predicted.
+- Bước 1. Chia dữ liệu đã cho thành :math:`k` phần (:math:`k-fold`).
+- Bước 2. Dùng :math:`k-1` fold để train model và dùng 1 fold còn lại để validate. Lúc này fold còn lại sẽ có predicted.
+- Bước 3. Lặp lại bước 2 tới :math:`k` lần. Sau bước này tất cả :math:`k` fold đều có predicted.
 - Bước 4. Tính các chỉ số đánh giá mô hình trên dựa trên predicted.
 
 Minh hoạ kỹ thuật K-fold Validation được cho như sau:
