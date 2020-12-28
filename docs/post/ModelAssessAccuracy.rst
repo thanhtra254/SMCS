@@ -1,4 +1,4 @@
-.. _post-moni-accuracy:
+.. _post-model_assess-accuracy:
 
 ===============================
 Monitoring Assessment: Accuracy
