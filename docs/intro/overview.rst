@@ -84,11 +84,13 @@ Với giới hạn của tài liệu, ta chỉ xét đến các bước có sử
 - **Variable Analysis:** Sau khi có các biến, ta tiến hành phân tích biến. Macro `Variable Review <https://smcs.readthedocs.io/vi/latest/post/VariableReview.html>`_ được sử dụng để tính toán các chỉ số thống kê (min, max, mean, ...) để ta có cái nhìn về chất lượng dữ liệu. Tiếp đó ta tiến hành phân tích đơn biến với Macro `Variable Analysis <https://smcs.readthedocs.io/vi/latest/post/VariableAnalysis.html>`_. Để phân tích sự liên quan giữa các biến và tìm cách kết hợp biến, ta sử dụng các công cụ macro `Variable Interaction <https://smcs.readthedocs.io/vi/latest/post/VariableInteaction.html>`_. Sau khi phân tích xong các biến, ta sử dụng Macro `Data Transformation <https://smcs.readthedocs.io/vi/latest/post/DataTransformartion.html>`_ để chuyển các biến về định dạng WOE.
 
 - **Variable Selection:** Là công đoạn chọn các biến vào mô hình. SMCS cung cấp một số phương pháp lựa chọn biến như sau:
+
    - *Stepwise method* sử dụng công cụ `Variable Selection: Stepwise Method <https://smcs.readthedocs.io/vi/latest/post/SelectFoward.html>`_.
    - *Marginal IV method* sử dụng công cụ `Variable Selection: Marginal IV Method <https://smcs.readthedocs.io/vi/latest/post/SelectMarIV.html>`_.
    - *Best subset selection* thử tất cả các cách kết hợp biến để tìm ra tổ hợp biến tốt nhất. Macro được sử dụng là `Best Subset Selection <https://smcs.readthedocs.io/vi/latest/post/SelectBestSubset.html>`_.
 
 - **Model Assessment:** Sau khi đã chọn được bộ biến thích hợp, ta tiến hành đánh giá mô hình. Hai chỉ tiêu đánh giá chính của mô hình là 
+
    - *Tính phân biệt* sử dụng macro `Model Assessment: Discriminatory <https://smcs.readthedocs.io/vi/latest/post/ModelAssessDiscriminatory.html>`_.
    - *Tính chính xác* sử dụng macro `Model Assessment: Accuracy <https://smcs.readthedocs.io/vi/latest/post/ModelAssessAccuracy.html>`_.
   Với một số trường hợp, ta có thể sử dụng thêm phương pháp Cross Validate hoặc K-Fold Validation để đánh giá mô hình. SMCS cung cấp macro `Model Assessment <https://smcs.readthedocs.io/vi/latest/post/ModelCrossValidation.html>`_ để thực hiện việc này.
@@ -96,6 +98,7 @@ Với giới hạn của tài liệu, ta chỉ xét đến các bước có sử
 - **Reporting:** Sau khi có được mô hình cuối cùng, ta trình bày kết quả của mô hình. Macro `Report Variables <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_ sẽ trình bày các biến và cách nhóm. Macro `Report Scorecard <https://smcs.readthedocs.io/vi/latest/post/ReportScorecard.html>`_ sẽ trình bày kết của của mô hình dưới dạng Scorecard. 
 
 - **Monitoring:** Mô hình sau khi triển khai sẽ được hậu kiểm định kỳ. Các nội dung chính bao gồm:
+
    - Tính ổn định của mô hình bằng cách sử dụng macro `Monitoring Report Stability <https://smcs.readthedocs.io/vi/latest/post/MoniStability.html>`_.
    - Tính phân biệt của mô hình bằng cách sử dụng macro `Monitoring Report Discriminatory <https://smcs.readthedocs.io/vi/latest/post/MoniDiscriminatory.html>`_.
    - Tính chính xác của mô hình bằng cách sử sụng macro `Monitoring Report Accuracy <https://smcs.readthedocs.io/vi/latest/post/MoniAccuracy.html>`_.
