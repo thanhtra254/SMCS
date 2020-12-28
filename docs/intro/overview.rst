@@ -85,10 +85,11 @@ Với giới hạn của tài liệu, ta chỉ xét đến các bước có sử
 - **Variable Selection:** Là công đoạn chọn các biến vào mô hình. SMCS cung cấp một số phương pháp lựa chọn biến như sau:
    - *Stepwise method* sử dụng công cụ `Variable Selection: Stepwise Method <https://smcs.readthedocs.io/vi/latest/post/SelectFoward.html>`_.
    - *Marginal IV method* sử dụng công cụ `Variable Selection: Marginal IV Method <https://smcs.readthedocs.io/vi/latest/post/SelectMarIV.html>`_.
+   - *Best subset selection* thử tất cả các cách kết hợp biến để tìm ra tổ hợp biến tốt nhất. Macro được sử dụng là `Best Subset Selection <https://smcs.readthedocs.io/vi/latest/post/SelectBestSubset.html>`_.
 
 - **Model Assessment:** Sau khi đã chọn được bộ biến thích hợp, ta tiến hành đánh giá mô hình. Hai chỉ tiêu đánh giá chính của mô hình là 
-   - *Tính phân biệt* sử dụng macro `Model Assessment: Discriminatory <https://smcs.readthedocs.io/vi/latest/post/ModelAssess.html>`_.
-   - *Tính chính xác* sử dụng macro `Model Assessment: Accuracy <https://smcs.readthedocs.io/vi/latest/post/ModelAssess.html>`_.
+   - *Tính phân biệt* sử dụng macro `Model Assessment: Discriminatory <https://smcs.readthedocs.io/vi/latest/post/ModelAssessDiscriminatory.html>`_.
+   - *Tính chính xác* sử dụng macro `Model Assessment: Accuracy <https://smcs.readthedocs.io/vi/latest/post/ModelAssessAccuracy.html>`_.
   Với một số trường hợp, ta có thể sử dụng thêm phương pháp Cross Validate hoặc K-Fold Validation để đánh giá mô hình. SMCS cung cấp macro `Model Assessment <https://smcs.readthedocs.io/vi/latest/post/ModelCrossValidation.html>`_ để thực hiện việc này.
 
 - **Reporting:** Sau khi có được mô hình cuối cùng, ta trình bày kết quả của mô hình. Macro `Report Variables <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_ sẽ trình bày các biến và cách nhóm. Macro `Report Scorecard <https://smcs.readthedocs.io/vi/latest/post/ReportScorecard.html>`_ sẽ trình bày kết của của mô hình dưới dạng Scorecard. 
