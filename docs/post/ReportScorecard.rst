@@ -53,7 +53,8 @@ Final Scorecard Report được cho trong ví dụ dưới đây
 
 .. image:: ./images/Reporting/Picture1.png
    :align: center
-   :width: 600
+   :height: 398
+   :alt: Scorecard Example
    
 Trong bảng bên, Score được tính theo công thức
 

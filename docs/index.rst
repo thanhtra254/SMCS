@@ -3,15 +3,14 @@
 .. image:: ./logo/SMCS_Logo_Big.png
    :align: center
    :width: 600
-   
 
-
+|
 
 ===========================================
 SAS Macros for Credit Scoring documentation
 ===========================================
 
-**SAS Macros for Credit Scoring (SMCS)** là tập hợp các `Macro`_ được viết trên chương trình `SAS`_ với mục đích phục vụ việc xây dựng mô hình `Credit Scorecard <https://en.wikipedia.org/wiki/Credit_scorecards>`_. Các Macro được viết cho các bước sau đây trong quá trình xây dựng mô hình:
+**SAS Macros for Credit Scoring (SMCS)** là tập hợp các `Macro`_ được viết trên chương trình `SAS`_ với mục đích phục vụ công việc xây dựng mô hình `Credit Scorecard <https://en.wikipedia.org/wiki/Credit_scorecards>`_. Các Macro được viết cho các bước sau đây trong quá trình xây dựng mô hình:
 
 * Chuẩn bị dữ liệu.
 * Làm sạch dữ liệu & phân tích biến.
@@ -34,18 +33,18 @@ Xử lý các vấn đề với macro:
 .. _SAS Communities: https://communities.sas.com/
 .. _issue tracker: https://github.com/thanhtra254/SMCS/issues
  
-Một số mẹo sử dụng:
+Một số tính năng:
 
 * Dùng công cụ search để tìm các nội dung.
 
 .. image:: ./logo/Search.png
    :align: center
-   :width: 100px
+   :width: 200px
    
 * Export tài liệu thành văn bản PDF/Html/Epub: Click vào cuối trang và chọn nội dung tương ứng.
 .. image:: ./logo/ExportPDF.png
    :align: center
-   :width: 100px
+   :width: 150px
 
 
 First steps
@@ -80,13 +79,13 @@ Data preparation
    post/DataReduceSize
    
 :doc:`post/DataAggregation`
-    Các kỹ thuật cho việc trích xuất biến.
+    Macro hỗ trợ việc trích xuất biến.
 
 :doc:`post/DataPartition`
-    Kỹ thuật chia dữ liệu thành train và validate theo phương pháp stratify sampling.
+    Chia dữ liệu thành train và validate theo phương pháp stratify sampling.
 
 :doc:`post/DataReduceSize`
-    Giảm kích thước của dữ liệu để hiệu năng tính toán trên file cao hơn.
+    Giảm kích thước của dữ liệu để tăng hiệu năng tính toán.
     
     
 Variable Analysis
@@ -101,7 +100,7 @@ Variable Analysis
    post/VariableTransformation
 
 :doc:`post/VariableReview`
-    Tính toán các chỉ số thống kê (Max, mean, std, ...) và chỉ số dự báo (IV, Gini, ...) của biến để đưa ra cái nhìn tổng quan về dữ liệu
+    Tính toán các chỉ số thống kê (Max, mean, std, ...) và chỉ số dự báo (IV, Gini, ...) của biến để đưa ra cái nhìn tổng quan về các biến dữ liệu.
     
 :doc:`post/VariableAnalysis`
     Binning và group các biến, sau đó tính toán chỉ số WoE.
@@ -129,7 +128,7 @@ Variable Selection
     Tổng quan về lựa chọn biến và các phương pháp lựa chọn biến.
     
 :doc:`post/SelectFoward`
-    Lựa chọn các biến sử dụng phương pháp Forward Selection. Các biến được lựa chọn tại mỗi bước được dựa trên hệ số Gini.
+    Lựa chọn các biến sử dụng phương pháp Forward/ Backward/ Stepwise. Các biến được lựa chọn tại mỗi bước được dựa trên hệ số Gini.
     
 :doc:`post/SelectMarIV`
     Lựa chọn các biến sử dụng phương pháp Marginal Information Value.
@@ -143,13 +142,16 @@ Model Assessment
    :caption: Model Assessment
    :hidden:
    
-   post/ModelAssess
+   post/ModelAssessDiscriminatory
+   post/ModelAssessAccuracy
    post/ModelCrossValidation
    
-:doc:`post/ModelAssess`
-    Tính toán các chỉ số đánh giá mô hình.
+:doc:`post/ModelAssessDiscriminatory`
+    Đánh giá mô hình bằng cách tính toán các chỉ số về sự phân biệt.
+:doc:`post/ModelAssessAccuracy`
+    Đánh giá mô hình bằng cách tính toán các chỉ số về sự chính xác.
 :doc:`post/ModelCrossValidation`
-    Đánh giá mô hình bằng các phương pháp: cross validation, f-fold validation và boostraping validation.
+    Đánh giá mô hình bằng các phương pháp: cross validation và k-fold validation.
    
 Report Scorecard
 ================
@@ -161,7 +163,7 @@ Report Scorecard
    post/ReportScorecard
    
 :doc:`post/ReportVariable`
-    Trình bày kết quả binning các biến.
+    Trình bày kết quả binning (coarse và fine) của các biến.
 
 :doc:`post/ReportScorecard`
     Trình bày kết quả mô hình và định dạng Scorecard.
@@ -178,10 +180,10 @@ Monitoring
    post/MoniAccuracy
    
 :doc:`post/MoniStability`
-    Các hậu kiểm về tính ổn định của mô hình.
+    Hậu kiểm về tính ổn định của mô hình. Nội dung bao gồm chỉ số PSI, CSI.
 
 :doc:`post/MoniDiscriminatory`
-    Các kết quả hậu kiểm về tính phân biệt của mô hình. Nội dung bao gồm Gini, KS của score và Gini, IV của từng biến.
+    Hậu kiểm về tính phân biệt của mô hình. Nội dung bao gồm Gini, KS của score và Gini, IV của từng biến.
     
 :doc:`post/MoniAccuracy`
-    Các kết quả hậu kiểm về tính chính xác của mô hình.
+    Hậu kiểm về tính chính xác của mô hình.

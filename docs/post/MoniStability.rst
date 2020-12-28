@@ -19,7 +19,8 @@ Monitoring Report: Stability
 
 .. image:: ./images/Monitoring/Picture1.png
    :align: center
-   :width: 600
+   :height: 288
+   :alt: Distribution Comparison
 
 Trong đó :math:`\%Dev,\%Rec` là phần trăm quan sát trong mỗi khoảng của mẫu train (DEV-development) và out of time (REC- recent).
 
@@ -52,7 +53,8 @@ Thang đánh giá cho chỉ số PSI được cho dưới đây:
 
 .. image:: ./images/Monitoring/Picture2.png
    :align: center
-   :width: 600
+   :height: 226
+   :alt: Distribution Comparison
 
 Chỉ số sử dụng là CSI (characteristic stability index). 
 
@@ -68,7 +70,8 @@ Ngoài ra, ta có thế đánh giá sự ổn định của biến qua một th�
 
 .. image:: ./images/Monitoring/Picture3.png
    :align: center
-   :width: 600
+   :height: 226
+   :alt: Distribution Comparison
 
 Từ đồ thị ta có thể thấy được:
 

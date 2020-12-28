@@ -50,6 +50,7 @@ Bảng sau đây minh họa cho việc tính WoE:
 .. list-table:: Example of WoE calculation
    :widths: 25 15 15 15 15
    :header-rows: 1
+   :align: center
    
    * - Range
      - Total
@@ -131,14 +132,16 @@ Coarse Binning
 
 .. image:: ./images/VariableAnalysis/FineBinning.png
    :align: center
-   :width: 600
+   :height: 226
+   :alt: Fine Binning
 
 
 Fine Binning
 
 .. image:: ./images/VariableAnalysis/CoarseBinning.png
    :align: center
-   :width: 600
+   :height: 226
+   :alt: Coarse Binning
 
 Sử dụng Macro
 =============

@@ -12,11 +12,12 @@ Variable interaction xảy ra khi:
 - Xu hướng thực tế khác với xu hướng kết hợp của hai biến trong mô hình logistic.
 - Không thể giải thích xu hướng của biến đơn trong mô hình.
 
-**Ví dụ**: Xu hướng của hai biến Age và Resident status được cho như hình. Nếu mô hình hồi quy có hai biến trên thì kết quả đầu ra sẽ là (𝐴𝑔𝑒>=30, 𝑅𝑒𝑠 𝑠𝑡𝑎𝑡𝑢𝑠=𝑂𝑤𝑛) tốt nhất và (𝐴𝑔𝑒<30, 𝑅𝑒𝑠 𝑠𝑡𝑎𝑡𝑢𝑠=𝑃𝑎𝑟𝑒𝑛𝑡𝑠) xấu nhất. Tuy nhiên dữ liệu thực tế không cho thấy nhận định trên.
+**Ví dụ**: Xu hướng của hai biến Age và Resident status được cho như hình. Nếu mô hình hồi quy có hai biến trên thì kết quả đầu ra sẽ là (Age>=30, Resident Status=) tốt nhất và (Age<30, Resident Status=Parents) xấu nhất. Tuy nhiên dữ liệu thực tế không cho thấy nhận định trên.
 
 .. image:: ./images/VariableAnalysis/Interactive.png
-    :width: 600px
+    :height: 163
     :alt: Interaction of two variables
+    :align: center
 
 Giải pháp là sẽ tạo một biến mới là kết hợp của hai biến ban đầu. Biến này sẽ được nhóm tương tự như phương pháp binning. Để phát hiện sự interactive giữa các biến, ta sử dụng các phương pháp sau:
 

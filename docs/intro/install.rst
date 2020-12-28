@@ -78,7 +78,7 @@ Kiểm tra thông tin Macros
 Kết quả nhận được như sau:
 
 .. list-table:: Macro Information
-   :widths: 35 60 25 25
+   :widths: 35 50 30 30
    :header-rows: 1
    
    * - MACRO_NAME
@@ -102,4 +102,8 @@ Kết quả nhận được như sau:
      - ...
      - ...
      
-Trong đó  MACRO_NAME là tên của Macro, MACRO_DESC là mô tả về Macro. CREATED và MODIFIED là ngày tạo và ngày cuối cùng thay đổi nội dung Macro.
+Trong đó:
+
+- **MACRO_NAME** là tên của Macro, 
+- **MACRO_DESC** là mô tả về Macro,
+- **CREATED** và **MODIFIED** là ngày tạo và ngày cuối cùng thay đổi nội dung Macro.

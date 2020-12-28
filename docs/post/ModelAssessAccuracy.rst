@@ -1,8 +1,8 @@
-.. _post-moni-accuracy:
+.. _post-model_assess-accuracy:
 
-===========================
-Monitoring Report: Accuracy
-===========================
+===============================
+Monitoring Assessment: Accuracy
+===============================
 
 Kiểm định tính chính xác
 ========================

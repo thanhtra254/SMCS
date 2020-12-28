@@ -26,7 +26,8 @@ Minh hoạ kỹ thuật Cross validation
 
 .. image:: ./images/DataPreparation/Picture5.png
    :align: center
-   :width: 600
+   :height: 233
+   :alt: Cross validation
 
 
 K-fold Validation
@@ -34,16 +35,17 @@ K-fold Validation
 
 K-fold Validation được thực hiện theo các bước như sau:
 
-- Bước 1. Chia dữ liệu đã cho thành $k$ phần ($k-$fold).
-- Bước 2. Dùng $k-1$ fold để train model và dùng 1 fold còn lại để validate. Lúc này fold còn lại sẽ có predicted.
-- Bước 3. Lặp lại bước 2 tới $k$ lần. Sau bước này tất cả $k$ fold đều có predicted.
+- Bước 1. Chia dữ liệu đã cho thành :math:`k` phần (:math:`k-fold`).
+- Bước 2. Dùng :math:`k-1` fold để train model và dùng 1 fold còn lại để validate. Lúc này fold còn lại sẽ có predicted.
+- Bước 3. Lặp lại bước 2 tới :math:`k` lần. Sau bước này tất cả :math:`k` fold đều có predicted.
 - Bước 4. Tính các chỉ số đánh giá mô hình trên dựa trên predicted.
 
 Minh hoạ kỹ thuật K-fold Validation được cho như sau:
 
 .. image:: ./images/DataPreparation/Picture6.png
    :align: center
-   :width: 600
+   :height: 200
+   :alt: K-fold Validation
 
 
 Sử dụng Macro
@@ -78,7 +80,7 @@ Ví dụ chạy macro cross validation như sau:
 .. code:: sh
 
    %MODEL_CROSS_VALIDATION(DATA=DATA.TRAIN_WOE, 
-				NUM=100, 
-				PERCENT=0.3, 
-				WOE_VARLIST=X1 X2 X3 X4 X5 X6 X7 X8 X9 X10, 
-				TYPE=2);
+	NUM=100, 
+	PERCENT=0.3, 
+	WOE_VARLIST=X1 X2 X3 X4 X5 X6 X7 X8 X9 X10, 
+	TYPE=2);
