@@ -47,7 +47,7 @@ extensions = [
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 CURR_PATH = os.path.abspath(os.path.dirname(__file__))
-html_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_Big.png')
+html_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_Big_White.png')
 html_favicon = os.path.join(CURR_PATH, 'logo', 'favicon.ico')
 latex_logo = os.path.join(CURR_PATH, 'logo', 'SMCS_Logo_Small.png')
 
