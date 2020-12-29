@@ -95,3 +95,9 @@ Dựa trên khái niệm Marginal IV, thuật toán chọn biến dựa trên Ma
 
 Minh họa cho kết quả chọn biến sử dụng Marginal IV được cho trong bảng dưới đây:
 
+.. image:: ./images/VariableSelection/Marginal_IV_Result.png
+	:alt: Marginal IV Result
+	:align: center
+	:height: 426px
+
+
