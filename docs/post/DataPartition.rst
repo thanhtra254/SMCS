@@ -7,7 +7,7 @@ Data Partition
 Overfitting
 ===========
 
-**Overfitting** là hiện tượng mô hình quá khớp với dữ liệu training. Việc quá khớp chỉ với một dữ liệu dẫn đến việc dự đoán nhầm, nhiễu và mô hình không còn tốt trên các dữ liệu khác. Hình sau đây minh họa hiện tượng overfitting.
+**Overfitting** là hiện tượng mô hình quá khớp với dữ liệu training. Việc quá khớp chỉ với một dữ liệu dẫn đến việc dự đoán nhầm, nhiễu và mô hình không còn tốt trên các dữ liệu khác. Hình sau đây minh họa hiện tượng `overfitting <https://en.wikipedia.org/wiki/Overfitting>`_.
 
 .. image:: ./images/DataPreparation/Picture1.png
    :align: center
@@ -28,7 +28,7 @@ Tránh overfitting
 - Dữ liệu ban đầu thường được chia thành tập train và validate (out-of sampe).
 - Xây dựng mô hình theo độ phức tạp tăng dần trên mẫu train, dùng mô hình này để score cho mẫu validate. 
 - Theo dõi performance đồng thời trên dữ liệu train và validate.
-- Chọn điều kiện dừng phù hợp (early stopping): thường là khi performance của model trên dữ liệu validate bắt đầu xấu đi.
+- Chọn điều kiện dừng phù hợp (`early stopping <https://en.wikipedia.org/wiki/Early_stopping>`_): thường là khi performance của model trên dữ liệu validate bắt đầu xấu đi.
 
 Hình sau đây minh họa phương pháp tránh overfitting:
 
@@ -39,7 +39,7 @@ Hình sau đây minh họa phương pháp tránh overfitting:
 
 Với hình minh họa trên, ta thấy rằng, khi độ phức tạp của mô hình tăng dần thì sai số trên dữ liệu train giảm dần.Trong khi đó sai số trên dữ liệu validate lúc đầu giảm dần nhưng sau đó lại tăng lên. Căn cứ vào đồ thị, ta thấy dừng tại bước số 9 là hợp lý. 
 
-Nếu số lượng quan sát trong dữ liệu đủ lớn, ta có thể chia dữ liệu ban đầu thành dữ liệu train (chiếm 70% quan sát) và dữ liệu validate (chiếm 30%) quan sát. Tỉ lệ này có thể là 70/30 hoặc 80/20. Khi chia dữ liệu thành hai phần cần chú ý các vấn đề như sau:
+Nếu số lượng quan sát trong dữ liệu đủ lớn, ta có thể chia dữ liệu ban đầu thành dữ liệu train (chiếm 70% quan sát) và dữ liệu validate (chiếm 30%) quan sát. Tỉ lệ này có thể là 70/30 hoặc 80/20 [Naeem Siddiqi, 2017]_. Khi chia dữ liệu thành hai phần cần chú ý các vấn đề như sau:
 
 - Sử dụng kỹ thuật Stratify sample cho biến target (good/bad) nhằm đảm bảo tỉ lệ Good/Bad của mẫu validation và train là tương tự nhau.
 
@@ -95,3 +95,4 @@ Example
    %DATA_PARTITION (DATA=DATA.IMPORT, TRAIN=DATA.TRAIN, VALIDATE=DATA.VALID, PERCENT=70, TARGET=BAD);
 
 
+.. [Naeem Siddiqi, 2017] Intelligent Credit Scoring: Building and Implementing Better Credit Risk Scorecards, 2nd Edition
