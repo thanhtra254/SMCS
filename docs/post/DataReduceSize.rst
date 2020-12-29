@@ -41,7 +41,7 @@ Detail
 Output
 ------
 
-Kết quả đầu ra của Macro là dữ liệu **OUTPUT** với các biến charater đã được rút gọn độ dài tối tiếu và các biến dạng date time đã được chuyển về đúng định dạng YYYY-MM-DD.
+Kết quả đầu ra của Macro là dữ liệu **OUTPUT** với các biến định dạng ký tự (biến character) đã được rút gọn độ dài tối thiểu và các biến dạng date time đã được chuyển về đúng định dạng YYYY-MM-DD.
 
 Example
 -------
