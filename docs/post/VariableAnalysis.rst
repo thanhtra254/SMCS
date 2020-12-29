@@ -130,18 +130,19 @@ Ví dụ về binning được cho như sau:
 
 Coarse Binning
 
-.. image:: ./images/VariableAnalysis/FineBinning.png
-   :align: center
-   :height: 226
-   :alt: Fine Binning
-
-
-Fine Binning
-
 .. image:: ./images/VariableAnalysis/CoarseBinning.png
    :align: center
    :height: 226
    :alt: Coarse Binning
+
+
+
+Fine Binning
+
+.. image:: ./images/VariableAnalysis/FineBinning.png
+   :align: center
+   :height: 226
+   :alt: Fine Binning
 
 Sử dụng Macro
 =============
