@@ -29,7 +29,7 @@ Sử dụng Macro
 Syntax
 ------
 
-Macro **DATA_ADD_WOE** là công cụ transform các biến từ dạng ban đầu sang dạng WOE và lưu sang một dữ liệu mới. Cú pháp của macro như sau:
+Macro **VAR_ADD_WOE** là công cụ transform các biến từ dạng ban đầu sang dạng WOE và lưu sang một dữ liệu mới. Cú pháp của macro như sau:
 
 .. code:: sh
 
@@ -39,8 +39,8 @@ Trong đó:
 
 -	DATA (data): Dữ liệu train. Các giá trị WOE của từng nhóm sẽ được tính dựa  trên dữ liệu  DATA. Macro đẩy ra hai dữ liệu liên quan:
 
-  -	DATA_WOE (output) chứa các biến đã được chuyển sang dạng WoE từ dữ liệu DATA. Các biến được đổi tên bắt đầu bằng WOE_.
-  -	DATA_GRP (output) chứa các biến đã được chuyển sang dạng group từ dữ liệu DATA. Các biến được đổi tên bắt đầu bằng GRP_.
+  -	DATA_WOE (output) chứa các biến đã được chuyển sang dạng WoE từ dữ liệu DATA. Các biến được đổi tên bắt đầu bằng WOE\_.
+  -	DATA_GRP (output) chứa các biến đã được chuyển sang dạng group từ dữ liệu DATA. Các biến được đổi tên bắt đầu bằng GRP\_.
   
 -	VALIDATE (data): Dữ liệu validate. Macro sử dụng WOE được tính từ DATA để transform các biến. Macro đẩy ra hai dữ liệu mới:
   -	VALIDATE _WOE (output) chứa các biến đã được chuyển sang dạng WoE từ dữ liệu VALIDATE. Các biến được đổi tên bắt đầu bằng WOE_.
