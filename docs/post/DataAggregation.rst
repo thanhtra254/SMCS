@@ -90,7 +90,7 @@ Các bước xử lý trong macro như sau:
   :alt: Data Transformation
   :height: 132
   
-- Bước 2: Sử dụng `data step <https://documentation.sas.com/?docsetId=lestmtsref&docsetTarget=n1kh25to5o0wmvn1o4n4hsl3yyww.htm&docsetVersion=9.4&locale=en>`_ và  `array<https://documentation.sas.com/?docsetId=lestmtsref&docsetTarget=p08do6szetrxe2n136ush727sbuo.htm&docsetVersion=9.4&locale=en>`_ để tạo các biến mới với các hàm aggregate: num, min, avg, max, sum, std (standard deviation), crr (correlation), slp (slope), rng(range).
+- Bước 2: Sử dụng `data step <https://documentation.sas.com/?docsetId=lestmtsref&docsetTarget=n1kh25to5o0wmvn1o4n4hsl3yyww.htm&docsetVersion=9.4&locale=en>`_ và  `array <https://documentation.sas.com/?docsetId=lestmtsref&docsetTarget=p08do6szetrxe2n136ush727sbuo.htm&docsetVersion=9.4&locale=en>`_ để tạo các biến mới với các hàm aggregate: num, min, avg, max, sum, std (standard deviation), crr (correlation), slp (slope), rng(range).
 
 Output
 ------
