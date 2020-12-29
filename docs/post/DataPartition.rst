@@ -81,8 +81,17 @@ Các bước xử lý trong macro như sau:
 - **Bước 2**: Sử dụng `PROC HPSAMPLE <https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=prochp&docsetTarget=prochp_hpsample_syntax01.htm&locale=en>`_ để chia dữ liệu **DATA**  thành hai dữ liệu **TRAIN**  và  **VALID** theo tỉ lệ **PERCENT: (100- PERCENT)**.
 - **Bước 3**: Chia biến **TARGET** thành 20 nhóm theo quantile. Sử dụng biến group mới này để thực hiện `stratify sampling <https://en.wikipedia.org/wiki/Stratified_sampling>`_. Sử dụng `PROC HPSAMPLE <https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=prochp&docsetTarget=prochp_hpsample_syntax01.htm&locale=en>`_ để chia dữ liệu **DATA** thành hai dữ liệu **TRAIN**  và  **VALID** theo tỉ lệ **PERCENT: (100- PERCENT)**.
 
+
+Output
+------
+
+Kết quả đầu ra của Macro là hai dữ liệu **TRAIN** và **VALIDATE** với các biến  và tỉ lệ **TARGET** tương tự như dữ liệu đầu vào. Tỉ lệ số lượng quan sát ở hai dữ liệu **TRAIN** và **VALIDATE** so với dữ liệu **DATA** là :math:`x` và :math:`1-x`.
+
+Example
+-------
+
 .. code:: sh
 
-   %DATA_PARTITION (DATA.IMPORT, DATA.TRAIN, DATA.VALID, 70, Y);
+   %DATA_PARTITION (DATA=DATA.IMPORT, TRAIN=DATA.TRAIN, VALIDATE=DATA.VALID, PERCENT=70, TARGET=BAD);
 
 
