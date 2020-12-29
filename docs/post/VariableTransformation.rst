@@ -37,41 +37,50 @@ Macro **VAR_ADD_WOE** là công cụ transform các biến từ dạng ban đầ
   
 Trong đó:
 
--	DATA (data): Dữ liệu train. Các giá trị WOE của từng nhóm sẽ được tính dựa  trên dữ liệu  DATA. Macro đẩy ra hai dữ liệu liên quan:
+-	**DATA** (data): Dữ liệu train. Các giá trị WOE của từng nhóm sẽ được tính dựa  trên dữ liệu  DATA. Macro đẩy ra hai dữ liệu liên quan:
 
-  -	DATA_WOE (output) chứa các biến đã được chuyển sang dạng WoE từ dữ liệu DATA. Các biến được đổi tên bắt đầu bằng WOE\_.
-  -	DATA_GRP (output) chứa các biến đã được chuyển sang dạng group từ dữ liệu DATA. Các biến được đổi tên bắt đầu bằng GRP\_.
+  -	*DATA_WOE* (output) chứa các biến đã được chuyển sang dạng WoE từ dữ liệu DATA. Các biến được đổi tên bắt đầu bằng WOE\_.
+  -	*DATA_GRP* (output) chứa các biến đã được chuyển sang dạng group từ dữ liệu DATA. Các biến được đổi tên bắt đầu bằng GRP\_.
   
--	VALIDATE (data): Dữ liệu validate. Macro sử dụng WOE được tính từ DATA để transform các biến. Macro đẩy ra hai dữ liệu mới:
-  -	VALIDATE _WOE (output) chứa các biến đã được chuyển sang dạng WoE từ dữ liệu VALIDATE. Các biến được đổi tên bắt đầu bằng WOE_.
-  -	VALIDATE _GRP (output) chứa các biến đã được chuyển sang dạng group từ dữ liệu VALIDATE. Các biến được đổi tên bắt đầu bằng GRP_.
+-	**VALIDATE** (data): Dữ liệu validate. Macro sử dụng WOE được tính từ **DATA** để transform các biến. Macro đẩy ra hai dữ liệu mới:
+  -	*VALIDATE_WOE* (output) chứa các biến đã được chuyển sang dạng WoE từ dữ liệu **VALIDATE**. Các biến được đổi tên bắt đầu bằng WOE\_.
+  -	*VALIDATE_GRP* (output) chứa các biến đã được chuyển sang dạng group từ dữ liệu **VALIDATE**. Các biến được đổi tên bắt đầu bằng GRP\_.
   
--	TEST (data): Tương tự dữ liệu VALIDATE.
+-	**TEST** (data): Tương tự dữ liệu **VALIDATE**.
 
--	KEEP (variable list): Các biến cần giữ lại (ví dụ customer_id, yearmonth, contract_no). Nguyên nhân vì mặc định macro ADD_WOE chỉ giữ lại các biến có dạng WOE_, GRP_, GOOD, BAD.
+-	**KEEP** (variable list): Các biến cần giữ lại (ví dụ customer_id, yearmonth, contract_no). Nguyên nhân vì mặc định macro ADD_WOE chỉ giữ lại các biến có dạng WOE\_, GRP\_, GOOD, BAD.
 
--	VARLIST (variable list): Các biến sẽ được transform thành dạng WoE và Group.
+-	**VARLIST** (variable list): Các biến sẽ được transform thành dạng WoE và Group.
 
 Detail
 ------
 
 Các bước xử lý trong macro như sau:
 
-- Bước 1: Transform các biến thành dạng Group (các biến có tiền tố GRP_). Sử dụng PROC FREQ để tính WoE của các nhóm của các biến Group;
+- Bước 1: Transform các biến thành dạng Group (các biến có tiền tố GRP\_) và tạo bảng DATA_GRP (ví dụ tham số **DATA** là DATA.PD_RB thì dữ liệu sẽ có tên là DATA.PD_RB_GRP. Lưu ý rằng cách hiểu này được áp dụng cho các nội dung phía dưới trong bài viết này). Sử dụng `PROC FREQ <https://documentation.sas.com/?docsetId=procstat&docsetVersion=9.4&docsetTarget=procstat_freq_syntax01.htm&locale=en>`_ để tính WoE của các nhóm của các biến Group;
 -	Bước 2: Tạo bảng DATA_WOEDATA chứa thông tin tổng hợp về nhóm và WoE của các biến thuộc **VARLIST**.
--	Bước 3: Chuyển các biến trong dữ liệu DATA thành dạng group và WoE. Đẩy ra hai bảng DATA_WOE và DATA_GRP.
--	Bước 4: Nếu data **VALIDATE** tồn tại thì chuyển các biến trong dữ liệu VALIDATE thành dạng group và WoE. Đẩy ra hai bảng VALIDATE _WOE và VALIDATE _GRP.
--	Bước 5: Nếu data **TEST** tồn tại thì chuyển các biến trong dữ liệu TEST thành dạng group và WoE. Đẩy ra hai bảng TEST _WOE và TEST_GRP.
+-	Bước 3: Chuyển các biến trong dữ liệu DATA thành dạng WoE và tạo ra bảng DATA_WOE.
+-	Bước 4: Nếu dữ liệu **VALIDATE** tồn tại thì chuyển các biến trong dữ liệu **VALIDATE** thành dạng group và WoE. Đẩy ra hai bảng VALIDATE _WOE và VALIDATE _GRP.
+-	Bước 5: Nếu dữ liệu **TEST** tồn tại thì chuyển các biến trong dữ liệu **TEST** thành dạng group và WoE. Đẩy ra hai bảng TEST _WOE và TEST_GRP.
 
+Output
+------
+
+Đầu ra của Macro là các bảng sau đây:
+
+- Các bảng chứa thông tin biến dưới dạng group: DATA_GRP, VALIDATE_GRP, TEST_GRP.
+- Các bảng chứa thông tin biến dưới dạng WoE: DATA_WOE, VALIDATE_WOE, TEST_WOE.
+- Bảng chứa thông tin các nhóm của biến: DATA_WOEDATA.
+- Bảng chứa thông tin binning: DATA_MAPPING.
 
 Example
 -------
 
 .. code:: sh
 
-  %ADD_WOE (DATA.TRAIN, DATA.VALID, 
-  Y YEARMONTH,
-  X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12);
+  %VAR_ADD_WOE (DATA=DATA.TRAIN, VALIDATE= DATA.VALID, 
+    KEEP=Y YEARMONTH,
+    VARLIST=X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12);
 
 
 
