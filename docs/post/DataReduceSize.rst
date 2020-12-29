@@ -17,8 +17,12 @@ Macro DATA_REDUCE_SIZE với mục đích xử lý hai vấn đề trên:
 - Với biến chữ có độ dài lớn, macro giảm thiểu độ dài xuống ngắn nhất có thể (và vẫn dữ nguyên thông tin của dữ liệu).
 - Với các biến ngày tháng định dạng sai, macro chuyển các biến này thành đúng định dạng  là format YYMMDD10. của SAS (dữ liệu sẽ hiển thị là 2020-01-08)
 
+Sử dụng Macro
+=============
+
 Syntax
-======
+------
+
 Cú pháp của macro như sau:
 
 .. code:: sh   
@@ -31,23 +35,28 @@ Trong đó:
 - **OUTPUT** là data đầu ra.
 - **DATE_VARLIST** là danh sách các biến ngày tháng bị sai định dạng.
 
-**Ví dụ:**
+Detail
+------
+
+Output
+------
+
+Kết quả đầu ra của Macro là dữ liệu **OUTPUT** với các biến charater đã được rút gọn độ dài tối tiếu và các biến dạng date time đã được chuyển về đúng định dạng YYYY-MM-DD.
+
+Example
+-------
 
 .. code:: sas    
     
     %REDUCE_SIZE(DATA.IMPORT, DATA.IMPORT1, 
         DATE_VARLIST=
-        CREATION_DATE
-        MIN_VALUE_DATE
-        DATE_OF_ISSUE
-        CUR_START_LIVING_DATE
-        EMP_START_WORK_DATE
-        CUS_OPEN
-        MIN_BD_COLL);
-
-
-Detail
-======
+            CREATION_DATE
+            MIN_VALUE_DATE
+            DATE_OF_ISSUE
+            CUR_START_LIVING_DATE
+            EMP_START_WORK_DATE
+            CUS_OPEN
+            MIN_BD_COLL);
 
 
 
