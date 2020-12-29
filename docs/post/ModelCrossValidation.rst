@@ -62,7 +62,7 @@ Trong đó:
 
 - **DATA (data)**: Dữ liệu xây dựng mô hình. Dữ liệu cần chứa ít nhất biến BAD và các biến trong **WOE_VARLIST**.
 - **NUM (integer)**: Số lượng các bước lặp lại.
-- **PERCENT (float [0-1])**(mặc định 0.3): Tỉ lệ chia dữ liệu validate/ train: x:(1-x).
+- **PERCENT (float [0-1])** (mặc định 0.3): Tỉ lệ chia dữ liệu validate/ train: x:(1-x).
 - **WOE_VARLIST** (WOE variable list): Danh sách biến hồi quy mô hình (dạng WOE).
 - **TYPE** (mặc định 2): Nếu Type=1 thì macro sẽ không tính lại WOE của các biến. Khi đó macro sẽ chạy nhanh hơn. Nếu Type=2 thì macro sẽ tính lại WOE của các biến trước khi hồi quy.
 
