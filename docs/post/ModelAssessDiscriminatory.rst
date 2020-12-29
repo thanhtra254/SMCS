@@ -4,17 +4,20 @@
 Model Assessment: Discriminatory
 ================================
 
-Scrapy is an application framework for crawling web sites and extracting
-structured data which can be used for a wide range of useful applications, like
-data mining, information processing or historical archival.
 
-Even though Scrapy was originally designed for web scraping, it can also be
-used to extract data using APIs (such as Amazon Associates Web Services) or
-as a general purpose web crawler.
+Kiểm định tính phân biệt
+========================
 
+Kiểm định tính phân biệt được sử dụng ở hầu hết các mô hình dự báo. Một mô hình là tốt nếu quan sát A "xấu" hơn quan sát B thì mô hình phải dự báo được rằng A "xấu" hơn B. Mục đích của kiểm định tính phân biệt là kiểm tra điều này. Một số kiểm định sau đây thường được áp dụng để kiếm tra tính phân biệt của mô hình.
 
-Walk-through of an example spider
-=================================
+Đánh giá thứ tự bad rate 
+------------------------
 
-In order to show you what Scrapy brings to the table, we'll walk you through an
-example of a Scrapy Spider using the simplest way to run a spider.
+Kiểm định này thường được thực hiện như sau:
+- Chia các dữ liệu thành các nhóm dựa trên kết quả đầu ra của mô hình. Cách chia thường dùng là đảm bảo số quan sát ở mỗi nhóm bằng nhau (`quatile binning <https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=prochp&docsetTarget=prochp_hpbin_overview03.htm&locale=en>`_).
+- Sắp xếp theo thứ tự các nhóm từ xấu đến tốt theo kết quả đầu ra và tính số lượng good, bad trong mỗi nhóm. Từ đó tính được bad rate của mỗi nhóm.
+- Vẽ đồ thị thể hiện Bad rate trong từng nhóm.
+
+Ví dụ được cho trong hình sau:
+
+.. image:: 
