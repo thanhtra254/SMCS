@@ -77,3 +77,35 @@ Trong đó:
 - **Max_month:** Là số tháng lớn nhất trước ngày quan sát (12,6) của cột id_month.
 - **Id:** Primary key của bảng. Ví dụ business_date customer_id.
 - **Varlist:** Danh sách các biến.
+
+Detail
+------
+
+Các bước xử lý trong macro như sau:
+
+- Bước 1. Chuyển từ dạng bảng dọc sang dạng bảng ngang: Data từ dạng 
+
+.. image:: ./images/DataPreparation/DataTransform.png
+  :align: center
+  :alt: Data Transformation
+  :height: 132
+  
+- Bước 2: Sử dụng `data step <https://documentation.sas.com/?docsetId=lestmtsref&docsetTarget=n1kh25to5o0wmvn1o4n4hsl3yyww.htm&docsetVersion=9.4&locale=en>`_ và  `array<https://documentation.sas.com/?docsetId=lestmtsref&docsetTarget=p08do6szetrxe2n136ush727sbuo.htm&docsetVersion=9.4&locale=en>`_ để tạo các biến mới với các hàm aggregate: num, min, avg, max, sum, std (standard deviation), crr (correlation), slp (slope), rng(range).
+
+Output
+------
+
+Kết quả của macro là dữ liệu **Dsout** với các biến **Id** và các biến có dạng Varname_agg1_agg2_c/m(i)
+
+Example
+-------
+
+Ví dụ dữ liệu đầu vào là VARIABLE_SQL với các biến Z1-Z3 và dữ liệu đầu ra mong muốn là VARIABLE.
+
+.. code:: sh
+
+  %DATA_AGGREGATION(DSIN=VARIABLE_SQL, 
+                    DSOUT=VARIABLE, 
+                    MAX_MONTH=12, 
+                    ID=ID, 
+                    VARLIST= Z1 Z2 Z3);
