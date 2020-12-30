@@ -146,3 +146,79 @@ Fine Binning
 
 Sử dụng Macro
 =============
+
+
+
+Syntax
+------
+
+Để tiến hành phân tích đơn biến, ta sử dụng Macro Var_Bin. Cú pháp của Macro như sau:
+
+.. code:: sh
+  
+  %Var_Bin(Data=, Var=, Numbin=, Group=, Cut_Raw=, Cut_Fine=, Bin_raw=BIN_RAW, Bin_Fine=BIN_FINE);
+  
+Trong đó:
+
+- **Data (dataset)**  là dữ liệu đầu vào (dữ liệu train). Các tính toán trong quá trình phân tích biến sẽ được thực hiện trên dữ liệu này. Dữ liệu cần chứa ít nhất các biến Good, Bad và **Var**.
+- **Var (variable)** là biến sẽ phân tích.
+- **Numbin (int)** là số lượng nhóm được chia ban đầu bằng phương pháp quantile binning.
+- **Group (int)** là số nhóm sau khi nhóm lại.
+- **Cut_Raw (dataset)** là dữ liệu chứa có một biến UB chứa thông tin cận trên của điểm cắt. Ví dụ dữ liệu có các thông tin ., 1,4,6, . thì các điểm cắt sẽ là :math:`missing, (-\infty, 1], (1, 4], (4, 6], (6, +\infty)`. Nếu tham số này trống thì macro sẽ tự tìm các điểm cắt dựa trên **Var** và **Numbin**.
+- **Cut_Fine**
+- **Bin_Raw (dataset)** là dữ liệu chứa thông tin binning. Kết quả coarse binning của macro sẽ được lưu vào dữ liệu này.
+- **Bin_Fine (dataset)** là dữ liệu chứa thông tin binning. Kết quả fine binning của macro sẽ được lưu vào dữ liệu này.
+- **Method (character)** là các phương pháp nhóm biến. Các giá trị có thể được liệt kê như sau:
+
+  - *BEST_IV*: Thử tất cả cách nhóm biến để tìm được cách nhóm thỏa mãn: 1) số lượng nhóm sau cùng là **Group** và 2) Information Value của cách nhóm là lớn nhất. Thời gian chạy macro với **numbin=25** là 13s (máy tính CPU i7-4790s, RAM 16GB, SSD) và tăng gấp đôi khi **numbin** tăng 1 đơn vị.
+  - *MONO*: Thử tất cả cách nhóm biến để tìm được cách nhóm thỏa mãn: 1) số lượng nhóm sau cùng là **Group**, 2) Trend của WoE là monotonic (ngoại trừ nhóm missing) và 3) Information Value của cách nhóm là lớn nhất.
+  -	*FAST*: Sử dụng thuật toán Greedy để giảm số lượng nhóm từ **numbin** xuống còn **group**. Thuật toán chạy nhanh nhưng không đảm bảo cách nhóm cuối cùng có IV lớn nhất.
+  -	*BRANCH*: Thử tất cả các cách nhóm biến và sử dụng thuật toán Branch & Bound để nhóm biến. Sử dụng tham số này trong trường hợp NUM lớn (thường là lớn hơn 30). Thuật toán nhanh hơn BEST_IV.
+
+Để điều chỉnh cách nhóm biến, ta sửa biến *GRP_FINAL* trong dữ liệu *FINALBIN** là kết quả đầu ra của macro Var_Bin. Các nhóm có giá trị *GRP_FINAL* bằng nhau được hiểu là thuộc cùng một nhóm lớn của Fine Binning. Sau đó, ta sử dụng macro Var_Bin_Manual
+
+.. code:: sh
+  
+  %Var_Bin_Manual(Data=, Bin_raw=BIN_RAW, Bin_Fine=BIN_FINE);
+
+Các tham số tương tự như macro Var_Bin. Macro Var_Bin_Manual chỉ chạy được **ngay sau khi** chạy macro Var_Bin. 
+
+Detail
+------
+
+Output
+------
+
+Kết quả đầu ra của macro như sau:
+
+**Coarse Binning** bao gồm bảng và đồ thị. Bảng coarse binning chứa các thông tin như sau:
+
+- *Label (Coarse)* chứa định danh nhóm (phần trong ngoặc vuông []) và khoảng giá trị của nhóm (nửa khoảng :math:`(a, b]`).
+- *Group* Các nhóm có giá trị bằng nhau được hiểu là thuộc cùng một nhóm lớn của Fine Binning.
+- *Total, Good, Bad* là số tổng số quan sát, tổng số quan sát good, tổng số quan sát bad trong nhóm.
+- *Percent* tỉ lệ phần trăm số lượng quan sát của nhóm so với toàn bộ dữ liệu.
+- *Bad Rate, Good Rate* là Bad/Total, Good/Total.
+- *WoE, IV* được tính theo công thức ở trên.
+
+Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coarse binning thể hiện số lượng quan sát trong mỗi nhóm và WOE tương ứng. Đồ thì được group theo biến *Group*.
+
+**Fine Binning** tương tự như coarse binning.
+
+**Format** có dạng PROC FORMAT, cần lưu lại format này để thực hiện bước tiếp theo là `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`
+
+**Information Value by Group Step** là đồ thị thể hiện giá trị IV với số lượng nhóm ở fine binning từ 1 đến **numbin**. Có thể dựa vào đồ thị này để quyết định **group**.
+
+Example
+-------
+
+Binning để tìm cách nhóm tối ưu:
+
+.. code:: sh
+  
+  %VAR_BIN(DATA=DATA.TRAIN, VAR=X2, NUMBIN=20, GROUP=8);
+  
+Binning để tìm cách nhóm tối ưu và monotonic
+
+.. code:: sh
+  
+  %VAR_BIN(DATA=DATA.TRAIN, VAR=X2, NUMBIN=20, METHOD=MONO);
