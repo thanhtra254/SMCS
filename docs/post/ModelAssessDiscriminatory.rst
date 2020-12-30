@@ -61,4 +61,4 @@ Hệ số K-S
 Hệ số K-S đo lường sự khác biệt lớn nhất giữa phân phối tích luỹ của quan sát good và bad. Công thức tính K-S như sau:
 
 .. math:: 
-  K-S=max(%Cum_Bad_i - %Cum_Good_i)
+  K-S=max(\%Cum_Bad_i - \%Cum_Good_i)
