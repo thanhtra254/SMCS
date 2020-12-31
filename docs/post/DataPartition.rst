@@ -99,4 +99,4 @@ References
 
 .. target-notes::
 
-.. _`Naeem Siddiqi, 2017`: Intelligent Credit Scoring: Building and Implementing Better Credit Risk Scorecards, 2nd Edition
+.. _`Naeem Siddiqi, 2017`: https://www.amazon.com/Intelligent-Credit-Scoring-Implementing-Scorecards/dp/1119279151
