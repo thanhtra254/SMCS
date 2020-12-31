@@ -139,6 +139,7 @@ Kết quả đầu ra của mô hình như sau:
 
 .. csv-table:: Example of dataset SUMMARY
 	:header: "VARIABLE","ID","STEP1","STEP2","STEP3","STEP4","STEP5"
+	:align: center
 	:widths: 20, 15, 15, 15, 15, 15, 15 
 	
 	"WOE_X1_1",	1,	0.24,	0.13,	0.09,	0.08,	0.08
