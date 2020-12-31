@@ -68,6 +68,20 @@ Kết quả đầu ra của Macro là bảng *RESULT* với mỗi dòng là thô
 - MEAN_VALID_GINI: Giá trị trung bình của Gini trong mẫu validate. Cột này chính là thông tin của tham số **METRIC**.
 - NUM_NEG: Số lượng các biến có hệ số ước lượng là số âm.
 
+.. csv-table:: Example of dataset RESULT
+	:header: ID,	MEAN_TRAIN_GINI,	NUM_VAR,	SELECT_VAR,	MEAN_VALID_GINI,	NUM_NEG
+	:align: center
+	:widths: 15, 30, 20, 30, 30, 15, 15 
+	
+  1,	20.37%,	1,	000000001,	16.47%,	0
+  2,	38.41%,	1,	000000010,	33.04%,	0
+  3,	46.44%,	2,	000000011,	41.18%,	0
+  4,	44.77%,	1,	000000100,	43.63%,	0
+  5,	50.64%,	2,	000000101,	47.49%,	0
+  6,	52.83%,	2,	000000110,	48.47%,	0
+
+  
+  
 Example
 -------
 
