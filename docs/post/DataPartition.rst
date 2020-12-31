@@ -39,7 +39,7 @@ Hình sau đây minh họa phương pháp tránh overfitting:
 
 Với hình minh họa trên, ta thấy rằng, khi độ phức tạp của mô hình tăng dần thì sai số trên dữ liệu train giảm dần.Trong khi đó sai số trên dữ liệu validate lúc đầu giảm dần nhưng sau đó lại tăng lên. Căn cứ vào đồ thị, ta thấy dừng tại bước số 9 là hợp lý. 
 
-Nếu số lượng quan sát trong dữ liệu đủ lớn, ta có thể chia dữ liệu ban đầu thành dữ liệu train (chiếm 70% quan sát) và dữ liệu validate (chiếm 30%) quan sát. Tỉ lệ này có thể là 70/30 hoặc 80/20 [Naeem Siddiqi, 2017]_. Khi chia dữ liệu thành hai phần cần chú ý các vấn đề như sau:
+Nếu số lượng quan sát trong dữ liệu đủ lớn, ta có thể chia dữ liệu ban đầu thành dữ liệu train (chiếm 70% quan sát) và dữ liệu validate (chiếm 30%) quan sát. Tỉ lệ này có thể là 70/30 hoặc 80/20 `Naeem Siddiqi, 2017`_. Khi chia dữ liệu thành hai phần cần chú ý các vấn đề như sau:
 
 - Sử dụng kỹ thuật Stratify sample cho biến target (good/bad) nhằm đảm bảo tỉ lệ Good/Bad của mẫu validation và train là tương tự nhau.
 
@@ -94,5 +94,9 @@ Example
 
    %DATA_PARTITION (DATA=DATA.IMPORT, TRAIN=DATA.TRAIN, VALIDATE=DATA.VALID, PERCENT=70, TARGET=BAD);
 
+References
+==========
 
-.. [Naeem Siddiqi, 2017] Intelligent Credit Scoring: Building and Implementing Better Credit Risk Scorecards, 2nd Edition
+.. target-notes::
+
+.. _`Naeem Siddiqi, 2017`: Intelligent Credit Scoring: Building and Implementing Better Credit Risk Scorecards, 2nd Edition
