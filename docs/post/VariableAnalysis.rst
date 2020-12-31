@@ -191,6 +191,9 @@ Output
 
 Kết quả đầu ra của macro như sau:
 
+Các kết quả output SAS
+^^^^^^^^^^^^^^^^^^^^^^
+
 **Coarse Binning** bao gồm bảng và đồ thị. Bảng coarse binning chứa các thông tin như sau:
 
 - *Label (Coarse)* chứa định danh nhóm (phần trong ngoặc vuông []) và khoảng giá trị của nhóm (nửa khoảng :math:`(a, b]`).
@@ -201,6 +204,11 @@ Kết quả đầu ra của macro như sau:
 - *WoE, IV* được tính theo công thức ở trên.
 
 Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coarse binning thể hiện số lượng quan sát trong mỗi nhóm và WOE tương ứng. Đồ thì được group theo biến *Group*.
+
+.. image:: ./images/VariableAnalysis/TableCoarseBin.png
+  :align: center
+  :alt: Example of Table Coarse Binning
+  :height: 223
 
 **Fine Binning** tương tự như coarse binning.
 
