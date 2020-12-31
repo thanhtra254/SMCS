@@ -101,3 +101,53 @@ Minh họa cho kết quả chọn biến sử dụng Marginal IV được cho tr
 	:height: 426px
 
 
+Sử dụng macro
+=============
+
+Syntax
+------
+
+Cú pháp của Macro như sau:
+
+.. code:: sh
+
+	%VARSELECT_MARIV (DATA=, WOE_VARLIST=, IV_ENTRY=0.02, CORR=0.7)
+
+Trong đó:
+
+- **DATA (data)** là dữ liệu đầu vào.
+- **WOE_VARLIST (list of variables)** là danh sách các biến ở định dạng WOE. Macro sẽ chọn biến từ danh sách các biến này.
+- **IV_ENTRY (float)** điểm cắt marginal IV. Chỉ các biến có marginal IV lớn hơn ngưỡng này mới được chọn vào mô hình.
+- **CORR (float)** điểm cắt correlation. Chỉ các biến có correlation với các biến *đã vào mô hình* nhỏ hơn ngưỡng này mới được chọn và mô hình.
+
+Detail
+------
+
+Output
+------
+
+Kết quả đầu ra của mô hình như sau:
+
+- *Bảng kết quả lựa chọn biến* thể hiện biến vào mô hình tại mỗi bước và Marginal IV của các biến tại bước đó. Bàng này chỉ hiển thị các biến vào mô hình cuối cùng.
+
+.. image:: ./images/VariableSelection/Marginal_IV_Result.png
+	:alt: Marginal IV Result
+	:align: center
+	:height: 426px
+	
+- *Bảng SUMMARY** thể hiện đầy đủ Marginal IV của các biến tại các bước (các cột STEP1-...).
+- *Bảng SELECTTIONS_SUMMARY* thể hiện Gini của mô hình và số lượng các biến có hệ số ước lượng là âm tại mỗi bước.
+- *Bảng SELECTED_VARIABLE* chứa danh sách các biến được chọn vào mô hình (theo thứ tự).
+
+
+Example
+-------
+
+Ví dụ về chọn biến sử dụng Marginal IV:
+
+.. code:: sh
+	
+	%VARSELECT_MARIV (DATA=DATA.MODEL2, 
+		WOE_VARLIST=WOE_X1 WOE_X2 WOE_X3 WOE_X4 WOE_X5 WOE_X6 WOE_X7 WOE_X8 WOE_X9, 
+		IV_ENTRY=0.01, 
+		CORR=0.7);
