@@ -138,7 +138,7 @@ Kết quả đầu ra của mô hình như sau:
 - *Bảng SUMMARY** thể hiện đầy đủ Marginal IV của các biến tại các bước (các cột STEP1-...).
 
 .. csv-table:: Example of dataset SUMMARY
-	:header: "VARIABLE"	"ID"	"STEP1"	"STEP2"	"STEP3"	"STEP4"	"STEP5"
+	:header: "VARIABLE","ID","STEP1","STEP2","STEP3","STEP4","STEP5"
 	:widths: 20, 15, 15, 15, 15, 15, 15 
 	
 	"WOE_X1_1",	1,	0.24,	0.13,	0.09,	0.08,	0.08
