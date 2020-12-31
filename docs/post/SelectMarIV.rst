@@ -147,8 +147,22 @@ Kết quả đầu ra của mô hình như sau:
 	"WOE_X1_3",	3,	0.13,	0.07,	0.05,	0.04,	...
 	"WOE_X1_4",	4,	0.13,	0.06,	0.05,	0.04,	...
 	"WOE_X2_1",	5,	0.16,	0.06,	0.03,	0.01,	...
+	"...",	...,	...,	...,	...,	...,	...
 	
 - *Bảng SELECTTIONS_SUMMARY* thể hiện Gini của mô hình và số lượng các biến có hệ số ước lượng là âm tại mỗi bước.
+
+.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+	:header: "STEP","EFFECTENTERED","GINI","NUM_NEG"
+	:align: center
+	:widths: 15, 25, 15, 15 
+	
+	1,	"WOE_X4_4",	66.11%,	0
+	2,	"WOE_X7_14",	71.47%,	0
+	3,	"WOE_X2_5",	74.65%,	0
+	4,	"WOE_X4_11",	75.22%,	0
+	5,	"WOE_X4_7",	75.43%,	0
+	...,	...,	...,	...
+	
 - *Bảng SELECTED_VARIABLE* chứa danh sách các biến được chọn vào mô hình (theo thứ tự).
 
 
