@@ -136,6 +136,16 @@ Kết quả đầu ra của mô hình như sau:
 	:height: 426px
 	
 - *Bảng SUMMARY** thể hiện đầy đủ Marginal IV của các biến tại các bước (các cột STEP1-...).
+
+.. csv-table:: Example of dataset SUMMARY
+	:header: "VARIABLE"	"ID"	"STEP1"	"STEP2"	"STEP3"	"STEP4"	"STEP5"
+	:widths: 20, 15, 15, 15, 15, 15, 15 
+	"WOE_X1_1",	1,	0.24,	0.13,	0.09,	0.08,	0.08
+	"WOE_X1_2",	2,	0.22,	0.11,	0.07,	0.06,	0.05
+	"WOE_X1_3",	3,	0.13,	0.07,	0.05,	0.04,	0.05
+	"WOE_X1_4",	4,	0.13,	0.06,	0.05,	0.04,	0.04
+	"WOE_X2_1",	5,	0.16,	0.06,	0.03,	0.01,	0.01
+	
 - *Bảng SELECTTIONS_SUMMARY* thể hiện Gini của mô hình và số lượng các biến có hệ số ước lượng là âm tại mỗi bước.
 - *Bảng SELECTED_VARIABLE* chứa danh sách các biến được chọn vào mô hình (theo thứ tự).
 
