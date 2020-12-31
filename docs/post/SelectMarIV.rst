@@ -165,7 +165,18 @@ Kết quả đầu ra của mô hình như sau:
 	
 - *Bảng SELECTED_VARIABLE* chứa danh sách các biến được chọn vào mô hình (theo thứ tự).
 
-
+.. csv-table:: Example of dataset SELECTED_VARIABLE
+	:header: "VARIABLE"
+	:align: center
+	:widths: 20
+	
+	"WOE_X1_1"
+	"WOE_X1_2"
+	"WOE_X1_3"
+	"WOE_X1_4"
+	"WOE_X2_1"
+	"..."
+	
 Example
 -------
 
