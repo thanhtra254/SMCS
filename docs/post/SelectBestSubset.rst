@@ -14,8 +14,8 @@ Với mỗi tập con, ta tiến hành hồi quy mô hình với các biến tro
 - Metric: Tiêu chí để đánh giá mô hình. Vì các mô hình Credit Scoring hay sử dụng Gini là chỉ số đánh giá nên các metric sau đây thường được sử dụng:
 
   - Gini của dữ liệu train/ validation.
-  - Gini của Cross validation.
-  - Gini của K-fold validation.
+  - Gini của Cross validation (xem thêm `Cross Validation <https://smcs.readthedocs.io/vi/latest/post/ModelCrossValidation.html>`_).
+  - Gini của K-fold validation (xem thêm `K-fold Validation <https://smcs.readthedocs.io/vi/latest/post/ModelCrossValidation.html>`_).
   
 - Số lượng các biến có hệ số ước lượng là âm: về tiêu chí chọn biến thì các hệ số ước lượng không được là số âm (xem thêm `variable selection <https://smcs.readthedocs.io/vi/latest/post/SelectOverview.html>`_.
 
