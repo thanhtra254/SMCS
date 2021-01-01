@@ -208,21 +208,21 @@ Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coars
 .. image:: ./images/VariableAnalysis/TableCoarseBin.png
   :align: center
   :alt: Example of Table Coarse Binning
-  :height: 223
+  :height: 446
 
 **Fine Binning** tương tự như coarse binning.
 
 .. image:: ./images/VariableAnalysis/TableFineBin.png
   :align: center
   :alt: Example of Table Coarse Binning
-  :height: 87
+  :height: 174
 
 **Format** có dạng PROC FORMAT, cần lưu lại format này để thực hiện bước tiếp theo là `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
 
 .. image:: ./images/VariableAnalysis/ProcFormat.png
   :align: center
   :alt: Example of Table Coarse Binning
-  :height: 101
+  :height: 202
 
 
 **Information Value by Group Step** là đồ thị thể hiện giá trị IV với số lượng nhóm ở fine binning từ 1 đến **numbin**. Có thể dựa vào đồ thị này để quyết định **group**.
@@ -230,7 +230,7 @@ Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coars
 .. image:: ./images/VariableAnalysis/SummaryIV.png
   :align: center
   :alt: Example of Table Coarse Binning
-  :height: 150
+  :height: 300
   
   
 Example
