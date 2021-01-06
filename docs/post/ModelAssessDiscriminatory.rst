@@ -46,7 +46,7 @@ Từ kết quả tính toán good và bad trong mỗi nhóm, ta tính toán tỷ
 Hệ số Gini được tính là hai lần phần diện tích được giới hạn bởi Roc curve của model và đường chéo nối điểm :math:`(0;0)` và :math:`(1;1)`.  Công thức tính Gini như sau:
 
 .. math::
-  Gini=1-\sum_{i=0}^{n} \left(\%CumBad_{i+1} + \%CumBad_i\right)\left(\%CumGood_{i+1} - \%CumGood_i\right)
+  Gini=1-\sum_{i=0}^{n-1} \left(\%CumBad_{i+1} + \%CumBad_i\right)\left(\%CumGood_{i+1} - \%CumGood_i\right)
   
 Với :math:`\%CumBad_0=\%CumGood_0=0`.
 
