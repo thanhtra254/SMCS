@@ -68,7 +68,28 @@ Nếu có tham số **outtime** thì macro sẽ sử dụng cách chia biến in
 Output
 ------
 
-Kết qua
+Kết quả của macro là các dữ liệu như sau: 
+
+Các bảng liên quan đến các chỉ số thống kê * dự báo
+
+- *MAPPING* là dữ liệu ghi lại cách binning các biến. Có thể sử dụng bảng này cùng với `PROC HPBIN <https://documentation.sas.com/?docsetId=prochp&docsetTarget=prochp_hpbin_syntax01.htm&docsetVersion=9.4&locale=en>`_ để binning các biến.
+
+.. csv-table:: Example of dataset MAPPING
+	:header: Variable, BinnedVariable, LB, UB, Range, Bin, Frequency, Proportion
+	:align: center
+	:widths: 10, 20, 20, 20, 30, 10, 10, 10
+	
+	X1,	BIN_X1,	.,    	-0.997,	X1 < -0.997,           	1,	8761,	0.05000029
+  X1,	BIN_X1,	-0.997,	-0.992,	-0.997 <= X1 < -0.992,	2,	8761,	0.05000029
+  X1,	BIN_X1,	-0.992,	-0.983,	-0.992 <= X1 < -0.983,	3,	8761,	0.05000029
+  X1,	BIN_X1,	-0.983,	-0.971,	-0.983 <= X1 < -0.971,	4,	8761,	0.05000029
+  X1,	BIN_X1,	-0.971,	-0.956,	-0.971 <= X1 < -0.956,	5,	8761,	0.05000029
+	...,	...,	...,	...,	...,	..., ..., ...
+
+- **
+
+Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất hiện nếu có dữ liệu **outtime**)
+
 
 Example
 -------
