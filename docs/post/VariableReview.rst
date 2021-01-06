@@ -86,9 +86,24 @@ Các bảng liên quan đến các chỉ số thống kê * dự báo
 	X1,	BIN_X1,	-0.971,	-0.956,	-0.971 <= X1 < -0.956,	5,	8761,	0.05000029
 	...,	...,	...,	...,	...,	..., ..., ...
 
-- **
+- **ITV_PRE_BIN, CHR_PRE_BIN** thông tin binning của các biến interval (itv) và categorical (character - chr). Các cột quan trọng như sau:
+	- NonEventCount, NonEventCount số lượng bad và số lượng good trong nhóm.
+	- NonEventRate, EventRate tỉ lệ bad và good trong nhóm.
+	- WOE, IV được tính toán như trình này ở `Variable Analysis <https://smcs.readthedocs.io/vi/latest/post/VariableAnalysis.html>`_.
+	
+.. csv-table:: Example of dataset ITV_PRE_BIN
+	:header: ..., Range, Bin, NonEventCount, NonEventRate, EventCount, EventRate, WOE, IV
+	:align: center
+	:widths: 10, 30, 10, 15, 15, 15, 15, 15, 15
+	
+	...,	X1 < -0.997,		1,	6336,	0.723,	2425,	0.276,	0.955,	0.042
+	...,	-0.997 <= X1 < -0.992,	2,	5442,	0.621,	3319,	0.378,	0.489,	0.011
+	...,	-0.992 <= X1 < -0.983,	3,	5495,	0.627,	3266,	0.372,	0.515,	0.012
+	...,	-0.983 <= X1 < -0.971,	4,	5590,	0.638,	3171,	0.361,	0.561,	0.015
+	...,	...,			...,	...,	...,	..., 	..., 	..., 	...
 
-Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất hiện nếu có dữ liệu **outtime**)
+Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất hiện nếu có dữ liệu **outtime**). 
+
 
 
 Example
