@@ -129,18 +129,18 @@ Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất 
 	- *VARIABLE, GROUP* tên của biến và nhóm tương tứng.
 	- *YEARMONTH*: giá trị tại yearmonth.
 	- *DEV_COLPERCENT, REC_COLPERCENT* tỉ lệ phần trăm của nhóm trong dữ liệu **train** (development - dev) và **outtime** (recent - rec).
-	- *PSI* được tính theo công thức :math:`PSI=left(\%Dev-\%Rec\right)ln\left(\frac{\%Dev}{\%Rec}\right)`. Chi tiết xem tại `Stability <https://smcs.readthedocs.io/vi/latest/post/MoniStability.html>`_.
+	- *PSI* được tính theo công thức :math:`PSI=left(\%Dev-\%Rec\right)ln\left(\frac{\%Dev}{\%Rec}\right)`. Chi tiết xem tại `Monitoring: Stability <https://smcs.readthedocs.io/vi/latest/post/MoniStability.html>`_.
 
 .. csv-table:: Example of dataset ITV_PCT_YM
 	:header: VARIABLE, GROUP, YEARMONTH, DEV_COLPERCENT, REC_COLPERCENT, PSI
 	:align: center
 	:widths: 15, 10, 15, 15, 15, 10
 	
-	BIN_X1,	1, 	201905,	5.00,	5.02,	0.00,
-	BIN_X1,	1, 	201907,	5.00,	5.02,	0.00,
-	BIN_X1,	1, 	201911,	5.00,	5.02,	0.00,
-	BIN_X1,	1, 	201904,	5.00,	5.02,	0.00,
-	BIN_X1,	1, 	201908,	5.00,	5.02,	0.00,
+	BIN_X1,	1, 	201905,	5.00,	5.02,	0.00
+	BIN_X1,	1, 	201907,	5.00,	5.02,	0.00
+	BIN_X1,	1, 	201911,	5.00,	5.02,	0.00
+	BIN_X1,	1, 	201904,	5.00,	5.02,	0.00
+	BIN_X1,	1, 	201908,	5.00,	5.02,	0.00
 	...,	...,	..., 	..., 	..., 	...
 Example
 -------
