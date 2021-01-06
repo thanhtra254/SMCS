@@ -22,10 +22,10 @@ Variable interaction xảy ra khi:
 Giải pháp là sẽ tạo một biến mới là kết hợp của hai biến ban đầu. Biến này sẽ được nhóm tương tự như phương pháp binning. Để phát hiện sự interactive giữa các biến, ta sử dụng các phương pháp sau:
 
 - Dựa trên kinh nghiệm bản thân:
+
   - Đối với mô hình application, interaction thường xảy ra giữa các biến demographic
   - Đối với mô hình behavior, thường xảy ra interaction giữa biến behavior và biến month on book.
-- Dựa trên interaction để giải thích chi tiết xu hướng của biến.
-- Dựa trên decision tree và so sánh kết quả với hồi quy logistic.
+- Dựa trên các tính toán định lượng. Ví dụ so sánh mô hình xây bằng decision tree và hồi quy logistic.
 
 Thực hiện variable interaction:
 
