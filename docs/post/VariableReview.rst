@@ -129,7 +129,7 @@ Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất 
 	- *VARIABLE, GROUP* tên của biến và nhóm tương tứng.
 	- *YEARMONTH*: giá trị tại yearmonth.
 	- *DEV_COLPERCENT, REC_COLPERCENT* tỉ lệ phần trăm của nhóm trong dữ liệu **train** (development - dev) và **outtime** (recent - rec).
-	- *PSI* được tính theo công thức :math:`PSI=left(\%Dev-\%Rec\right)ln\left(\frac{\%Dev}{\%Rec}\right)`. Chi tiết xem tại `Monitoring: Stability <https://smcs.readthedocs.io/vi/latest/post/MoniStability.html>`_.
+	- *PSI* được tính theo công thức :math:`PSI=left(\%Dev-\%Rec\right)\ln\left(\frac{\%Dev}{\%Rec}\right)`. Chi tiết xem tại `Monitoring: Stability <https://smcs.readthedocs.io/vi/latest/post/MoniStability.html>`_.
 
 .. csv-table:: Example of dataset ITV_PCT_YM
 	:header: VARIABLE, GROUP, YEARMONTH, DEV_COLPERCENT, REC_COLPERCENT, PSI
