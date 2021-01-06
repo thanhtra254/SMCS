@@ -77,16 +77,17 @@ Các bảng liên quan đến các chỉ số thống kê * dự báo
 .. csv-table:: Example of dataset MAPPING
 	:header: Variable, BinnedVariable, LB, UB, Range, Bin, Frequency, Proportion
 	:align: center
-	:widths: 10, 20, 20, 20, 30, 10, 10, 10
+	:widths: 15, 20, 12, 12, 30, 10, 15, 15
 	
-	X1,	BIN_X1,	.,    	-0.997,	X1 < -0.997,           	1,	8761,	0.05000029
-	X1,	BIN_X1,	-0.997,	-0.992,	-0.997 <= X1 < -0.992,	2,	8761,	0.05000029
-	X1,	BIN_X1,	-0.992,	-0.983,	-0.992 <= X1 < -0.983,	3,	8761,	0.05000029
-	X1,	BIN_X1,	-0.983,	-0.971,	-0.983 <= X1 < -0.971,	4,	8761,	0.05000029
-	X1,	BIN_X1,	-0.971,	-0.956,	-0.971 <= X1 < -0.956,	5,	8761,	0.05000029
+	X1,	BIN_X1,	.,    	-0.997,	X1 < -0.997,           	1,	8761,	0.050
+	X1,	BIN_X1,	-0.997,	-0.992,	-0.997 <= X1 < -0.992,	2,	8761,	0.050
+	X1,	BIN_X1,	-0.992,	-0.983,	-0.992 <= X1 < -0.983,	3,	8761,	0.050
+	X1,	BIN_X1,	-0.983,	-0.971,	-0.983 <= X1 < -0.971,	4,	8761,	0.050
+	X1,	BIN_X1,	-0.971,	-0.956,	-0.971 <= X1 < -0.956,	5,	8761,	0.050
 	...,	...,	...,	...,	...,	..., ..., ...
 
 - *ITV_PRE_BIN, CHR_PRE_BIN* thông tin binning của các biến interval (itv) và categorical (character - chr). Các cột quan trọng như sau:
+
 	- NonEventCount, NonEventCount số lượng bad và số lượng good trong nhóm.
 	- NonEventRate, EventRate tỉ lệ bad và good trong nhóm.
 	- WOE, IV được tính toán như trình này ở `Variable Analysis <https://smcs.readthedocs.io/vi/latest/post/VariableAnalysis.html>`_.
@@ -94,7 +95,7 @@ Các bảng liên quan đến các chỉ số thống kê * dự báo
 .. csv-table:: Example of dataset ITV_PRE_BIN
 	:header: ..., Range, Bin, NonEventCount, NonEventRate, EventCount, EventRate, WOE, IV
 	:align: center
-	:widths: 10, 30, 10, 15, 15, 15, 15, 15, 15
+	:widths: 5, 30, 5, 20, 20, 17, 17, 10, 10
 	
 	...,	X1 < -0.997,		1,	6336,	0.723,	2425,	0.276,	0.955,	0.042
 	...,	-0.997 <= X1 < -0.992,	2,	5442,	0.621,	3319,	0.378,	0.489,	0.011
@@ -103,6 +104,7 @@ Các bảng liên quan đến các chỉ số thống kê * dự báo
 	...,	...,			...,	...,	...,	..., 	..., 	..., 	...
 
 - *ITV_SUMMARY, CHR_SUMMARY* chứa các thông tin chỉ số thống kê và chỉ số dự báo của biến. Dữ liệu bao gồm các cột:
+
 	- *VARIABLE* tên của biến.
 	- *NUM_BIN*: Số lượng các nhóm sau khi binning của biến.
 	- *MAX_BADRATE, MIN_BADRATE* bad rate lớn nhất/ nhỏ nhất trong tất cả các nhóm của biến.
@@ -126,6 +128,7 @@ Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất 
 
 
 - *ITV_PCT_YM, CHR_PCT_YM* chứa tỉ lệ phần trăm của từng nhóm trong từng biến trong từng tháng ở dữ liệu **outtime**. Các cột như sau:
+
 	- *VARIABLE, GROUP* tên của biến và nhóm tương tứng.
 	- *YEARMONTH*: giá trị tại yearmonth.
 	- *DEV_COLPERCENT, REC_COLPERCENT* tỉ lệ phần trăm của nhóm trong dữ liệu **train** (development - dev) và **outtime** (recent - rec).
@@ -134,7 +137,7 @@ Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất 
 .. csv-table:: Example of dataset ITV_PCT_YM
 	:header: VARIABLE, GROUP, YEARMONTH, DEV_COLPERCENT, REC_COLPERCENT, PSI
 	:align: center
-	:widths: 15, 10, 15, 15, 15, 10
+	:widths: 15, 10, 15, 20, 20, 10
 	
 	BIN_X1,	1, 	201905,	5.00,	5.02,	0.00
 	BIN_X1,	1, 	201907,	5.00,	5.02,	0.00
@@ -149,4 +152,7 @@ Ví dụ như sau:
 
 .. code:: sh
 
-	%VAR_REVIEW(TRAIN=DATA.TRAIN, OUTTIME=DATA.OUTTIME, NUMBIN=20, EXCLUDE_VARLIST=Y GOOD BAD YEARMONTH ID OBS_DATE);
+	%VAR_REVIEW(TRAIN=DATA.TRAIN, 
+		OUTTIME=DATA.OUTTIME, 
+		NUMBIN=20, 
+		EXCLUDE_VARLIST=Y GOOD BAD YEARMONTH ID OBS_DATE);
