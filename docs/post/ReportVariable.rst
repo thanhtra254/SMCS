@@ -4,17 +4,24 @@
 Report Variables
 ================
 
-Scrapy is an application framework for crawling web sites and extracting
-structured data which can be used for a wide range of useful applications, like
-data mining, information processing or historical archival.
+Trình bày kết quả phân tích biến bao gồm các nội dung sau đây:
 
-Even though Scrapy was originally designed for web scraping, it can also be
-used to extract data using APIs (such as Amazon Associates Web Services) or
-as a general purpose web crawler.
+- Overview về dữ liệu: số lượng quan sát, số lượng good, số lượng bad trong mỗi nhóm.
+- Overview vể các biến: Các thông tin thống kê: min, max, ... và các thông tin về tính dự báo IV, Trend, .... Nội dung của phần này là kết quả của `Variable Review <https://smcs.readthedocs.io/vi/latest/post/VariableReview.html>`_.
+- Phân tích biến: Bao gồm coarse binning và fine binning. Nội dung của phần này là kết quả của `Variable Analysis <https://smcs.readthedocs.io/vi/latest/post/VariableAnalysis.html>`_.
 
 
-Walk-through of an example spider
-=================================
+Sử dụng Macro
+=============
 
-In order to show you what Scrapy brings to the table, we'll walk you through an
-example of a Scrapy Spider using the simplest way to run a spider.
+Syntax
+------
+
+Detail
+------
+
+Output
+------
+
+Example
+-------
