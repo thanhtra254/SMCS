@@ -133,7 +133,6 @@ Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất 
 
 .. csv-table:: Example of dataset ITV_PCT_YM
 	:header: VARIABLE, GROUP, YEARMONTH, DEV_COLPERCENT, REC_COLPERCENT, PSI
-
 	:align: center
 	:widths: 15, 10, 15, 15, 15, 10
 	
