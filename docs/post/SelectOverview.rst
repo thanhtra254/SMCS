@@ -17,13 +17,13 @@ Việc lựa chọn biến ở mô hình Credit Scoring có mục đích chọn 
 - Sự ổn định của biến trong tương lai,
 - Ý kiến chuyên gia, 
 - …
-Vì các tiêu chí định tính rất đa dạng và mỗi tổ chức có đặc trưng riêng về khẩu vị rủi ro, nguồn dữ liệu nên trong tài liệu giả định các biến đã được lọc qua các tiêu chí định tính này này.
+Vì các tiêu chí định tính rất đa dạng và mỗi tổ chức có đặc trưng riêng về khẩu vị rủi ro, nguồn dữ liệu nên tài liệu giả định các biến đã được lọc qua các tiêu chí định tính này.
 
 **Tiêu chí định lượng** bao gồm các tiêu chí như sau:
 
 - Các biến không có tương quan đôi một lớn hơn 0.7: Thật ra điều này không hề có trong bất kỳ tài liệu chính thống nào. Nhiều nghiên cứu chỉ ra rằng với số lượng mẫu đủ lớn thì sự đa cộng tuyến giữa các biến không ảnh hưởng tới kết quả hồi quy mô hình. Ngưỡng 0.7 là tự quy định.
 - Các hệ số phải là dương: Từ công thức tính :math:`WoE=\ln\left(\frac{\%Good}{\%Bad}\right)` ta thấy rằng, khách hàng càng tốt thì WoE càng lớn. Điều đó nghĩa là các hệ số hồi quy :math:`\beta_1, \beta_2, \ldots, \beta_n` ứng với :math:`woeX1,woeX2,\ldots,woeXn` phải là các giá trị dương. 
-- P-value của mỗi biến phải nhỏ hơn 0.05: Điều này để đảm bảo biến vào mô hình là có ý nghĩa. Tuy nhiên chỉ số này không đáng tin cậy và có thể fake dễ dàng.
+- P-value của mỗi biến phải nhỏ hơn 0.05: Điều này để đảm bảo biến vào mô hình là có ý nghĩa. Tuy nhiên chỉ số này không đáng tin cậy và có thể giả mạo dễ dàng.
 - Tối đa hóa sức mạnh của mô hình: Các tài liệu và các tổ chức tín dụng hay sử dụng chỉ số Gini (một số dạng khác là AR, AUC) để đánh giá sức mạnh của mô hình.
 
 Lựa chọn biến là công việc chọn ra :math:`k` biến từ :math:`n` biến ban đầu sao cho thoả mãn các tiêu chí đã đặt ra. Các phương pháp lựa chọn biến được liệt kê ở mục tiếp theo.
@@ -39,7 +39,7 @@ Thuật toán best-subset thử tất cả các tổ hợp biến để tìm ra 
 	
 - Số lượng các trường hợp cần thử vẫn rất lớn.
 - Kết quả tìm ra là tối ưu nhưng có thể vẫn không đảm bảo điều kiện về dấu và sự tương quan giữa các biến.
-- Phương pháp branch & bound dựa trên giả định hàm mất mát là monotonic. Tuy nhiên, các mô hình thẻ điểm tín dụng thường chọn mô hình dựa trên hệ số Gini. Hệ số này là rời rạc và không có tính chất đơn điệu.
+- Phương pháp branch and bound dựa trên giả định hàm mất mát là monotonic. Tuy nhiên, các mô hình thẻ điểm tín dụng thường chọn mô hình dựa trên hệ số Gini. Hệ số này là rời rạc và không có tính chất đơn điệu.
 
 Vì các lý do này, phương pháp best subset không phù hợp với đa phần các mô hình thẻ điểm tín dụng. Phương pháp này chỉ có thể áp dụng nếu số lượng biến trong mô hình là nhỏ trong khả năng chạy của máy tính.
 
@@ -51,7 +51,7 @@ Thuật toán Greedy là thuật toán tìm kiếm sự tối ưu trong từng b
 - Forward, Backward, Stepwise.
 - Marginal IV.
 
-Trong đó phương pháp stepwise được sử dụng phổ biến nhất. Thuật toán Greedy cần khối lượng tính toán thấp O(p^2) với p là số lượng biến trong mô hình. Tuy nhiên thuật toán này có nhược điểm như sau:
+Trong đó phương pháp stepwise được sử dụng phổ biến nhất. Thuật toán Greedy cần khối lượng tính toán thấp :math:`O(p^2)` với p là số lượng biến trong mô hình. Tuy nhiên thuật toán này có nhược điểm như sau:
 
 - Bộ biến cuối cùng không đảm bảo là bộ biến tốt nhất.
 - Không kiểm soát được các hệ số ước tính là số âm.
@@ -72,7 +72,7 @@ Nhắc lại lý thuyết, mô hình hồi quy logistic ước lượng các tha
 .. math::
     L(\beta)=-2LL=-2\sum_{i=1}^n \left(y_i\log⁡(\widehat{y_i})+(1-y_i)\log⁡(1-\widehat{y_i})\right) 
 
-Các phương pháp “phạt” cộng thêm một phần phạt vào hàm mất mát L(b). Một số cách tiếp cận phần phạt như sau:
+Các phương pháp “phạt” cộng thêm một phần phạt vào hàm mất mát :math:`L(b)`. Một số cách tiếp cận phần phạt như sau:
 
 **Phương pháp LASSO** (least absolute shrinkage and selection operator) thêm phần phạt là tổng giá trị tuyệt đối của các hệ số. Công thức hàm mất mát mới như sau:
 
