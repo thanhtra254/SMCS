@@ -43,7 +43,14 @@ Từ kết quả tính toán good và bad trong mỗi nhóm, ta tính toán tỷ
   :alt: Decision Table
   :height: 258
 
-Hệ số Gini được tính là hai lần phần diện tích được giới hạn bởi Roc curve của model và đường chéo nối điểm :math:`(0;0)` và :math:`(1;1)`.  Hệ số Gini nằm trong khoảng giá trị :math:`[−1;1]`. Nhìn chung, hệ số Gini càng lớn thì mô hình càng tốt. Một hệ số khác tương tự hệ số Gini là Sommers'D được tính như sau:
+Hệ số Gini được tính là hai lần phần diện tích được giới hạn bởi Roc curve của model và đường chéo nối điểm :math:`(0;0)` và :math:`(1;1)`.  Công thức tính Gini như sau:
+
+.. math::
+  Gini=1-sum_{i=0}^{n} \left(\%CumBad_{i+1} + \%CumBad_i\right)\left(\%CumGood_{i+1} - \%CumGood_i\right)
+  
+Với :math:`\%CumBad_0=\%CumGood_0=0`.
+
+Hệ số Gini nằm trong khoảng giá trị :math:`[−1;1]`. Nhìn chung, hệ số Gini càng lớn thì mô hình càng tốt. Một hệ số khác tương tự hệ số Gini là Sommers'D được tính như sau:
 
 .. math::
   Sommers'D=\frac{n_c-n_d}{t}
@@ -61,4 +68,4 @@ Hệ số K-S
 Hệ số K-S đo lường sự khác biệt lớn nhất giữa phân phối tích luỹ của quan sát good và bad. Công thức tính K-S như sau:
 
 .. math:: 
-  K-S=max(\%Cum_Bad_i - \%Cum_Good_i)
+  K-S=max(\%CumBad_i - \%CumGood_i)
