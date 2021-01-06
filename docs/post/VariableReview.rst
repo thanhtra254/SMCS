@@ -56,7 +56,7 @@ Macro sẽ xử lý theo hai loại biến là interval và categorical.
 - Các chỉ số thống kê: min, max, mean, median, std, non-missing, missing, số lượng các nhóm (là số thực tế so với **numbin** là số kỳ vọng).
 - Số lượng good, bad, WoE, Bad rate trong các khoảng.
 - Các chỉ số dự báo IV,
-- Các chỉ số khác: max_badrate là tỷ lệ bad với nhất trong các nhóm tương tứng với mỗi biến.
+- Các chỉ số khác: max_badrate, min_badrate là tỷ lệ bad lớn nhất/ nhỏ nhất trong tất cả các nhóm tương tứng với mỗi biến.
 
 **Với biến categorical**, macro chia biến thành các nhóm theo các giá trị khác nhau của biến. Các chỉ số sau đây được tính toán:
 
@@ -86,7 +86,7 @@ Các bảng liên quan đến các chỉ số thống kê * dự báo
 	X1,	BIN_X1,	-0.971,	-0.956,	-0.971 <= X1 < -0.956,	5,	8761,	0.05000029
 	...,	...,	...,	...,	...,	..., ..., ...
 
-- **ITV_PRE_BIN, CHR_PRE_BIN** thông tin binning của các biến interval (itv) và categorical (character - chr). Các cột quan trọng như sau:
+- *ITV_PRE_BIN, CHR_PRE_BIN* thông tin binning của các biến interval (itv) và categorical (character - chr). Các cột quan trọng như sau:
 	- NonEventCount, NonEventCount số lượng bad và số lượng good trong nhóm.
 	- NonEventRate, EventRate tỉ lệ bad và good trong nhóm.
 	- WOE, IV được tính toán như trình này ở `Variable Analysis <https://smcs.readthedocs.io/vi/latest/post/VariableAnalysis.html>`_.
@@ -102,9 +102,52 @@ Các bảng liên quan đến các chỉ số thống kê * dự báo
 	...,	-0.983 <= X1 < -0.971,	4,	5590,	0.638,	3171,	0.361,	0.561,	0.015
 	...,	...,			...,	...,	...,	..., 	..., 	..., 	...
 
-Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất hiện nếu có dữ liệu **outtime**). 
+- *ITV_SUMMARY, CHR_SUMMARY* chứa các thông tin chỉ số thống kê và chỉ số dự báo của biến. Dữ liệu bao gồm các cột:
+	- *VARIABLE* tên của biến.
+	- *NUM_BIN*: Số lượng các nhóm sau khi binning của biến.
+	- *MAX_BADRATE, MIN_BADRATE* bad rate lớn nhất/ nhỏ nhất trong tất cả các nhóm của biến.
+	- *N, NMISS, MEAN, MEDIAN, STD, MIN, MAX*: số lượng giá trị không missing, số lượng giá trị missing, giá trị trung bình, trung vị, độ lệch chuẩn, giá trị nhỏ nhất, giá trị lớn nhất của biến.
+	
+Các bảng liên quan đến độ ổn định (các bảng này chỉ xuất hiện nếu có dữ liệu **outtime**):
+
+- *ITV_PSI, CHR_PSI* chứa chỉ số PSI của từng biến trong từng tháng ở dữ liệu **outtime**. 
+
+.. csv-table:: Example of dataset ITV_PSI
+	:header: VARIABLE, YEARMONTH, PSI
+	:align: center
+	:widths: 15, 15, 15
+	
+	BIN_X1,	201904,	0.34
+	BIN_X1,	201905,	0.34
+	BIN_X1,	201906,	0.34
+	BIN_X1,	201907,	0.34
+	BIN_X1,	201908,	0.34
+	...,	...,	...
 
 
+- *ITV_PCT_YM, CHR_PCT_YM* chứa tỉ lệ phần trăm của từng nhóm trong từng biến trong từng tháng ở dữ liệu **outtime**. Các cột như sau:
+	- *VARIABLE, GROUP* tên của biến và nhóm tương tứng.
+	- *YEARMONTH*: giá trị tại yearmonth.
+	- *DEV_COLPERCENT, REC_COLPERCENT* tỉ lệ phần trăm của nhóm trong dữ liệu **train** (development - dev) và **outtime** (recent - rec).
+	- *PSI* được tính theo công thức :math:`PSI=left(\%Dev-\%Rec\right)ln\left(\frac{\%Dev}{\%Rec}\right)`. Chi tiết xem tại `Stability <https://smcs.readthedocs.io/vi/latest/post/MoniStability.html>`_.
 
+.. csv-table:: Example of dataset ITV_PCT_YM
+	:header: VARIABLE, GROUP, YEARMONTH, DEV_COLPERCENT, REC_COLPERCENT, PSI
+
+	:align: center
+	:widths: 15, 10, 15, 15, 15, 10
+	
+	BIN_X1,	1, 	201905,	5.00,	5.02,	0.00,
+	BIN_X1,	1, 	201907,	5.00,	5.02,	0.00,
+	BIN_X1,	1, 	201911,	5.00,	5.02,	0.00,
+	BIN_X1,	1, 	201904,	5.00,	5.02,	0.00,
+	BIN_X1,	1, 	201908,	5.00,	5.02,	0.00,
+	...,	...,	..., 	..., 	..., 	...
 Example
 -------
+
+Ví dụ như sau:
+
+.. code:: sh
+
+	%VAR_REVIEW(TRAIN=DATA.TRAIN, OUTTIME=DATA.OUTTIME, NUMBIN=20, EXCLUDE_VARLIST=Y GOOD BAD YEARMONTH ID OBS_DATE);
