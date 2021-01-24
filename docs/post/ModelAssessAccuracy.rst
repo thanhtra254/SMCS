@@ -1,7 +1,7 @@
 .. _post-model_assess-accuracy:
 
 ===============================
-Monitoring Assessment: Accuracy
+ Assessment: Accuracy
 ===============================
 
 Kiểm định tính chính xác
