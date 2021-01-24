@@ -142,17 +142,23 @@ Model Assessment
    :caption: Model Assessment
    :hidden:
    
+   post/ModelRegression
    post/ModelAssessDiscriminatory
    post/ModelAssessAccuracy
    post/ModelCrossValidation
-   
+   post/ModelScoring
+
+:doc:`post/ModelRegression`
+    Ước lượng hệ số và tính toán chỉ số dự báo của mô hình.  
 :doc:`post/ModelAssessDiscriminatory`
     Đánh giá mô hình bằng cách tính toán các chỉ số về sự phân biệt.
 :doc:`post/ModelAssessAccuracy`
     Đánh giá mô hình bằng cách tính toán các chỉ số về sự chính xác.
 :doc:`post/ModelCrossValidation`
     Đánh giá mô hình bằng các phương pháp: cross validation và k-fold validation.
-   
+:doc:`post/ModelScoring`
+    Chấm điểm cho dữ liệu mới sử dụng kết quả của mô hình.
+    
 Report Scorecard
 ================
 .. toctree::
