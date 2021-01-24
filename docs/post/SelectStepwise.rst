@@ -1,13 +1,13 @@
 .. _post-select_foward:
 
 ====================================
-Variable Selection: Foward Selection
+Variable Selection: Stepwise Selection
 ====================================
 
 Các phương pháp
 ===============
 
-Phương pháp lựa chọn biến bằng phương pháp Foward thuộc dạng thuật toán Greedy: Tại mỗi bước, thuật toán sẽ tìm một biến sao cho sức mạnh của mô hình là lớn nhất. Ba dạng thuật toán phổ biến ở dạng này là forward, backward và stepwise.
+Phương pháp lựa chọn biến bằng phương pháp stepwise thuộc dạng thuật toán Greedy: Tại mỗi bước, thuật toán sẽ tìm một biến sao cho sức mạnh của mô hình là lớn nhất. Ba dạng thuật toán phổ biến ở dạng này là forward, backward và stepwise.
 
 Phương pháp forward
 -------------------
