@@ -119,7 +119,7 @@ Variable Selection
    :hidden:
    
    post/SelectOverview
-   post/SelectFoward
+   post/SelectStepwise
    post/SelectMarIV
    post/SelectBestSubset
    
@@ -127,7 +127,7 @@ Variable Selection
 :doc:`post/SelectOverview`
     Tổng quan về lựa chọn biến và các phương pháp lựa chọn biến.
     
-:doc:`post/SelectFoward`
+:doc:`post/SelectStepwise`
     Lựa chọn các biến sử dụng phương pháp Forward/ Backward/ Stepwise. Các biến được lựa chọn tại mỗi bước được dựa trên hệ số Gini.
     
 :doc:`post/SelectMarIV`
