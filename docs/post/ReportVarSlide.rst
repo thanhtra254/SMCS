@@ -1,4 +1,4 @@
-.. _post-ReportVarSlide:
+.. _post-Report-Var-Slide:
 
 ============
 Report Slide
