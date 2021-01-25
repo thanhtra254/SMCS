@@ -1,8 +1,8 @@
 .. _post-report_variable:
 
-================
-Report Variables
-================
+========================
+Report Variables Binning
+========================
 
 Trình bày kết quả phân tích biến bao gồm các nội dung sau đây:
 
