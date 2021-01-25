@@ -231,30 +231,66 @@ Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coars
 Các dữ liệu output
 ^^^^^^^^^^^^^^^^^^
 
-- *Bảng FINALBIN* là dữ liệu chứa thông tin coarse binning và fine binning của biến.
+- *Bảng FINALBIN* là dữ liệu chứa thông tin coarse binning và fine binning của biến. Bảng này sẽ được sử dụng trong macro VAR_BIN_MANUAL (nếu cần).
 
 .. csv-table:: Example of dataset SELECTTIONS_SUMMARY
 	:header: STEP, GRP_FINAL, GRP_TEMP, TOTAL, GOOD, BAD, UB, LB, PERCENT, ...
 	:align: center
 
-	  7,	1,	1,	8610,	6174,	2436,	-0.9979,	.,	4.94%,	7.08%, ...
-	  7,	2,	2,	8841,	5505,	3336,	-0.9925,	-0.9979,	5.07%,	6.32%, ...
-	  7,	2,	3,	8687,	5463,	3224,	-0.9839,	-0.9925,	4.98%,	6.27%, ...
-	  7,	2,	4,	8745,	5487,	3258,	-0.9718,	-0.9839,	5.01%,	6.30%, ...
-	  7,	2,	5,	8712,	5668,	3044,	-0.9561,	-0.9718,	5.00%,	6.50%, ...
+	  7,	1,	1,	8610,	6174,	2436,	-0.9979,	.,		4.94%,	 ...
+	  7,	2,	2,	8841,	5505,	3336,	-0.9925,	-0.9979,	5.07%,	 ...
+	  7,	2,	3,	8687,	5463,	3224,	-0.9839,	-0.9925,	4.98%,	 ...
+	  7,	2,	4,	8745,	5487,	3258,	-0.9718,	-0.9839,	5.01%,	 ...
+	  7,	2,	5,	8712,	5668,	3044,	-0.9561,	-0.9718,	5.00%,	 ...
 	  ...,	...,	...,	...,	...,	...,	...,	...,	...,	..., ...
 
 - *Bảng SUMMARY_IV* là dữ liệu chứa thông tin IV tại mỗi bước của đồ thị :ref:`summary_iv`
 
+.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+	:header: STEP, IV, MAPPING, SELECT
+	:align: center
+
+	1,	0,	1,	.
+	2,	2.1359,	3,	.
+	3,	2.7346,	19,	.
+	4,	2.8107,	23,	.
+	5,	2.8254,	55,	.
+	6,	2.8377,	63,	.
+	7,	2.8428,	262207,	2.8428
+	...,	...,	...,	...
+	
 - *Bảng MAPPING* là kết quả nhóm tối ưu tại mỗi STEP.
 
 - *Bảng PRINT_RAW/ PRINT_FINE* là bảng dữ liệu của coarse binning và fine binning :ref:`coarse_binning`
 
+	
 - *Bảng CUT_RAW/ CUT_FINE* là điểm cắt của coarse binning và fine binning.
 
 - *Bảng VAR_BIN_FINE/ VAR_BIN_COARSE* lưu trữ kết quả coarse binning và fine binning của **tất cả các biến đã phân tích**. Hai bảng này được sử dụng tại bước `Variable Report Binning <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_.
 
+.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+	:header: VARIABLE, RANGE, GRP_FINAL, TOTAL, BAD, GOOD, PERCENT, BAD_RATE, GOOD_RATE, WOE, IV
+	:align: center
+	
+	X2,	"[01] MISSING",			1,	10566,	3509,	7057,	6.06%,	33.21%,	66.79%,	0.699,	0.028
+	X2,	"[02] (-INF, -0.9841]",		2,	8199,	8193,	6,	4.70%,	99.93%,	0.07%,	-7.219,	0.678
+	X2,	"[03] (-0.9841, -0.8588]",	3,	16368,	15784,	584,	9.39%,	96.43%,	3.57%,	-3.296,	0.574
+	X2,	"[04] (-0.8588, -0.5849]",	4,	16389,	14330,	2059,	9.40%,	87.44%,	12.56%,	-1.939,	0.273
+	...,	...,	...,	...,	...,	...,	...,	...,	...,	...,	...
+	
 - *Bảng VAR_BIN_MAPPING* lưu kết quả nhóm biến dưới dạng proc format. Bảng này được sử dụng tại bước `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
+
+
+.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+	:header: FMTNAME, START, END, LABEL, TYPE, SEXCL, EEXCL, HLO
+	:align: center
+	X2F,	.,	        .,		"[01] MISSING",			N,	N,	N,	
+	X2F,	LOW,	        -0.9841,	"[02] (-INF, -0.9841]",		N,	N,	N,	L
+	X2F,	-0.9841,        -0.8588,	"[03] (-0.9841, -0.8588]",	N,	Y,	N,	
+	X2F,	-0.8588,        -0.5849,	"[04] (-0.8588, -0.5849]",	N,	Y,	N,	
+	X2F,	-0.5849,        -0.0563,	"[05] (-0.5849, -0.0563]",	N,	Y,	N,	
+	X2F,	-0.0563,	0.9544,		"[06] (-0.0563, 0.9544]",	N,	Y,	N,	
+	X2F,	0.9544,		HIGH,		"[07] (0.9544 , +INF)",		N,	Y,	N,	H
 
 
 Example
