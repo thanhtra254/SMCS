@@ -166,7 +166,7 @@ Reporting
    :hidden:
    
    post/ReportVarBin
-   post/ReportScorecard
+   post/ReportVarSlide
    
 :doc:`post/ReportVarBin`
     Trình bày kết quả binning (coarse và fine) của các biến.
