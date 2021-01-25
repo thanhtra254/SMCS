@@ -1,8 +1,8 @@
-.. _post-report_scorecard:
+.. _post-ReportVarSlide:
 
-================
-Report Scorecard
-================
+============
+Report Slide
+============
 
 Overview
 ========
