@@ -13,7 +13,7 @@ Model scoring là công việc chấm điểm (tính toán output) cho dữ li�
 .. math::
   IV=\sum_{i=0}^n WoeX_i \times \beta_i
 
-trong đó :math:`\WoeX_0 =1` và  :math:`\beta_i` là hệ số chặn (intercept). Các biến dưới dạng WOE :math:`WoeX_1, WoeX_2, ..., WoeX_n` và hệ số tương ứng :math:`\beta_1, \beta_2, ..., \beta_n`.
+trong đó :math:`WoeX_0 =1` và  :math:`\beta_i` là hệ số chặn (intercept). Các biến dưới dạng WOE :math:`WoeX_1, WoeX_2, ..., WoeX_n` và hệ số tương ứng :math:`\beta_1, \beta_2, ..., \beta_n`.
 
 Sử dụng Macro
 =============
@@ -51,10 +51,10 @@ Trong đó:
 - **DS_PARAM (dataset)** là dữ liệu lưu thông tin các hệ số. Dữ liệu là kết quả đầu ra của Macro Dữ liệu là kết quả đầu ra của Macro `Model Regression <https://smcs.readthedocs.io/vi/latest/post/ModelRegression.html>`_. Ví dụ về dữ liệu như dưới đây:
 
 .. csv-table:: Example of dataset DS_PARAM
-	:header: "_NAME_",	"_TYPE_",	"Intercept", 	WOE_X1,	WOE_X2,	WOE_X3,	WOE_X4,	WOE_X5,	WOE_X6,	WOE_X8
+	:header: "_NAME_",	"_TYPE_",	"Intercept", 	WOE_X1,	WOE_X2,	WOE_X3,	WOE_X4,	WOE_X5,	...
 	:align: center
 	
-	Estimate,	PARMS,	0.01675,	0.9202,	0.7971,	0.8608,	0.8727,	0.9028,	0.1408,	0.06968,
+	Estimate,	PARMS,	0.01675,	0.9202,	0.7971,	0.8608,	0.8727,	0.9028,	...
 
 - **VARLIST (danh sách biến)** là danh sách các biến trong mô hình.
 
