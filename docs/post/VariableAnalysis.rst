@@ -233,7 +233,7 @@ Các dữ liệu output
 
 - *Bảng FINALBIN* là dữ liệu chứa thông tin coarse binning và fine binning của biến. Bảng này sẽ được sử dụng trong macro VAR_BIN_MANUAL (nếu cần).
 
-.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+.. csv-table:: Example of dataset FINALBIN
 	:header: STEP, GRP_FINAL, GRP_TEMP, TOTAL, GOOD, BAD, UB, LB, PERCENT, ...
 	:align: center
 
@@ -246,7 +246,7 @@ Các dữ liệu output
 
 - *Bảng SUMMARY_IV* là dữ liệu chứa thông tin IV tại mỗi bước của đồ thị :ref:`summary_iv`
 
-.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+.. csv-table:: Example of dataset SUMMARY_IV
 	:header: STEP, IV, MAPPING, SELECT
 	:align: center
 
@@ -268,7 +268,7 @@ Các dữ liệu output
 
 - *Bảng VAR_BIN_FINE/ VAR_BIN_COARSE* lưu trữ kết quả coarse binning và fine binning của **tất cả các biến đã phân tích**. Hai bảng này được sử dụng tại bước `Variable Report Binning <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_.
 
-.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+.. csv-table:: Example of dataset VAR_BIN_FINE
 	:header: VARIABLE, RANGE, GRP_FINAL, TOTAL, BAD, GOOD, PERCENT, BAD_RATE, GOOD_RATE, WOE, IV
 	:align: center
 	
@@ -280,12 +280,11 @@ Các dữ liệu output
 	
 - *Bảng VAR_BIN_MAPPING* lưu kết quả nhóm biến dưới dạng proc format. Bảng này được sử dụng tại bước `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
 
-.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+.. csv-table:: Example of dataset VAR_BIN_MAPPING
 	:header: FMTNAME, START, END, LABEL, TYPE, SEXCL, EEXCL, HLO
 	:align: center
-	X2F,	LOW,	        -0.9841,	"[02] (-INF, -0.9841]",		N,	N,	N,	L
-
-
+	
+	X2F,	LOW, -0.9841, "[02] (-INF, -0.9841]",	N, N, N, L
 
 Example
 -------
