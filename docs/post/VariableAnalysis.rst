@@ -283,7 +283,6 @@ Các dữ liệu output
 .. csv-table:: Example of dataset SELECTTIONS_SUMMARY
 	:header: FMTNAME, START, END, LABEL, TYPE, SEXCL, EEXCL, HLO
 	:align: center
-	X2F,	.,	        .,		"[01] MISSING",			N,	N,	N,	1
 	X2F,	LOW,	        -0.9841,	"[02] (-INF, -0.9841]",		N,	N,	N,	L
 
 
