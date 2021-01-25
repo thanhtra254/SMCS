@@ -135,8 +135,6 @@ Coarse Binning
    :height: 226
    :alt: Coarse Binning
 
-
-
 Fine Binning
 
 .. image:: ./images/VariableAnalysis/FineBinning.png
@@ -233,19 +231,36 @@ Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coars
 Các dữ liệu output
 ^^^^^^^^^^^^^^^^^^
 
-**FINALBIN** là dữ liệu chứa thông tin coarse binning và fine binning của biến.
+- *Bảng FINALBIN* là dữ liệu chứa thông tin coarse binning và fine binning của biến.
+STEP	GRP_FINAL	GRP_TEMP	TOTAL	GOOD	BAD	UB	LB	PERCENT	PERCENT_GOOD
+7	1	1	8,610	6,174	2,436	-0.9979	.	4.94%	7.08%
+7	2	2	8,841	5,505	3,336	-0.9925	-0.9979	5.07%	6.32%
+7	2	3	8,687	5,463	3,224	-0.9839	-0.9925	4.98%	6.27%
+7	2	4	8,745	5,487	3,258	-0.9718	-0.9839	5.01%	6.30%
+7	2	5	8,712	5,668	3,044	-0.9561	-0.9718	5.00%	6.50%
 
-**SUMMARY_IV** là dữ liệu chứa thông tin IV tại mỗi bước của đồ thị :ref:`summary_iv`
+.. csv-table:: Example of dataset SELECTTIONS_SUMMARY
+	:header: STEP, GRP_FINAL, GRP_TEMP, TOTAL, GOOD, BAD, UB, LB, PERCENT, ...
+	:align: center
+	:widths: 15, 25, 15, 15 
+  7,	1,	1,	8610,	6174,	2436,	-0.9979,	.,	4.94%,	7.08%, ...
+  7,	2,	2,	8841,	5505,	3336,	-0.9925,	-0.9979,	5.07%,	6.32%, ...
+  7,	2,	3,	8687,	5463,	3224,	-0.9839,	-0.9925,	4.98%,	6.27%, ...
+  7,	2,	4,	8745,	5487,	3258,	-0.9718,	-0.9839,	5.01%,	6.30%, ...
+  7,	2,	5,	8712,	5668,	3044,	-0.9561,	-0.9718,	5.00%,	6.50%, ...
+  ...,	...,	...,	...,	...,	...,	...,	...,	...,	..., ...
 
-**MAPPING** là kết quả nhóm tối ưu tại mỗi STEP.
+- *Bảng SUMMARY_IV* là dữ liệu chứa thông tin IV tại mỗi bước của đồ thị :ref:`summary_iv`
 
-**PRINT_RAW/ PRINT_FINE** là bảng dữ liệu của coarse binning và fine binning :ref:`coarse_binning`
+- *Bảng MAPPING* là kết quả nhóm tối ưu tại mỗi STEP.
 
-**CUT_RAW/ CUT_FINE** là điểm cắt của coarse binning và fine binning.
+- *Bảng PRINT_RAW/ PRINT_FINE* là bảng dữ liệu của coarse binning và fine binning :ref:`coarse_binning`
 
-**VAR_BIN_FINE/ VAR_BIN_COARSE** lưu trữ kết quả coarse binning và fine binning của **tất cả các biến đã phân tích**. Hai bảng này được sử dụng tại bước `Variable Report Binning <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_.
+- *Bảng CUT_RAW/ CUT_FINE* là điểm cắt của coarse binning và fine binning.
 
-**VAR_BIN_MAPPING** lưu kết quả nhóm biến dưới dạng proc format. Bảng này được sử dụng tại bước `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
+- *Bảng VAR_BIN_FINE/ VAR_BIN_COARSE* lưu trữ kết quả coarse binning và fine binning của **tất cả các biến đã phân tích**. Hai bảng này được sử dụng tại bước `Variable Report Binning <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_.
+
+- *Bảng VAR_BIN_MAPPING* lưu kết quả nhóm biến dưới dạng proc format. Bảng này được sử dụng tại bước `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
 
 
 Example
