@@ -280,7 +280,6 @@ Các dữ liệu output
 	
 - *Bảng VAR_BIN_MAPPING* lưu kết quả nhóm biến dưới dạng proc format. Bảng này được sử dụng tại bước `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
 
-
 .. csv-table:: Example of dataset SELECTTIONS_SUMMARY
 	:header: FMTNAME, START, END, LABEL, TYPE, SEXCL, EEXCL, HLO
 	:align: center
@@ -312,4 +311,9 @@ Sử dụng Macro Var_Bin_manual
 ============================
 
 Macro Var_Bin_manual được sử dụng ngay sau macro Var_Bin để điều chỉnh kết quả Fine binning trong trường hợp kết quả không như mong muốn. Cách sử dụng như sau:
+
+#. Sửa cột GRP_FINAL ở dữ liệu FINALBIN theo cách muốn nhóm. Các số bằng nhau được hiểu là sẽ tạo thành một nhóm.
+#. Chạy macro %Var_manual_bin
+
+Kết quả của macro tương tự với macro Var_Bin.
 
