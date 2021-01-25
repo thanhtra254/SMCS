@@ -159,20 +159,20 @@ Model Assessment
 :doc:`post/ModelScoring`
     Chấm điểm cho dữ liệu mới sử dụng kết quả của mô hình.
     
-Report Scorecard
-================
+Reporting
+=========
 .. toctree::
-   :caption: Report Scorecard
+   :caption: Reporting
    :hidden:
    
-   post/ReportVariable
+   post/ReportVarBin
    post/ReportScorecard
    
-:doc:`post/ReportVariable`
+:doc:`post/ReportVarBin`
     Trình bày kết quả binning (coarse và fine) của các biến.
 
-:doc:`post/ReportScorecard`
-    Trình bày kết quả mô hình và định dạng Scorecard.
+:doc:`post/ReportVarSlide`
+    Trình bày thông tin về biến trong mô hình ra slide.
     
     
 Monitoring
