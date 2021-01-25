@@ -11,7 +11,7 @@ Model scoring là công việc chấm điểm (tính toán output) cho dữ li�
 #. Tính score bằng công thức 
 
 .. math::
-  IV=\sum_{i=0}^n WoeX_i \times \beta_i
+  Score=Logistic\left(\sum_{i=0}^n WoeX_i \times \beta_i\right)
 
 trong đó :math:`WoeX_0 =1` và  :math:`\beta_i` là hệ số chặn (intercept). Các biến dưới dạng WOE :math:`WoeX_1, WoeX_2, ..., WoeX_n` và hệ số tương ứng :math:`\beta_1, \beta_2, ..., \beta_n`.
 
