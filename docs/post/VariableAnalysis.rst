@@ -189,8 +189,9 @@ Kết quả đầu ra của macro như sau:
 
 Các kết quả output SAS
 ^^^^^^^^^^^^^^^^^^^^^^
-.. _coarse_binning:
-**Coarse Binning** bao gồm bảng và đồ thị. Bảng coarse binning chứa các thông tin như sau:
+.. _coarse-binning:
+
+*Coarse Binning* bao gồm bảng và đồ thị. Bảng coarse binning chứa các thông tin như sau:
 
 - *Label (Coarse)* chứa định danh nhóm (phần trong ngoặc vuông []) và khoảng giá trị của nhóm (nửa khoảng :math:`(a, b]`).
 - *Group* Các nhóm có giá trị bằng nhau được hiểu là thuộc cùng một nhóm lớn của Fine Binning.
@@ -206,22 +207,23 @@ Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coars
   :alt: Example of Table Coarse Binning
   :height: 446
 
-**Fine Binning** tương tự như coarse binning.
+*Fine Binning* tương tự như coarse binning.
 
 .. image:: ./images/VariableAnalysis/TableFineBin.png
   :align: center
   :alt: Example of Table Coarse Binning
   :height: 174
 
-**Format** có dạng PROC FORMAT, cần lưu lại format này để thực hiện bước tiếp theo là `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
+*Format* có dạng PROC FORMAT, cần lưu lại format này để thực hiện bước tiếp theo là `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
 
 .. image:: ./images/VariableAnalysis/ProcFormat.png
   :align: center
   :alt: Example of Table Coarse Binning
   :height: 202
 
-.. _summary_iv:
-**Information Value by Group Step** là đồ thị thể hiện giá trị IV với số lượng nhóm ở fine binning từ 1 đến **numbin**. Có thể dựa vào đồ thị này để quyết định **group**.
+.. _summary-iv:
+
+*Information Value by Group Step* là đồ thị thể hiện giá trị IV với số lượng nhóm ở fine binning từ 1 đến **numbin**. Có thể dựa vào đồ thị này để quyết định **group**.
 
 .. image:: ./images/VariableAnalysis/SummaryIV.png
   :align: center
@@ -231,7 +233,7 @@ Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coars
 Các dữ liệu output
 ^^^^^^^^^^^^^^^^^^
 
-- *Bảng FINALBIN* là dữ liệu chứa thông tin coarse binning và fine binning của biến. Bảng này sẽ được sử dụng trong macro VAR_BIN_MANUAL (nếu cần).
+*Bảng FINALBIN* là dữ liệu chứa thông tin coarse binning và fine binning của biến. Bảng này sẽ được sử dụng trong macro VAR_BIN_MANUAL (nếu cần).
 
 .. csv-table:: Example of dataset FINALBIN
 	:header: STEP, GRP_FINAL, GRP_TEMP, TOTAL, GOOD, BAD, UB, LB, PERCENT, ...
@@ -244,7 +246,7 @@ Các dữ liệu output
 	  7,	2,	5,	8712,	5668,	3044,	-0.9561,	-0.9718,	5.00%,	 ...
 	  ...,	...,	...,	...,	...,	...,	...,	...,	...,	..., ...
 
-- *Bảng SUMMARY_IV* là dữ liệu chứa thông tin IV tại mỗi bước của đồ thị :ref:`summary_iv`
+*Bảng SUMMARY_IV* là dữ liệu chứa thông tin IV tại mỗi bước của đồ thị :any:`summary-iv`
 
 .. csv-table:: Example of dataset SUMMARY_IV
 	:header: STEP, IV, MAPPING, SELECT
@@ -259,14 +261,14 @@ Các dữ liệu output
 	7,	2.8428,	262207,	2.8428
 	...,	...,	...,	...
 	
-- *Bảng MAPPING* là kết quả nhóm tối ưu tại mỗi STEP.
+*Bảng MAPPING* là kết quả nhóm tối ưu tại mỗi STEP.
 
-- *Bảng PRINT_RAW/ PRINT_FINE* là bảng dữ liệu của coarse binning và fine binning :ref:`coarse_binning`
+*Bảng PRINT_RAW/ PRINT_FINE* là bảng dữ liệu của coarse binning và fine binning :any:`coarse-binning`
 
 	
-- *Bảng CUT_RAW/ CUT_FINE* là điểm cắt của coarse binning và fine binning.
+*Bảng CUT_RAW/ CUT_FINE* là điểm cắt của coarse binning và fine binning.
 
-- *Bảng VAR_BIN_FINE/ VAR_BIN_COARSE* lưu trữ kết quả coarse binning và fine binning của **tất cả các biến đã phân tích**. Hai bảng này được sử dụng tại bước `Variable Report Binning <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_.
+*Bảng VAR_BIN_FINE/ VAR_BIN_COARSE* lưu trữ kết quả coarse binning và fine binning của **tất cả các biến đã phân tích**. Hai bảng này được sử dụng tại bước `Variable Report Binning <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_.
 
 .. csv-table:: Example of dataset VAR_BIN_FINE
 	:header: VARIABLE, RANGE, GRP_FINAL, TOTAL, BAD, GOOD, PERCENT, BAD_RATE, GOOD_RATE, WOE, IV
@@ -278,7 +280,7 @@ Các dữ liệu output
 	X2,	"[04] (-0.8588, -0.5849]",	4,	16389,	14330,	2059,	9.40%,	87.44%,	12.56%,	-1.939,	0.273
 	...,	...,	...,	...,	...,	...,	...,	...,	...,	...,	...
 	
-- *Bảng VAR_BIN_MAPPING* lưu kết quả nhóm biến dưới dạng proc format. Bảng này được sử dụng tại bước `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
+*Bảng VAR_BIN_MAPPING* lưu kết quả nhóm biến dưới dạng proc format. Bảng này được sử dụng tại bước `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
 
 .. csv-table:: Example of dataset VAR_BIN_MAPPING
 	:header: FMTNAME, START, END, LABEL, TYPE, SEXCL, EEXCL, HLO
