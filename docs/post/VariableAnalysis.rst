@@ -144,10 +144,8 @@ Fine Binning
    :height: 226
    :alt: Fine Binning
 
-Sử dụng Macro
-=============
-
-
+Sử dụng Macro Var_Bin
+=====================
 
 Syntax
 ------
@@ -156,7 +154,7 @@ Syntax
 
 .. code:: sh
   
-  %Var_Bin(Data=, Var=, Numbin=, Group=, Cut_Raw=, Cut_Fine=, Bin_raw=BIN_RAW, Bin_Fine=BIN_FINE);
+  %Var_Bin(Data=, Var=, Numbin=, Group=, Method=BESTIV, Cut_Raw=, Cut_Fine=, Round=4, Libname=WORK);
   
 Trong đó:
 
@@ -166,8 +164,8 @@ Trong đó:
 - **Group (int)** là số nhóm sau khi nhóm lại.
 - **Cut_Raw (dataset)** là dữ liệu chứa có một biến UB chứa thông tin cận trên của điểm cắt. Ví dụ dữ liệu có các thông tin ., 1,4,6, . thì các điểm cắt sẽ là :math:`missing, (-\infty, 1], (1, 4], (4, 6], (6, +\infty)`. Nếu tham số này trống thì macro sẽ tự tìm các điểm cắt dựa trên **Var** và **Numbin**.
 - **Cut_Fine**
-- **Bin_Raw (dataset)** là dữ liệu chứa thông tin binning. Kết quả coarse binning của macro sẽ được lưu vào dữ liệu này.
-- **Bin_Fine (dataset)** là dữ liệu chứa thông tin binning. Kết quả fine binning của macro sẽ được lưu vào dữ liệu này.
+- **Round (int)** (giá trị mặc định bằng 4) số lượng các chữ số sau dấu phảy ở các điểm cắt khi thực hiện quantile binning.
+- **Libname (text)** (giá trị mặc định là WORK) thư viện lưu các kết quả output của macro bao gồm: VAR_BIN_RAW, VAR_BIN_FINE, VAR_BIN_MAPPING.
 - **Method (character)** là các phương pháp nhóm biến. Các giá trị có thể được liệt kê như sau:
 
   - *BEST_IV*: Thử tất cả cách nhóm biến để tìm được cách nhóm thỏa mãn: 1) số lượng nhóm sau cùng là **Group** và 2) Information Value của cách nhóm là lớn nhất. Thời gian chạy macro với **numbin=25** là 13s (máy tính CPU i7-4790s, RAM 16GB, SSD) và tăng gấp đôi khi **numbin** tăng 1 đơn vị.
@@ -177,7 +175,7 @@ Trong đó:
 
 Để điều chỉnh cách nhóm biến, ta sửa biến *GRP_FINAL* trong dữ liệu *FINALBIN** là kết quả đầu ra của macro Var_Bin. Các nhóm có giá trị *GRP_FINAL* bằng nhau được hiểu là thuộc cùng một nhóm lớn của Fine Binning. Sau đó, ta sử dụng macro Var_Bin_Manual
 
-.. code:: sh
+.. code:: sas
   
   %Var_Bin_Manual(Data=, Bin_raw=BIN_RAW, Bin_Fine=BIN_FINE);
 
@@ -193,7 +191,7 @@ Kết quả đầu ra của macro như sau:
 
 Các kết quả output SAS
 ^^^^^^^^^^^^^^^^^^^^^^
-
+.. _coarse_binning:
 **Coarse Binning** bao gồm bảng và đồ thị. Bảng coarse binning chứa các thông tin như sau:
 
 - *Label (Coarse)* chứa định danh nhóm (phần trong ngoặc vuông []) và khoảng giá trị của nhóm (nửa khoảng :math:`(a, b]`).
@@ -224,7 +222,7 @@ Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coars
   :alt: Example of Table Coarse Binning
   :height: 202
 
-
+.. _summary_iv:
 **Information Value by Group Step** là đồ thị thể hiện giá trị IV với số lượng nhóm ở fine binning từ 1 đến **numbin**. Có thể dựa vào đồ thị này để quyết định **group**.
 
 .. image:: ./images/VariableAnalysis/SummaryIV.png
@@ -232,7 +230,24 @@ Các màu trong bảng được tô dựa theo biến *Group*. Đồ thị coars
   :alt: Example of Table Coarse Binning
   :height: 300
   
-  
+Các dữ liệu output
+^^^^^^^^^^^^^^^^^^
+
+**FINALBIN** là dữ liệu chứa thông tin coarse binning và fine binning của biến.
+
+**SUMMARY_IV** là dữ liệu chứa thông tin IV tại mỗi bước của đồ thị :ref:`summary_iv`
+
+**MAPPING** là kết quả nhóm tối ưu tại mỗi STEP.
+
+**PRINT_RAW/ PRINT_FINE** là bảng dữ liệu của coarse binning và fine binning :ref:`coarse_binning`
+
+**CUT_RAW/ CUT_FINE** là điểm cắt của coarse binning và fine binning.
+
+**VAR_BIN_FINE/ VAR_BIN_COARSE** lưu trữ kết quả coarse binning và fine binning của **tất cả các biến đã phân tích**. Hai bảng này được sử dụng tại bước `Variable Report Binning <https://smcs.readthedocs.io/vi/latest/post/ReportVariable.html>`_.
+
+**VAR_BIN_MAPPING** lưu kết quả nhóm biến dưới dạng proc format. Bảng này được sử dụng tại bước `Variable Transformation <https://smcs.readthedocs.io/vi/latest/post/VariableTransformation.html>`_.
+
+
 Example
 -------
 
@@ -247,3 +262,9 @@ Binning để tìm cách nhóm tối ưu và monotonic
 .. code:: sh
   
   %VAR_BIN(DATA=DATA.TRAIN, VAR=X2, NUMBIN=20, METHOD=MONO);
+  
+Sử dụng Macro Var_Bin_manual
+============================
+
+Macro Var_Bin_manual được sử dụng ngay sau macro Var_Bin để điều chỉnh kết quả Fine binning trong trường hợp kết quả không như mong muốn. Cách sử dụng như sau:
+
