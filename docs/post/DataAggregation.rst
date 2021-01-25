@@ -66,17 +66,18 @@ Syntax
 
 Để thực hiện Data Aggregation, ta sử dụng Macro DATA_AGGREGATION. Cú pháp của Macro như sau:
 
-.. code:: sh
+.. code:: sas
   
-  %Data_Aggregation (Dsin, Dsout, max_month, id, varlist)
+  %Data_Aggregation (Ds_in, Ds_out, max_month, id, varlist, step=3)
   
 Trong đó:
 
-- **Dsin:** data đầu vào chính là data dạng multiple từ SQL.
-- **Dsout:** data đầu ra. Mỗi biến cơ sở sẽ tạo ra :math:`max\_month\times 10`  biến mới.
-- **Max_month:** Là số tháng lớn nhất trước ngày quan sát (12,6) của cột id_month.
-- **Id:** Primary key của bảng. Ví dụ business_date customer_id.
-- **Varlist:** Danh sách các biến.
+- **Ds_in (dataset)** data đầu vào chính là data dạng multiple từ SQL.
+- **Ds_out (dataset)** data đầu ra. Mỗi biến cơ sở sẽ tạo ra :math:`max\_month\times 10`  biến mới.
+- **Max_month (int)** Là số tháng lớn nhất trước ngày quan sát (12,6) của cột id_month.
+- **Id (danh sách biến)** Primary key của bảng. Ví dụ business_date customer_id.
+- **Varlist (danh sách biến)** Danh sách các biến.
+- **Step (int)** để hạn chế số lượng các biến. Ví dụ với :math:`step=3` thì các biến aggregation trong **DS_out** sẽ có index chia hết cho 3 (ví dụ Var1_num_c3, Var1_num_c6, Var1_num_c9, Var1_num_c12. 
 
 Detail
 ------
@@ -102,10 +103,10 @@ Example
 
 Ví dụ dữ liệu đầu vào là VARIABLE_SQL với các biến Z1-Z3 và dữ liệu đầu ra mong muốn là VARIABLE.
 
-.. code:: sh
+.. code:: sas
 
-  %DATA_AGGREGATION(DSIN=VARIABLE_SQL, 
-                    DSOUT=VARIABLE, 
+  %DATA_AGGREGATION(DS_IN=VARIABLE_SQL, 
+                    DS_OUT=VARIABLE, 
                     MAX_MONTH=12, 
                     ID=ID, 
                     VARLIST= Z1 Z2 Z3);
